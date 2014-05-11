@@ -50,75 +50,13 @@
     position: relative;
     width: 84px;
     height: 84px;
-    background-image: $time;
+    background-image: url("../images/time.png");
     background-repeat: no-repeat;
-    background-size: 100% auto;
     @include transition(transform .4s linear);
     @include scale3d(1,1,1);
-    
-    &:after,&:before{
-      top:0;
-      border-top: 92px solid rgba(255,0,0,.3);
-      border-bottom: 0 solid transparent;
-      content: '';
-      position: absolute;
-      @include rotate(-180deg);
-      @include transition(all .4s linear);
-    }
-
-    &:after{
-      left: 0;
-      border-left:  0 solid transparent;
-      border-right:42px solid #ffffff;
-    }
-
-    &:before{
-      right:0;
-      border-right: 0 solid transparent;
-      border-left: 42px solid #ffffff;
-    }
 
 
 
-    &.luri{
-      background-position: 0px -500px;
-    }
-    &.lucas{
-      background-position: 0 -420px;
-    }
-    &.beto{
-      background-position: 0 -80px;
-    }
-    &.andre{
-      background-position: 0 0;
-    }
-    &.pulis{
-      background-position: 0 -838px;
-    }
-    &.carol{
-      background-position: 0 -160px;
-    }
-    &.marlos{
-      background-position: 0 -586px;
-    }
-    &.erick{
-      background-position: 0 -250px;
-    }
-    &.jacob{
-      background-position: 0 -335px;
-    }
-    &.paulo{
-      background-position: 0 -755px;
-    }
-    &.paula{
-      background-position: 0 -665px;
-    }
-    &.giovanni{
-      background-position: 0 -916px;
-    }
-    &.ruy{
-      background-position: 0 -1008px;
-    }
   }
   .infos{
     float: left;

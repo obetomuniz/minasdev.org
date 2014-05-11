@@ -4,8 +4,6 @@
 @import "icons/*.png";
 @include all-icons-sprites;
 
-$time: sprite-map("time/*.png");
-
 @import "foundation/base";
 @import "foundation/header";
 

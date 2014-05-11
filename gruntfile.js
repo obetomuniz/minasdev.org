@@ -94,32 +94,25 @@ module.exports = function( grunt ) {
       },
       scss: {
         files: ['dev/statics/scss/**/*.scss'],
-        tasks: ['compass:dist']
+        tasks: ['compass:dist', 'regex-replace:dist']
       },
       js: {
         files: ['dev/statics/scripts/**/*.js'],
         tasks: ['clean:distJS', 'copy:distJS', 'uglify:dist']
       },
       images: {
-        files: ['dev/statics/images/**/*'],
-        tasks: ['clean:distIMAGES','imagemin:default','copy:distIMAGES']
+        files: ['dev/statics/images/time/**/*','dev/statics/images/icons/**/*'],
+        tasks: ['sprite:time', 'sprite:time', 'compass:dist', 'regex-replace:dist']
       },
       fonts: {
         files: ['dev/statics/fonts/**/*'],
         tasks: ['clean:distFONTS','imagemin:default','copy:distFONTS']
       }
     },
-
     "regex-replace": {
         dist: {
             src: ['dist/statics/styles/minasdev.css'],
             actions: [
-                {
-                    name: 'bar',
-                    search: '/dev',
-                    replace: '',
-                    flags: 'g'
-                },
                 {
                     name: 'bar',
                     search: '/dist',

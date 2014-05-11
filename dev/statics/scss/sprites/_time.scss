@@ -1,0 +1,146 @@
+  $andre-x: 0px;
+  $andre-y: 160px;
+  $andre-offset-x: 0px;
+  $andre-offset-y: -160px;
+  $andre-width: 160px;
+  $andre-height: 160px;
+  $andre-total-width: 160px;
+  $andre-total-height: 1920px;
+  $andre-image: '../../images/time.png';
+  $andre: 0px 160px 0px -160px 160px 160px 160px 1920px '../../images/time.png';
+  $betomuniz-x: 0px;
+  $betomuniz-y: 960px;
+  $betomuniz-offset-x: 0px;
+  $betomuniz-offset-y: -960px;
+  $betomuniz-width: 160px;
+  $betomuniz-height: 160px;
+  $betomuniz-total-width: 160px;
+  $betomuniz-total-height: 1920px;
+  $betomuniz-image: '../../images/time.png';
+  $betomuniz: 0px 960px 0px -960px 160px 160px 160px 1920px '../../images/time.png';
+  $erick-x: 0px;
+  $erick-y: 320px;
+  $erick-offset-x: 0px;
+  $erick-offset-y: -320px;
+  $erick-width: 160px;
+  $erick-height: 160px;
+  $erick-total-width: 160px;
+  $erick-total-height: 1920px;
+  $erick-image: '../../images/time.png';
+  $erick: 0px 320px 0px -320px 160px 160px 160px 1920px '../../images/time.png';
+  $giovanni-x: 0px;
+  $giovanni-y: 480px;
+  $giovanni-offset-x: 0px;
+  $giovanni-offset-y: -480px;
+  $giovanni-width: 160px;
+  $giovanni-height: 160px;
+  $giovanni-total-width: 160px;
+  $giovanni-total-height: 1920px;
+  $giovanni-image: '../../images/time.png';
+  $giovanni: 0px 480px 0px -480px 160px 160px 160px 1920px '../../images/time.png';
+  $jacob-x: 0px;
+  $jacob-y: 640px;
+  $jacob-offset-x: 0px;
+  $jacob-offset-y: -640px;
+  $jacob-width: 160px;
+  $jacob-height: 160px;
+  $jacob-total-width: 160px;
+  $jacob-total-height: 1920px;
+  $jacob-image: '../../images/time.png';
+  $jacob: 0px 640px 0px -640px 160px 160px 160px 1920px '../../images/time.png';
+  $lucas-x: 0px;
+  $lucas-y: 800px;
+  $lucas-offset-x: 0px;
+  $lucas-offset-y: -800px;
+  $lucas-width: 160px;
+  $lucas-height: 160px;
+  $lucas-total-width: 160px;
+  $lucas-total-height: 1920px;
+  $lucas-image: '../../images/time.png';
+  $lucas: 0px 800px 0px -800px 160px 160px 160px 1920px '../../images/time.png';
+  $luri-x: 0px;
+  $luri-y: 0px;
+  $luri-offset-x: 0px;
+  $luri-offset-y: 0px;
+  $luri-width: 160px;
+  $luri-height: 160px;
+  $luri-total-width: 160px;
+  $luri-total-height: 1920px;
+  $luri-image: '../../images/time.png';
+  $luri: 0px 0px 0px 0px 160px 160px 160px 1920px '../../images/time.png';
+  $marlos-x: 0px;
+  $marlos-y: 1120px;
+  $marlos-offset-x: 0px;
+  $marlos-offset-y: -1120px;
+  $marlos-width: 160px;
+  $marlos-height: 160px;
+  $marlos-total-width: 160px;
+  $marlos-total-height: 1920px;
+  $marlos-image: '../../images/time.png';
+  $marlos: 0px 1120px 0px -1120px 160px 160px 160px 1920px '../../images/time.png';
+  $paula-x: 0px;
+  $paula-y: 1280px;
+  $paula-offset-x: 0px;
+  $paula-offset-y: -1280px;
+  $paula-width: 160px;
+  $paula-height: 160px;
+  $paula-total-width: 160px;
+  $paula-total-height: 1920px;
+  $paula-image: '../../images/time.png';
+  $paula: 0px 1280px 0px -1280px 160px 160px 160px 1920px '../../images/time.png';
+  $paulo-x: 0px;
+  $paulo-y: 1440px;
+  $paulo-offset-x: 0px;
+  $paulo-offset-y: -1440px;
+  $paulo-width: 160px;
+  $paulo-height: 160px;
+  $paulo-total-width: 160px;
+  $paulo-total-height: 1920px;
+  $paulo-image: '../../images/time.png';
+  $paulo: 0px 1440px 0px -1440px 160px 160px 160px 1920px '../../images/time.png';
+  $pulis-x: 0px;
+  $pulis-y: 1600px;
+  $pulis-offset-x: 0px;
+  $pulis-offset-y: -1600px;
+  $pulis-width: 160px;
+  $pulis-height: 160px;
+  $pulis-total-width: 160px;
+  $pulis-total-height: 1920px;
+  $pulis-image: '../../images/time.png';
+  $pulis: 0px 1600px 0px -1600px 160px 160px 160px 1920px '../../images/time.png';
+  $ruy-x: 0px;
+  $ruy-y: 1760px;
+  $ruy-offset-x: 0px;
+  $ruy-offset-y: -1760px;
+  $ruy-width: 160px;
+  $ruy-height: 160px;
+  $ruy-total-width: 160px;
+  $ruy-total-height: 1920px;
+  $ruy-image: '../../images/time.png';
+  $ruy: 0px 1760px 0px -1760px 160px 160px 160px 1920px '../../images/time.png';
+
+  @mixin sprite-width($sprite) {
+    width: nth($sprite, 5);
+  }
+
+  @mixin sprite-height($sprite) {
+    height: nth($sprite, 6);
+  }
+
+  @mixin sprite-position($sprite) {
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+  }
+
+  @mixin sprite-image($sprite) {
+    $sprite-image: nth($sprite, 9);
+    background-image: url(#{$sprite-image});
+  }
+
+  @mixin sprite($sprite) {
+    @include sprite-image($sprite);
+    @include sprite-position($sprite);
+    @include sprite-width($sprite);
+    @include sprite-height($sprite);
+  }

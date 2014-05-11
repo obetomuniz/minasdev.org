@@ -1,0 +1,66 @@
+  $facebook-minasdev-x: 0px;
+  $facebook-minasdev-y: 34px;
+  $facebook-minasdev-offset-x: 0px;
+  $facebook-minasdev-offset-y: -34px;
+  $facebook-minasdev-width: 15px;
+  $facebook-minasdev-height: 29px;
+  $facebook-minasdev-total-width: 34px;
+  $facebook-minasdev-total-height: 92px;
+  $facebook-minasdev-image: '../../images/icons.png';
+  $facebook-minasdev: 0px 34px 0px -34px 15px 29px 34px 92px '../../images/icons.png';
+  $facebook-organizador-x: 0px;
+  $facebook-organizador-y: 16px;
+  $facebook-organizador-offset-x: 0px;
+  $facebook-organizador-offset-y: -16px;
+  $facebook-organizador-width: 9px;
+  $facebook-organizador-height: 18px;
+  $facebook-organizador-total-width: 34px;
+  $facebook-organizador-total-height: 92px;
+  $facebook-organizador-image: '../../images/icons.png';
+  $facebook-organizador: 0px 16px 0px -16px 9px 18px 34px 92px '../../images/icons.png';
+  $twitter-minasdev-x: 0px;
+  $twitter-minasdev-y: 63px;
+  $twitter-minasdev-offset-x: 0px;
+  $twitter-minasdev-offset-y: -63px;
+  $twitter-minasdev-width: 34px;
+  $twitter-minasdev-height: 29px;
+  $twitter-minasdev-total-width: 34px;
+  $twitter-minasdev-total-height: 92px;
+  $twitter-minasdev-image: '../../images/icons.png';
+  $twitter-minasdev: 0px 63px 0px -63px 34px 29px 34px 92px '../../images/icons.png';
+  $twitter-organizador-x: 0px;
+  $twitter-organizador-y: 0px;
+  $twitter-organizador-offset-x: 0px;
+  $twitter-organizador-offset-y: 0px;
+  $twitter-organizador-width: 18px;
+  $twitter-organizador-height: 16px;
+  $twitter-organizador-total-width: 34px;
+  $twitter-organizador-total-height: 92px;
+  $twitter-organizador-image: '../../images/icons.png';
+  $twitter-organizador: 0px 0px 0px 0px 18px 16px 34px 92px '../../images/icons.png';
+
+  @mixin sprite-width($sprite) {
+    width: nth($sprite, 5);
+  }
+
+  @mixin sprite-height($sprite) {
+    height: nth($sprite, 6);
+  }
+
+  @mixin sprite-position($sprite) {
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+  }
+
+  @mixin sprite-image($sprite) {
+    $sprite-image: nth($sprite, 9);
+    background-image: url(#{$sprite-image});
+  }
+
+  @mixin sprite($sprite) {
+    @include sprite-image($sprite);
+    @include sprite-position($sprite);
+    @include sprite-width($sprite);
+    @include sprite-height($sprite);
+  }
