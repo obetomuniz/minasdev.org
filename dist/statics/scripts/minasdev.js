@@ -1,0 +1,1 @@
+jQuery(function(){jQuery(".goto").on("click",function(a){a.preventDefault(),jQuery("html, body").animate({scrollTop:jQuery(jQuery(this).attr("href")).offset().top-100},1e3)})});

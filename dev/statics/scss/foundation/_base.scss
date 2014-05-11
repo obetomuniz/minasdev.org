@@ -1,0 +1,20 @@
+
+@include font-face("Lato-Regular", font-files("lato-regular-webfont.eot","lato-regular-webfont.eot?#iefix","lato-regular-webfont.woff","lato-regular-webfont.ttf","lato-regular-webfont.svg#latoregular"));
+@include font-face("Lato-Light", font-files("lato-hairline-webfont.eot","lato-hairline-webfont.eot?#iefix","lato-hairline-webfont.woff","lato-hairline-webfont.ttf","lato-hairline-webfont.svg#latohairline"));
+@include font-face("Lato-LightItalic", font-files("lato-hairlineitalic-webfont.eot","lato-hairlineitalic-webfont.eot?#iefix","lato-hairlineitalic-webfont.woff","lato-hairlineitalic-webfont.ttf","lato-hairlineitalic-webfont.svg#latohairline_italic"));
+@include font-face("Lato-Bold", font-files("lato-bold-webfont.eot","lato-bold-webfont.eot?#iefix","lato-bold-webfont.woff","lato-bold-webfont.ttf","lato-bold-webfont.svg#latobold"));
+@include font-face("Lato-BoldItalic", font-files("lato-bolditalic-webfont.eot","lato-bolditalic-webfont.eot?#iefix","lato-bolditalic-webfont.woff","lato-bolditalic-webfont.ttf","lato-bolditalic-webfont.svg#latobold_italic"));
+
+body{
+  background: image-url("bg-header.jpg") no-repeat center 0;
+  border-top: 5px solid #e62319;
+}
+.container{
+  width: 960px;
+}
+.wrapper{
+  width: 940px;
+}
+.center-content{
+  margin: 0 auto;
+}

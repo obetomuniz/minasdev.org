@@ -1,0 +1,101 @@
+.leads{
+  text-align: center;
+  position: relative;
+  margin-bottom: 140px;
+  h1, p, span{
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Lato-Regular", Arial, sans-serif;
+    display: block;
+  }
+  h1{
+    margin: 180px 0 100px;
+  }
+  .chamada-intro{
+    font-size: 41px;
+    font-family: "Lato-Light", Arial, sans-serif;
+  }
+  .chamada-minasgerais{
+    font-size: 56px;
+    font-family: "Lato-Bold", Arial, sans-serif;
+  }
+  .chamada-fiquepordentro{
+    font-size: 24px;
+    font-family: "Lato-Light", Arial, sans-serif;
+    margin: 100px 0 110px;
+  }
+}
+
+.leads-form{
+  display: block;
+  width: 630px;
+  @include border-radius(5px);
+  overflow: hidden;
+  height: 80px;
+  @include box-shadow(0px 1px 1px #202020, 0 0 0 30px rgba(#000, 0.2));
+  label{
+    height: 100%;
+    width: 70%;
+  }
+  input,button{
+    border: 0;
+    outline: none;
+    height: 100%;
+  }
+  input{
+    padding: 0 12px 0;
+    font-size: 30px;
+    width: 96%;
+    font-family: "Lato-LightItalic", Arial, sans-serif;
+    color: #888;
+    &::-webkit-input-placeholder {
+      color: #888;
+      text-transform: uppercase;
+      font-family: "Lato-LightItalic", Arial, sans-serif;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+      color: #888;
+      text-transform: uppercase;
+      font-family: "Lato-LightItalic", Arial, sans-serif;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+      color: #888;
+      text-transform: uppercase;
+      font-family: "Lato-LightItalic", Arial, sans-serif;
+    }
+
+    &:-ms-input-placeholder {
+      color: #888;
+      text-transform: uppercase;
+      font-family: "Lato-LightItalic", Arial, sans-serif;
+    }
+  }
+  button{
+    font-size: 18px;
+    padding: 0 12px 0;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Lato-Bold", Arial, sans-serif;
+    width: 30%;
+    cursor: pointer;
+    @include background-image(linear-gradient(#ff0000 0%, #ff0000 50%, #da1e1e 50%, #da1e1e 100%));
+  }
+  
+  &:after{
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid rgba(#000, 0.2);
+
+    content: '';
+    display: block;
+    position: absolute;
+    top: 147px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
