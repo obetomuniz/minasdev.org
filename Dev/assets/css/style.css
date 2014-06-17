@@ -42,10 +42,12 @@ a:hover{
 .yellow{
     color: #FDB801
 }
-.link-italic{
+a.link-italic{
     font-style:italic;
     font-size: 12px;
-    font-weight: ;
+}
+a:hover.link-italic{
+    color: #000;
 }
 .date{
     font-size:44px;
@@ -84,22 +86,32 @@ a:hover{
 }
 
 ul.menu{
-    margin-top:30px;
-    float:right; 
+    float:right;
+    margin-top:45px; 
 }
 
 ul.menu li{
     list-style:none;
     float:left;
-    margin:10px;
+    margin-right:25px;
+}
+
+ul.menu li:last-of-type{
+    margin: 0px;
 }
 
 ul.menu li a {
     color: #000;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 14px;
+    font-family: 'proxima_nova_rgbold';
+    font-size: 13px;
     font-weight: bold;
+}
+
+ul.menu li a:hover{
+    color: #E7412F;
+    border-bottom: 2px solid #000;
 }
 
 .mapa{
