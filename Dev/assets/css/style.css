@@ -13,20 +13,11 @@ body{
     font-family: 'proxima_novasemibold';
 }
 h2{
-<<<<<<< HEAD
-  font-size:35px;
-  margin-bottom:16px;
-  font-family: 'proxima_novablack';
-  text-transform: uppercase;
-  font-weight: normal;
-}
-=======
     font-size:35px;
     margin-bottom:16px;
     font-family: 'proxima_novablack';
     text-transform: uppercase;
     font-weight: normal;}
->>>>>>> 438beacb6ff7011a97588dd84b89e167bb81af6a
 h3, 
 h4{
     margin-bottom:10px;
@@ -57,19 +48,12 @@ a:hover{
     font-weight: ;
 }
 .date{
-<<<<<<< HEAD
-	font-size:44px;
-	font-family: 'proxima_novablack';
-	display: block;
-	margin: 10px 0;
-	border-bottom: 4px solid #ff4b37;
-	width: 69px;
-=======
     font-size:44px;
     font-family: 'proxima_novablack';
     display: block;
-    margin:0;
->>>>>>> 438beacb6ff7011a97588dd84b89e167bb81af6a
+    margin: 10px 0;
+    border-bottom: 4px solid #ff4b37;
+    width: 69px;
 }
 .limit{
     width:1040px;
@@ -81,7 +65,7 @@ a:hover{
 }
 
 /* Topo - Menu */
-header{
+.header{
     background-color: #fff;
     height: 100px;
 }
@@ -165,19 +149,10 @@ ul.menu li a {
     float:left;
     margin-top:82px;
 }
-<<<<<<< HEAD
-.dev-beer-image {
-	float:right;
-	width:460px;
-	height:540px;
-	background: "../images/dev-beer.png" no-repeat;
-	
-=======
 .dev-beer-image{
     float:right;
     width:460px;
     height:540px;
->>>>>>> 438beacb6ff7011a97588dd84b89e167bb81af6a
 }
 .dev-beer-image img{
     margin: 82px 95px 0 0;
@@ -252,31 +227,19 @@ ul.menu li a {
 
 /* FOOTER */
 .footer{
-<<<<<<< HEAD
- height:315px;
- color:#fff;
-=======
     height:315px;
     color:#fff;
 }
 .title-footer{
     color: #E7412F;
->>>>>>> 438beacb6ff7011a97588dd84b89e167bb81af6a
 }
-
-.title-footer{ color: #E7412F; }
 .footer-left{
     float:left;
     width:350px;
 }
-<<<<<<< HEAD
-
-.footer-right{ float:right; }
-=======
 .footer-right{
     float:right;
 }
->>>>>>> 438beacb6ff7011a97588dd84b89e167bb81af6a
 .share{
     display: block;
     margin:75px 0 20px 0;
@@ -294,7 +257,6 @@ ul.menu li a {
     display: block;
     margin-left:30px;
 }
-
 .icon{
     background: url('../images/redes-footer.png') no-repeat top left;
     width:160px;
@@ -311,17 +273,9 @@ ul.menu li a {
     height: 32px; 
 } 
 .icon-twitter{ background-position: -128px 0; 
-<<<<<<< HEAD
-	width: 32px; 
-	height: 32px; 
-}
-
-.copyright{ float:right; }
-=======
     width: 32px; 
     height: 32px; 
 } 
 .copyright{
     float:right;
 }
->>>>>>> 438beacb6ff7011a97588dd84b89e167bb81af6a
