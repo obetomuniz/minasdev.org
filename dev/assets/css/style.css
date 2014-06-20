@@ -266,11 +266,25 @@ ul.menu li{
 }
 
 .lista-parceiros li {
-  float:left;
-  height:104px;
-  margin-right:42px;
-  width:166px;
+    float:left;
+    height:104px;
+    margin-right:42px;
+    width:166px;
 }
+.icon-parceiros{
+   background: url(../images/parceiros/parceiros.png) no-repeat top left;
+   height:104px;
+   width:1622px;
+}
+.sprite-braziljs{ background-position: 0 0; width: 166px; height: 104px; } 
+.sprite-casa-do-codigo{ background-position: -208px 0; width: 166px; height: 104px; } 
+.sprite-devcast{ background-position: -416px 0; width: 166px; height: 104px; } 
+.sprite-eventick{ background-position: -624px 0; width: 166px; height: 104px; } 
+.sprite-frontinbh{ background-position: -832px 0; width: 166px; height: 104px; } 
+.sprite-jchebly{ background-position: -1040px 0; width: 166px; height: 104px; } 
+.sprite-rc{ background-position: -1248px 0; width: 166px; height: 104px; } 
+.sprite-wordcamp2014{ background-position: -1456px 0; width: 166px; height: 104px; } 
+
 
 .lista-parceiros li a { display: block; }
 
