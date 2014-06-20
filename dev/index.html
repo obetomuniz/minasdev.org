@@ -31,12 +31,12 @@
             <div class="logo"></div>
             <nav role="navigation">
                 <ul class="menu">
-                    <li><a href="">Home                        </a></li>
-                    <li><a href="#comunidade">Como Participar  </a></li>
-                    <li><a href="#projetos">Projetos           </a></li>
-                    <li><a href="#eventos">Próximos Eventos    </a></li>
-                    <li><a href="#dev-beer">Minas Beer         </a></li>
-                    <li><a href="#newsletter">Newsletter       </a></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#comunidade">Como Participar</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#eventos">Próximos Eventos</a></li>
+                    <li><a href="#dev-beer">Minas Beer</a></li>
+                    <li><a href="#newsletter">Newsletter</a></li>
                 </ul>
             </nav>
         </div>
@@ -45,8 +45,8 @@
     <section class="mapa" id="comunidade">
     	<div class="container">
 	    	<div class="entry-text">
-		    	<h1 class="headline">Comunidade de <br> Desenvolvedores de Minas Gerais</h1>
-		    	<p>Acreditamos que a troca de conhecimento é a base do crescimento profissional. Queremos unir desenvolvedores para que juntos todos possam contribuir e fortalecer o mercado em Minas Gerais. <br>
+		    	<h1 class="headline">Comunidade de <br /> Desenvolvedores de Minas Gerais</h1>
+		    	<p>Acreditamos que a troca de conhecimento é a base do crescimento profissional. Queremos unir desenvolvedores para que juntos todos possam contribuir e fortalecer o mercado em Minas Gerais. <br />
 				Tudo isso, através da criação de iniciativas que contribuam para essa troca e apoio de parceiros com a mesma visão.</p>
 			</div>
 		</div>
@@ -54,22 +54,22 @@
 
 
     <section class="projetos" id="projetos">
-
+        <header>
+            <h1>Nossos Projetos <div class="line"></div></h1>
+        </header>
         
       
     </section>
 
     <section class="eventos" id="eventos">
         <div class="container">
-            <div class="logo-eventos">
-                <img src="assets/images/eventos.png" alt="Confira os próximos eventos do Minas Dev" />
-            </div>
+            <div class="logo-eventos"></div>
 
             <ul class="lista-eventos">
                 <li>
-                    <header>
-                      <time datetime="2014-05-31" class="date">31.05</time>
-                      <h3 class="title-evento">Dev in Company</h3>
+                  <header>
+                    <time datetime="2014-05-31" class="date">31.05</time>
+                    <h3 class="title-evento">Dev in Company</h3>
                   </header>
                   SEED Minas Gerais<br />
                   Rua Curitiba, 1957, Lourdes, BH<br />
@@ -121,13 +121,12 @@
 
 		        <div class="dev-beer-agenda">
 		            <h3 class="title-chamada yellow">Quando vai ser o próximo?</h3>
-		            <span class="date">24.05</span>
-		            <img src="assets/images/line-yellow.png" class="separador" />
+		            <span class="date date-yellow">24.05</span>
 		            <div itemscope itemtype="http://schema.org/Restaurant">
 			            <h4 itemprop="name" class="title-evento yellow">Restaurante Takê</h4>
 			            <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 			            	<span itemprop="streetAddress">R. Professor Moraes, 659</span>
-			            	<span itemprop="addressLocality">Funcionários</span></address>
+			            	<span itemprop="addressLocality">Funcionários</span></address><br />
 			            <p>Informações no site<br />
 			               <a itemprop="url"  href="http://www.takebh.com.br" target="_blank" class="link-italic yellow">http://takebh.com.br</a>
 			            </p>
@@ -136,18 +135,19 @@
 		    </div>
 
 	        <div class="dev-beer-image" role="img" aria-label="">
-	            <img src="assets/images/dev-beer.png" alt="" />
+	            <!--<img src="assets/images/dev-beer.png" alt="" />-->
 	        </div>
 		</div>
 	</section>
 
 	<section class="newsletter" id="newsletter">
     	<div class="container">
-        	<h2 class="title-newsletter">Newsletter</h2>
-
-	        <form class="form-news" method="post" name="Newsletter">
+        	<form class="form-news" method="post" name="Newsletter">
+              <fieldset>
+                <legend>Newsletter</legend>
 	            <input type="text" name="email" placeholder="Digite aqui seu email e receba as novidades do Minas Dev" aria-label="Digite aqui seu email e receba as novidades do Minas Dev" id="email" class="input-news" />
 	            <input type="submit" name="cadastrar" value="Cadastrar" class="btn btn-news" />
+              </fieldset>
 	        </form>
     	</div>
 	</section>
@@ -183,8 +183,8 @@
         <div class="footer-right">
             <ul class="share">
                 <li><a href="https://www.facebook.com/minasdev?ref=ts&fref=ts" class="icon icon-facebook" title="Facebook">Facebook</a></li>
-                <li><a href="https://twitter.com/minasdev" class="icon icon-twitter">Twitter</a></li>
-                <li><a href="#" class="icon icon-google">Google Plus</a></li>
+                <li><a href="https://twitter.com/minasdev" class="icon icon-twitter" title="Twitter">Twitter</a></li>
+                <li><a href="#" class="icon icon-google" title="Google Plus">Google Plus</a></li>
             </ul><!--.share-->
 
             <span class="copyright">© 2013-2014 Minas Dev.</span>

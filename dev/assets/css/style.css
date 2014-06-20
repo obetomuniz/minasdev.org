@@ -52,6 +52,7 @@ a:hover.link-italic{ color: #000; }
   margin: 10px 0;
   width: 69px;
 }
+.date-yellow{ border-bottom: 4px solid #FDB801; }
 
 .container {
   margin:0 auto;
@@ -145,12 +146,14 @@ ul.menu li{
 
 .logo-eventos{
   float:left;
-  margin-right:30px;
+  margin:140px 0 0 0;
   vertical-align: center;
-  width:460px;
+  width:338px;
+  height:194px;
+  background: url('../images/eventos.png') no-repeat;
 }
 
-.logo-eventos img{ margin: 170px 0 0 0; }
+.logo-eventos img{ margin-top: 170px; }
 
 .lista-eventos {
   float:right;
@@ -180,11 +183,14 @@ ul.menu li{
 
 .dev-beer-image{
   float:right;
-  height:540px;
+  height:345px;
   width:460px;
 }
 
-.dev-beer-image img { margin: 82px 95px 0 0; }
+.dev-beer-image {
+  background: url('../images/dev-beer.png') no-repeat; 
+  margin-top:80px;
+}
 
 .title-dev-beer { color: #FDB801; }
 
@@ -195,20 +201,28 @@ ul.menu li{
 
 /* NEWSLETTER */
 
-.newsletter {
+.newsletter{
   background-color:#E7412F;
   height:107px;
-  line-height: 107px;
 }
 
-.title-newsletter{
+
+.form-news fieldset{ 
+  width:1040px;
+  border:none;
+  margin-top:33px;
+}
+
+.form-news legend{
   color:#fff;
   float:left;
+  text-transform: uppercase;
+  margin-right:90px;
+  font: normal 35px 'proxima_novablack';
 }
-
 .form-news {
   float:right;
-  height:107px;
+  
 }
 
 .input-news {
@@ -222,6 +236,7 @@ ul.menu li{
   border:none;
   padding:14px 40px;
   text-transform: uppercase;
+  font-weight:bold;
 }
 
 .btn-news {
@@ -308,14 +323,32 @@ ul.menu li{
   width: 32px;
 }
 
+.icon-facebook:hover {
+  background-position: 0 -32px;
+  height: 32px;
+  width: 32px;
+}
+
 .icon-google {
   background-position: -64px 0;
   height: 32px;
   width: 32px;
 }
 
+.icon-google:hover {
+  background-position: -64px -32px;
+  height: 32px;
+  width: 32px;
+}
+
 .icon-twitter {
   background-position: -128px 0;
+  height: 32px;
+  width: 32px;
+}
+
+.icon-twitter:hover {
+  background-position: -128px -32px;
   height: 32px;
   width: 32px;
 }
