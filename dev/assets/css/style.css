@@ -267,9 +267,8 @@ ul.menu li{
 
 .lista-parceiros li {
     float:left;
-    height:104px;
     margin-right:42px;
-    width:166px;
+    
 }
 .icon-parceiros{
    background: url(../images/parceiros/parceiros.png) no-repeat top left;
@@ -286,7 +285,7 @@ ul.menu li{
 .sprite-wordcamp2014{ background-position: -1456px 0; width: 166px; height: 104px; } 
 
 
-.lista-parceiros li a { display: block; }
+.lista-parceiros li a { display: block; text-indent: -9999px;}
 
 .recuo { margin-left:125px; }
 
