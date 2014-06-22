@@ -54,9 +54,7 @@ a:hover.link-italic{ color: #000; }
 }
 .date-yellow{ border-bottom: 4px solid #FDB801; }
 
-.clear{
-  clear: both;
-}
+.clear { clear: both; }
 
 .container {
   margin:0 auto;
@@ -125,7 +123,7 @@ ul.menu li{
 .entry-text {
   position: absolute;
   width: 458px;
-  right: 298px;
+  right: 450px;
   top: 400px;
 }
 
@@ -134,7 +132,6 @@ ul.menu li{
   font: 45px/45px 'proxima_novaextrabold';
   margin-bottom: 10px;
   text-transform: uppercase;
-  line-height: 35px;
 }
 
 .mapa  p {
@@ -143,60 +140,51 @@ ul.menu li{
 }
 
 /* PROJETOS */
-.projetos{
-  margin: 60px 0px;
-}
+.projetos { margin: 60px 0; }
 
-.projetos h1{
-  margin-bottom:16px;
-  margin-left: 40px;
+.projetos h1 {
   color:#E7412F;
-  font-size:45px;
-  font-family: 'proxima_novablack';
-  font-weight: normal;
+  font: normal 45px 'proxima_novablack';
+  margin: 0 40px 16px 0;
   text-transform: uppercase;
 }
 
-.line{
+.line {
+  border-bottom: 4px solid #E7412F;
   margin-top: 10px;
   width: 170px;
-  border-bottom: 4px solid #E7412F;
 }
 
 .box-projeto {
-  width: 262px;
+  color: #fff;
   float: left;
   padding: 30px 40px;
-  color: #fff;
+  width: 262px;
 }
 
-.box-projeto h3{
-  margin-top: 15px;
+.box-projeto .subtitle {
   font: normal 14px 'proxima_novaextrabold';
+  margin-top: 15px;
   text-transform: uppercase;
 }
 
-.box-projeto h3 .line{
-  width: 80px;
+.box-projeto .subtitle .line {
   border-bottom: 3px solid #E7412F;
-}
-
-.box-projeto p{
-  font: normal 12px 'proxima_novasemibold';
-}
-
-.box-projeto .link a{
   width: 80px;
-  margin-top: 15px;
-  margin-bottom: 25px;
-  padding-top: 15px;
+}
+
+.box-projeto p { font: normal 12px 'proxima_novasemibold'; }
+.projeto a {
+  border-top: 1px solid #333;
   display: block;
   font: italic 12px 'proxima_novasemibold';
+  margin: 15px 0 25px 0;
+  padding-top: 15px;
   text-decoration: none;
-  border-top: 1px solid #333333;
+  width: 80px;
 }
 
-.box-avatar img{
+.box-avatar img {
   margin: 5px;
   float: left;
   -webkit-border-radius: 50%;
@@ -204,17 +192,14 @@ ul.menu li{
           border-radius: 50%;
 }
 
-.box-avatar img:nth-child(3n+1){
-  margin-left: 0px;
-}
-
-a.btn-projeto {
-  margin: 30px 0px;
-  padding: 10px 10px;
-  display: block;
+.box-avatar img:nth-child(3n+1){ margin-left: 0; }
+.btn-projeto {
   border: 1px solid #939393;
-  font: normal 10px 'proxima_novasemibold';
   color: #fff;
+  display: block;
+  font: normal 10px 'proxima_novasemibold';
+  margin: 30px 0px;
+  padding: 10px;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -223,19 +208,19 @@ a.btn-projeto {
           border-radius: 3px;
 }
 
-a:hover.btn-projeto{
+a:hover.btn-projeto {
   color: #E7412F;
   border: 1px solid #E7412F;
 }
 
 /* INÍCIO EVENTOS */
 
-.eventos{
+.eventos {
   background-color:#fff;
   height:525px;
 }
 
-.logo-eventos{
+.logo-eventos {
   float:left;
   margin:140px 0 0 0;
   vertical-align: center;
@@ -244,7 +229,7 @@ a:hover.btn-projeto{
   background: url('../images/eventos.png') no-repeat;
 }
 
-.logo-eventos img{ margin-top: 170px; }
+.logo-eventos img { margin-top: 170px; }
 
 .lista-eventos {
   float:right;
@@ -261,7 +246,8 @@ a:hover.btn-projeto{
 }
 
 /* DEV-BEER */
-.dev-beer{
+
+.dev-beer {
   color:#fff;
   height: 540px;
 }
@@ -279,12 +265,11 @@ a:hover.btn-projeto{
 }
 
 .dev-beer-image {
-  background: url('../images/dev-beer.png') no-repeat; 
+  background: url('../images/dev-beer.png') no-repeat;
   margin-top:80px;
 }
 
 .title-dev-beer { color: #FDB801; }
-
 .title-chamada {
   font-size:18px;
   text-transform: uppercase;
@@ -297,35 +282,31 @@ a:hover.btn-projeto{
   height:107px;
 }
 
-
-.form-news fieldset{ 
+.form-news fieldset {
   width:1040px;
   border:none;
   margin-top:33px;
 }
 
-.form-news legend{
+.form-news legend {
   color:#fff;
   float:left;
-  text-transform: uppercase;
-  margin-right:90px;
   font: normal 35px 'proxima_novablack';
-}
-.form-news {
-  float:right;
-  
+  margin-right:90px;
+  text-transform: uppercase;
 }
 
+.form-news { float:right; }
 .input-news {
-  border: 1px solid #fff;
   background-color: #E7412F;
+  border: 1px solid #fff;
   color: #fff;
   margin-right:30px;
   padding:14px;
-  width:460px;
   -webkit-border-radius: 3px;
    -moz-border-radius: 3px;
         border-radius: 3px;
+        width:460px;
 }
 
 ::-webkit-input-placeholder {
@@ -339,12 +320,12 @@ a:hover.btn-projeto{
 }
 
 ::-moz-placeholder {
-   color: #fff;  
+   color: #fff;
    font: normal 14px 'proxima_novasemibold';
 }
 
-:-ms-input-placeholder {  
-   color: #fff;  
+:-ms-input-placeholder {
+   color: #fff;
    font: normal 14px 'proxima_novasemibold';
 }
 
@@ -388,24 +369,65 @@ a:hover.btn-projeto{
 .lista-parceiros li {
     float:left;
     margin-right:42px;
-    
+
 }
 .icon-parceiros{
    background: url(../images/parceiros/parceiros.png) no-repeat top left;
    height:104px;
    width:1622px;
 }
-.sprite-braziljs{ background-position: 0 0; width: 166px; height: 104px; } 
-.sprite-casa-do-codigo{ background-position: -208px 0; width: 166px; height: 104px; } 
-.sprite-devcast{ background-position: -416px 0; width: 166px; height: 104px; } 
-.sprite-eventick{ background-position: -624px 0; width: 166px; height: 104px; } 
-.sprite-frontinbh{ background-position: -832px 0; width: 166px; height: 104px; } 
-.sprite-jchebly{ background-position: -1040px 0; width: 166px; height: 104px; } 
-.sprite-rc{ background-position: -1248px 0; width: 166px; height: 104px; } 
-.sprite-wordcamp2014{ background-position: -1456px 0; width: 166px; height: 104px; } 
+.sprite-braziljs {
+  background-position: 0 0;
+  height: 104px;
+  width: 166px;
+}
 
+.sprite-casa-do-codigo {
+  background-position: -208px 0;
+  height: 104px;
+  width: 166px;
+}
 
-.lista-parceiros li a { display: block; text-indent: -9999px;}
+.sprite-devcast {
+  background-position: -416px 0;
+  height: 104px;
+  width: 166px;
+}
+
+.sprite-eventick{
+  background-position: -624px 0;
+  height: 104px;
+  width: 166px;
+}
+
+.sprite-frontinbh {
+  background-position: -832px 0;
+  height: 104px;
+  width: 166px;
+}
+
+.sprite-jchebly{
+  background-position: -1040px 0;
+  height: 104px;
+  width: 166px;
+}
+
+.sprite-rc {
+  background-position: -1248px 0;
+  height: 104px;
+  width: 166px;
+}
+
+.sprite-wordcamp2014 {
+  background-position: -1456px 0;
+  height: 104px;
+  width: 166px;
+}
+
+.lista-parceiros li a {
+  display: block;
+  text-indent: -9999px;
+}
 
 .recuo { margin-left:125px; }
 
@@ -417,7 +439,6 @@ a:hover.btn-projeto{
 }
 
 .title-footer { color: #E7412F; }
-
 .footer-left {
   float:left;
   width:350px;
