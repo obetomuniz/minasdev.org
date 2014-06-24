@@ -139,8 +139,15 @@ ul.menu li{
   font: 14px/18px 'proxima_novasemibold';
 }
 
+/* PARTICIPAR */
+.participar{
+  background-color: #E7412F;
+  padding-top: 35px;
+  height: 200px;
+}
+
 /* PROJETOS */
-.projetos { margin: 60px 0; }
+.projetos { margin: 150px 0px 60px 0px; }
 
 .projetos h1 {
   color:#E7412F;
