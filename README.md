@@ -1,4 +1,15 @@
-minasdev
+minasdev.org v1
 ========
 
-landing page
+#### DEVELOPMENT TEAM: ####
+
+- Paula Faria
+- Marcos César
+- Thiago Alvernaz
+- Rafael Pimentao
+- Bruno Pulis
+- Beto Muniz
+
+#### CREDITS: ####
+
+Coming Soon :)

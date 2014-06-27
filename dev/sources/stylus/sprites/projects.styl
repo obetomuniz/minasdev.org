@@ -1,0 +1,74 @@
+/*
+Stylus variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon_home_width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon_home = x y offset_x offset_y width height total_width total_height image_path;
+*/
+$acessibilidadeurbana_x = 0px;
+$acessibilidadeurbana_y = 129px;
+$acessibilidadeurbana_offset_x = 0px;
+$acessibilidadeurbana_offset_y = -129px;
+$acessibilidadeurbana_width = 168px;
+$acessibilidadeurbana_height = 86px;
+$acessibilidadeurbana_total_width = 184px;
+$acessibilidadeurbana_total_height = 215px;
+$acessibilidadeurbana_image = '../../../public/assets/images/projects.png';
+$acessibilidadeurbana = 0px 129px 0px -129px 168px 86px 184px 215px '../../../public/assets/images/projects.png';
+$devincompany_x = 0px;
+$devincompany_y = 64px;
+$devincompany_offset_x = 0px;
+$devincompany_offset_y = -64px;
+$devincompany_width = 184px;
+$devincompany_height = 62px;
+$devincompany_total_width = 184px;
+$devincompany_total_height = 215px;
+$devincompany_image = '../../../public/assets/images/projects.png';
+$devincompany = 0px 64px 0px -64px 184px 62px 184px 215px '../../../public/assets/images/projects.png';
+$devinuniversity_x = 0px;
+$devinuniversity_y = 0px;
+$devinuniversity_offset_x = 0px;
+$devinuniversity_offset_y = 0px;
+$devinuniversity_width = 184px;
+$devinuniversity_height = 61px;
+$devinuniversity_total_width = 184px;
+$devinuniversity_total_height = 215px;
+$devinuniversity_image = '../../../public/assets/images/projects.png';
+$devinuniversity = 0px 0px 0px 0px 184px 61px 184px 215px '../../../public/assets/images/projects.png';
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  spriteWidth($icon_home)
+}
+
+.icon-email {
+  sprite($icon_email)
+}
+*/
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}

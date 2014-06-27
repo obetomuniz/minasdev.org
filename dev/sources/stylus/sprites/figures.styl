@@ -1,0 +1,84 @@
+/*
+Stylus variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon_home_width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon_home = x y offset_x offset_y width height total_width total_height image_path;
+*/
+$como-participar_x = 0px;
+$como-participar_y = 374px;
+$como-participar_offset_x = 0px;
+$como-participar_offset_y = -374px;
+$como-participar_width = 937px;
+$como-participar_height = 289px;
+$como-participar_total_width = 937px;
+$como-participar_total_height = 1013px;
+$como-participar_image = '../../../public/assets/images/figures.png';
+$como-participar = 0px 374px 0px -374px 937px 289px 937px 1013px '../../../public/assets/images/figures.png';
+$logo-minadev_x = 0px;
+$logo-minadev_y = 0px;
+$logo-minadev_offset_x = 0px;
+$logo-minadev_offset_y = 0px;
+$logo-minadev_width = 170px;
+$logo-minadev_height = 170px;
+$logo-minadev_total_width = 937px;
+$logo-minadev_total_height = 1013px;
+$logo-minadev_image = '../../../public/assets/images/figures.png';
+$logo-minadev = 0px 0px 0px 0px 170px 170px 937px 1013px '../../../public/assets/images/figures.png';
+$minasdev-beer_x = 0px;
+$minasdev-beer_y = 668px;
+$minasdev-beer_offset_x = 0px;
+$minasdev-beer_offset_y = -668px;
+$minasdev-beer_width = 458px;
+$minasdev-beer_height = 345px;
+$minasdev-beer_total_width = 937px;
+$minasdev-beer_total_height = 1013px;
+$minasdev-beer_image = '../../../public/assets/images/figures.png';
+$minasdev-beer = 0px 668px 0px -668px 458px 345px 937px 1013px '../../../public/assets/images/figures.png';
+$proximos-eventos_x = 0px;
+$proximos-eventos_y = 175px;
+$proximos-eventos_offset_x = 0px;
+$proximos-eventos_offset_y = -175px;
+$proximos-eventos_width = 338px;
+$proximos-eventos_height = 194px;
+$proximos-eventos_total_width = 937px;
+$proximos-eventos_total_height = 1013px;
+$proximos-eventos_image = '../../../public/assets/images/figures.png';
+$proximos-eventos = 0px 175px 0px -175px 338px 194px 937px 1013px '../../../public/assets/images/figures.png';
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  spriteWidth($icon_home)
+}
+
+.icon-email {
+  sprite($icon_email)
+}
+*/
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}
