@@ -35,7 +35,7 @@ module.exports = function( grunt ) {
     sprite: {
       figures: {
         'padding': 5,
-        'src': ['sources/images/figures/*.png', 'sources/images/projects/*.png', 'sources/images/partners/*.png'],
+        'src': ['sources/images/figures/*.png', 'sources/images/partners/*.png'],
         'destImg': 'public/assets/images/figures.png',
         'destCSS': 'sources/stylus/sprites/figures.styl'
       },
@@ -68,7 +68,8 @@ module.exports = function( grunt ) {
     copy: {
       development: {
         files: [
-          {expand: true, cwd: 'sources/images/background/', src: ['**'], dest: 'public/assets/images/'}
+          {expand: true, cwd: 'sources/images/background/', src: ['**'], dest: 'public/assets/images/'},
+          {expand: true, cwd: 'sources/images/projects/', src: ['**'], dest: 'public/assets/images/projects/'}
         ]
       },
       production: {
