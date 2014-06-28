@@ -10,13 +10,13 @@ minasdev.org v1
 
 ### How Contribute? ###
 
-First install the dependencies with:
+First install the dependencies inside of `dev/` folder with command:
 
     npm install
 
 ### Development ###
 
-To develop, just run the command:
+To develop, simply run the following command inside the folder `dev/`:
 
     grunt
 
@@ -24,7 +24,7 @@ It will create a local server on port 4000
 
 ### Build ###
 
-Just run the command:
+To build, simply run the following command inside the folder `dev/`:
 
     grunt build
 

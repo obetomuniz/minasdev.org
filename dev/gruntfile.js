@@ -53,9 +53,9 @@ module.exports = function( grunt ) {
         },
         files: [{
           expand: true,
-          cwd: 'public/assets/images/',
+          cwd: '../production/public/assets/images/',
           src: ['**/*.{png,jpg,gif}'],
-          dest: 'public/assets/images/'
+          dest: '../production/public/assets/images/'
         }]
       }
     },
@@ -66,7 +66,7 @@ module.exports = function( grunt ) {
           quitAfter: true,
           // jpegMini: true
         },
-        src: ['public/assets/images/']
+        src: ['../production/public/assets/images/']
       }
     },
     copy: {
@@ -188,14 +188,11 @@ module.exports = function( grunt ) {
     'concurrent'
   ]);
 
-  grunt.registerTask('images', [
-    'imagemin:dynamic',
-    // 'imageoptim:dynamic'
-  ]);
-
   grunt.registerTask('build', [
     'clean:production',
-    'copy:production'
+    'copy:production',
+    'imagemin:dynamic',
+    // 'imageoptim:dynamic'
   ]);
 
 };
