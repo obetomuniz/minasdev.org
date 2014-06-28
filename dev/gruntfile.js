@@ -13,13 +13,13 @@ module.exports = function( grunt ) {
         ],
         dest: '.tmp/scripts.js'
       },
-      // vendors: {
-      //   src: [],
-      //   dest: '.tmp/vendors.js'
-      // },
+      vendors: {
+        src: ['sources/libraries/jquery/dist/jquery.min.js'],
+        dest: '.tmp/vendors.js'
+      },
       compile:{
         src: [
-          // '.tmp/vendors.js',
+          '.tmp/vendors.js',
           '.tmp/scripts.js'
         ],
         dest: 'public/assets/javascripts/minasdev.js'
@@ -130,7 +130,7 @@ module.exports = function( grunt ) {
         files: 'sources/scripts/**/*.js',
         tasks: [
           'clean:tmp',
-          // 'concat:vendors',
+          'concat:vendors',
           'concat:scripts',
           'concat:compile'
         ]
@@ -179,7 +179,7 @@ module.exports = function( grunt ) {
   grunt.registerTask('default', [
     'clean:old',
     'shell:bower',
-    // 'concat:vendors',
+    'concat:vendors',
     'concat:scripts',
     'concat:compile',
     'sprite',
