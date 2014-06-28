@@ -1,14 +1,1 @@
-$(function(){
-
-    $(".navigation-link").on('click', function(e) {
-        e.preventDefault();
-        scrollToElement($(this).attr('data-anchor'), $(this).attr('data-offset'));
-    });
-
-});
-
-function scrollToElement(selector, offset){
-    $('html, body').animate({
-        scrollTop: $(selector).offset().top - offset
-    }, 2000);
-}
+function scrollToElement(a,b){$("html, body").animate({scrollTop:$(a).offset().top-b},2e3)}function validateEmail(a){var b=/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;return b.test(a)}$(function(){$(".navigation-link").on("click",function(a){a.preventDefault(),scrollToElement($(this).attr("data-anchor"),$(this).attr("data-offset"))}),$(".newsletter-form").on("submit",function(){return""!==$("#email").val()&&validateEmail($("#email").val())?void 0:!1})});

@@ -6,6 +6,17 @@ module.exports = function( grunt ) {
 
   // Tasks configurations
   grunt.initConfig({
+    htmlmin: {
+      compile: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          '../production/index.html': 'public/index.html'
+        }
+      }
+    },
     concat: {
       scripts: {
         src: [
@@ -23,6 +34,13 @@ module.exports = function( grunt ) {
           '.tmp/scripts.js'
         ],
         dest: 'public/assets/javascripts/minasdev.js'
+      }
+    },
+    uglify: {
+      scripts: {
+        files: {
+          '.tmp/scripts.js': ['.tmp/scripts.js']
+        }
       }
     },
     stylus: {
@@ -181,6 +199,7 @@ module.exports = function( grunt ) {
     'shell:bower',
     'concat:vendors',
     'concat:scripts',
+    'uglify:scripts',
     'concat:compile',
     'sprite',
     'stylus:compile',
@@ -191,6 +210,7 @@ module.exports = function( grunt ) {
   grunt.registerTask('build', [
     'clean:production',
     'copy:production',
+    'htmlmin:compile',
     'imagemin:dynamic',
     // 'imageoptim:dynamic'
   ]);
