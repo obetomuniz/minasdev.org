@@ -33,15 +33,9 @@ module.exports = function( grunt ) {
       }
     },
     sprite: {
-      projects: {
-        'padding': 3,
-        'src': ['sources/images/projects/*.png'],
-        'destImg': 'public/assets/images/projects.png',
-        'destCSS': 'sources/stylus/sprites/projects.styl'
-      },
       figures: {
         'padding': 5,
-        'src': ['sources/images/figures/*.png'],
+        'src': ['sources/images/figures/*.png', 'sources/images/projects/*.png', 'sources/images/partners/*.png'],
         'destImg': 'public/assets/images/figures.png',
         'destCSS': 'sources/stylus/sprites/figures.styl'
       },
@@ -50,12 +44,6 @@ module.exports = function( grunt ) {
         'src': ['sources/images/icons/*.png'],
         'destImg': 'public/assets/images/icons.png',
         'destCSS': 'sources/stylus/sprites/icons.styl'
-      },
-      partners: {
-        'padding': 3,
-        'src': ['sources/images/partners/*.png'],
-        'destImg': 'public/assets/images/partners.png',
-        'destCSS': 'sources/stylus/sprites/partners.styl'
       },
       team: {
         'padding': 3,
@@ -78,6 +66,11 @@ module.exports = function( grunt ) {
       }
     },
     copy: {
+      development: {
+        files: [
+          {expand: true, cwd: 'sources/images/background/', src: ['**'], dest: 'public/assets/images/'}
+        ]
+      },
       production: {
         files: [
           {expand: true, src: ['public/**'], dest: '../production/'},
@@ -93,14 +86,10 @@ module.exports = function( grunt ) {
         },
         src: [
           '.tmp/',
-          'public/assets/images/projects.png',
-          'sources/stylus/sprites/projects.styl',
           'public/assets/images/figures.png',
           'sources/stylus/sprites/figures.styl',
           'public/assets/images/icons.png',
           'sources/stylus/sprites/icons.styl',
-          'public/assets/images/partners.png',
-          'sources/stylus/sprites/partners.styl',
           'public/assets/images/team.png',
           'sources/stylus/sprites/team.styl',
           '../production/'
@@ -117,14 +106,10 @@ module.exports = function( grunt ) {
           force: true
         },
         src: [
-          'public/assets/images/projects.png',
-          'sources/stylus/sprites/projects.styl',
           'public/assets/images/figures.png',
           'sources/stylus/sprites/figures.styl',
           'public/assets/images/icons.png',
           'sources/stylus/sprites/icons.styl',
-          'public/assets/images/partners.png',
-          'sources/stylus/sprites/partners.styl',
           'public/assets/images/team.png',
           'sources/stylus/sprites/team.styl'
         ]
@@ -198,6 +183,7 @@ module.exports = function( grunt ) {
     'concat:compile',
     'sprite',
     'stylus:compile',
+    'copy:development',
     'concurrent'
   ]);
 
