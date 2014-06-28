@@ -1,7 +1,7 @@
 .nossos-projetos{
     padding-top 200px
     background-color #242424
-    h2{
+    .nossos-projetos-title {
         font-family "PN-Black"
         font-size 44px
         text-transform uppercase
@@ -20,14 +20,14 @@
 }
 
 .projetos{
-    article{
+    .projeto {
         display inline-block
         vertical-align top
         width 265px
         margin 0 55px
         &.devincompany, &.devinuniversity{
-            figure{
-                img{
+            .projeto-logo-container{
+                .projeto-logo{
                     top 49px
                     left 42px
                 }
@@ -35,8 +35,8 @@
 
         }
         &.acessibilidadeurbana{
-            figure{
-                img{
+            .projeto-logo-container{
+                .projeto-logo{
                     top 27px
                     left 48px
 
@@ -45,7 +45,7 @@
 
         }
     }
-    figure{
+    .projeto-logo-container{
         display block
         background-color #f3f3f3
         position relative
@@ -54,12 +54,12 @@
         width 262px
         height 150px
         margin-bottom 25px
-        img{
+        .projeto-logo{
             display block
             position absolute
         }
     }
-    h3{
+    .projeto-title{
         font-family "PN-ExtraBold"
         text-transform uppercase
         display block
@@ -74,7 +74,7 @@
             background-color #e8422f
         }
     }
-    p{
+    .projeto-desc{
         font-family "PN-SemiBold"
         display block
         color #fff
@@ -100,14 +100,14 @@
     }
     .idealizadores{
         margin-bottom 25px
-        ul{
+        .idealizador-container{
             display block
         }
-        li{
+        .idealizador-item{
             display inline-block
             vertical-align middle
         }
-        a{
+        .idealizador{
             width 45px
             height 0
             overflow hidden
@@ -118,7 +118,7 @@
             margin 2px
         }
     }
-    button{
+    .projeto-button{
         font-family "PN-Bold"
         font-size 10px
         border 1px solid #fff
