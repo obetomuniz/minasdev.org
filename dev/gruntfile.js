@@ -190,7 +190,7 @@ module.exports = function( grunt ) {
 
   grunt.registerTask('images', [
     'imagemin:dynamic',
-    'imageoptim:dynamic'
+    // 'imageoptim:dynamic'
   ]);
 
   grunt.registerTask('build', [
