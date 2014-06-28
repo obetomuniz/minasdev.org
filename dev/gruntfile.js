@@ -59,6 +59,16 @@ module.exports = function( grunt ) {
         }]
       }
     },
+    imageoptim: {
+      dynamic: {
+        options: {
+          imageAlpha: true,
+          quitAfter: true,
+          // jpegMini: true
+        },
+        src: ['public/assets/images/']
+      }
+    },
     copy: {
       development: {
         files: [
@@ -179,7 +189,8 @@ module.exports = function( grunt ) {
   ]);
 
   grunt.registerTask('images', [
-    'imagemin:dynamic'
+    'imagemin:dynamic',
+    'imageoptim:dynamic'
   ]);
 
   grunt.registerTask('build', [
