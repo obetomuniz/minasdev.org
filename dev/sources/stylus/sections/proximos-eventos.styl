@@ -1,0 +1,72 @@
+.proximos-eventos{
+    background-color #fff
+    .container{
+        padding 30px 0 30px 60px
+    }
+    h2 {
+        display inline-block
+        vertical-align middle
+        background-position $proximos-eventos_offset_x $proximos-eventos_offset_y
+        width $proximos-eventos_width
+        height 0
+        padding-top $proximos-eventos_height
+        overflow hidden
+        margin-right 150px
+    }
+    ul {
+        display inline-block
+        vertical-align middle
+        width 580px
+    }
+    li{
+        display inline-block
+        vertical-align top
+        width 210px
+        margin-top 25px
+        margin-bottom 25px
+        &.first{
+            margin-right 55px
+        }
+        &.last{
+            margin-left 55px
+        }
+    }
+    h3{
+        font-family "PN-Black"
+        font-size 44px
+        text-transform uppercase
+        display block
+        color #242424
+        &:after{
+            display block
+            content ''
+            width 100px
+            height 5px
+            margin 12px 0 14px
+            background-color #e8422f
+        }
+    }
+    h4{
+        font-family "PN-ExtraBold"
+        font-size 14px
+        text-transform uppercase
+        display block
+        color #242424
+        margin-bottom 12px
+    }
+    p{
+        font-family "PN-SemiBold"
+        font-size 12px
+        display block
+        color #444444
+        margin-bottom 4px
+    }
+    a{
+        text-decoration none
+        font-family "PN-SemiBold"
+        color #e8422f
+        display block
+        font-size 12px
+        margin-top 6px
+    }
+}
