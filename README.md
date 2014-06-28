@@ -22,12 +22,6 @@ To develop, simply run the following command inside the folder `dev/`:
 
 It will create a local server on port 4000
 
-### Build ###
-
-To build, simply run the following command inside the folder `dev/`:
-
-    grunt build
-
 ### Scaffolding ###
 
 ```javascript
