@@ -25,7 +25,7 @@ module.exports = function( grunt ) {
         dest: '.tmp/scripts.js'
       },
       vendors: {
-        src: ['sources/libraries/jquery/dist/jquery.min.js'],
+        src: ['sources/libraries/jquery/dist/jquery.min.js', 'sources/libraries/jquery.easing/js/jquery.easing.min.js'],
         dest: '.tmp/vendors.js'
       },
       compile:{

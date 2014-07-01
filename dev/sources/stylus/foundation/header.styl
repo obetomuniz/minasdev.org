@@ -3,6 +3,7 @@
     position fixed
     width 100%
     z-index 4
+    border-bottom 3px solid #c84c3d
 
     .container{
         position relative
@@ -18,22 +19,26 @@
             display block
             overflow hidden
             height 0
-            width $logo-minadev_width
-            padding-top $logo-minadev_height
-            background-position $logo-minadev_offset_x $logo-minadev_offset_y
+            width 130px
+            padding-top 130px
+            background-position 0 -295px
+            background-size 720px auto
+            transition all 0.3s ease
         }
     }
 
     .navigation {
         .navigation-container {
             display block
-            margin-left 270px
+            margin-left 220px
+            transition margin-left 0.3s ease
         }
 
         .navigation-item {
             display inline-block
             vertical-align middle
-            margin 50px 20px
+            margin 30px 20px
+            transition margin 0.3s ease
         }
 
         .navigation-link {
@@ -43,6 +48,27 @@
             text-transform uppercase
             text-decoration none
             color #1e1e1e
+        }
+    }
+
+    &.on-top{
+        .logo {
+            .logo-link {
+                width $logo-minadev_width
+                padding-top $logo-minadev_height
+                background-position $logo-minadev_offset_x $logo-minadev_offset_y
+                background-size 937px auto
+            }
+        }
+
+        .navigation {
+            .navigation-container {
+                margin-left 270px
+            }
+
+            .navigation-item {
+                margin 50px 20px
+            }
         }
     }
 }

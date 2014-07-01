@@ -1,5 +1,13 @@
 $(function(){
 
+    $(document).on('scroll', function(){
+        if($(window).scrollTop() < 170){
+            $('header').addClass('on-top');
+        }else{
+            $('header').removeClass('on-top');
+        }
+    });
+
     $(".navigation-link").on('click', function(e) {
         e.preventDefault();
         scrollToElement($(this).attr('data-anchor'), $(this).attr('data-offset'));
@@ -17,7 +25,7 @@ $(function(){
 function scrollToElement(selector, offset){
     $('html, body').animate({
         scrollTop: $(selector).offset().top - offset
-    }, 2000);
+    }, 1200, 'easeInOutCubic');
 }
 
 function validateEmail(email) {
