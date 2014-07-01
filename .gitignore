@@ -1,6 +1,7 @@
 .DS_Store
-.sass-cache
-node_modules
+.sass-cache/
+node_modules/
 *.log
 Thumbs.db
 __MACOSX
+production/
