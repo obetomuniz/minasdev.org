@@ -44,12 +44,12 @@ README.md
 
 ## DEVELOPMENT TEAM: ##
 
-- Paula Faria
-- Marcos César
-- Thiago Alvernaz
-- Rafael Pimentao
-- Bruno Pulis
 - Beto Muniz
+- Bruno Pulis
+- Marcos César
+- Paula Faria
+- Rafael Pimentao
+- Thiago Alvernaz
 
 ## CREDITS: ##
 

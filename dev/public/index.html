@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 
         <!-- Prefetch DNS for external assets -->
@@ -23,51 +22,50 @@
         <title>Minas Dev</title>
         <meta name="description" content="Somos um Movimento que visa fomentar o cenário de desenvolvimento de Minas Gerais. Faça parte também!">
 
-        <noscript>
-            Seu navegador não suporta scripts. Experimente usar outro navegador.
-        </noscript>
-
         <!-- minasdev.org styles -->
         <link rel="stylesheet" href="/assets/stylesheets/minasdev.css">
 
         <!-- In Test -->
         <script src="//polyfill.io"></script>
+        <noscript>
+            Seu navegador não suporta scripts. Experimente usar outro navegador, ou atualizar para um mais moderno.
+        </noscript>
     </head>
 
     <body>
-        <header class="header-page on-top">
-            <div class="container align-center">
+        <header class="header-page on-top" role="banner">
+            <div class="container">
                 <h1 class="logo"><a class="sprite-figures logo-link" href="/">Minas Dev</a></h1>
-                <nav class="navigation">
+
+                <nav class="navigation" role="navigation">
                     <ul class="navigation-container">
-                        <li class="navigation-item"><a class="navigation-link" data-anchor="html" data-offset="0" href="#">Home</a></li>
-                        <li class="navigation-item"><a class="navigation-link" data-anchor=".como-participar-section" data-offset="200" href="#">Como Participar</a></li>
-                        <li class="navigation-item"><a class="navigation-link" data-anchor=".nossos-projetos" data-offset="-20" href="#">Projetos</a></li>
-                        <li class="navigation-item"><a class="navigation-link" data-anchor=".proximos-eventos" data-offset="110" href="#">Próximos Eventos</a></li>
-                        <li class="navigation-item"><a class="navigation-link" data-anchor=".minasdev-beer" data-offset="140" href="#">MinasDev Beer</a></li>
-                        <li class="navigation-item"><a class="navigation-link" data-anchor=".newsletter" data-offset="200" href="#">Newsletter</a></li>
+                        <li class="nav-item"><a class="nav-link" data-anchor="html" data-offset="0" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" data-anchor=".como-participar-section" data-offset="200" href="#">Como Participar</a></li>
+                        <li class="nav-item"><a class="nav-link" data-anchor=".nossos-projetos" data-offset="-20" href="#">Projetos</a></li>
+                        <li class="nav-item"><a class="nav-link" data-anchor=".proximos-eventos" data-offset="110" href="#">Próximos Eventos</a></li>
+                        <li class="nav-item"><a class="nav-link" data-anchor=".minasdev-beer" data-offset="140" href="#">MinasDev Beer</a></li>
+                        <li class="nav-item"><a class="nav-link" data-anchor=".newsletter" data-offset="200" href="#">Newsletter</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <main class="main-page">
-            <div class="container align-center mapa-de-minas">
+        <main class="main-page" role="main">
+            <div class="container mapa-de-minas">
                 <div class="about">
                     <h1 class="about-title">Comunidade de Desenvolvedores de Minas Gerais</h1>
                     <p class="about-text">Acreditamos que a troca de conhecimento é a base do crescimento profissional. Queremos unir desenvolvedores para que juntos todos possam contribuir e fortalecer o mercado em Minas Gerais.</p>
                     <p class="about-text">Tudo isso, através da criação de iniciativas que contribuam para essa troca e apoio de parceiros com a mesma visão.</p>
                 </div>
                 <ul class="minasdev-socials">
-                    <li class="minasdev-social"><a class="sprite-icons minasdev-social-link facebook" href="#">Facebook do MinasDev</a></li>
-                    <li class="minasdev-social"><a class="sprite-icons minasdev-social-link twitter" href="#">Twitter do MinasDev</a></li>
-                    <li class="minasdev-social"><a class="sprite-icons minasdev-social-link google-plus" href="#">Google Plus do MinasDev</a></li>
+                    <li class="minasdev-social"><a class="sprite-icons minasdev-social-link facebook" href="https://www.facebook.com/minasdev" target="_blank">Facebook do MinasDev</a></li>
+                    <li class="minasdev-social"><a class="sprite-icons minasdev-social-link twitter" href="https://twitter.com/minasdev" target="_blank">Twitter do MinasDev</a></li>
                 </ul>
             </div>
         </main>
 
         <section class="como-participar-section">
-            <div class="container align-center como-participar">
+            <div class="container como-participar">
                 <div class="sprite-figures ribbon-como-participar">
                     <h2 class="como-participar-title">Como Participar?</h2>
                     <p class="como-participar-text">
@@ -80,18 +78,19 @@
         </section>
 
         <section class="nossos-projetos">
-            <div class="container align-center">
-                <h2 class="nossos-projetos-title">Nossos Projetos</h2>
+            <div class="container">
+                <h1 class="nossos-projetos-title">Nossos Projetos</h1>
                 <div class="projetos">
                     <article class="projeto devincompany">
                         <figure class="projeto-logo-container">
-                            <img class="projeto-logo" src="/assets/images/projects/devincompany.png" alt="">
+                            <img class="projeto-logo" src="/assets/images/projects/devincompany.png" alt="Dev In Company">
                         </figure>
-                        <h3 class="projeto-title">Dev in Company</h3>
+
+                        <h2 class="projeto-title" lang="en">Dev in Company</h2>
                         <p class="projeto-desc">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi maxime labore et delectus eligendi suscipit aspernatur est quia iste aliquid!
                         </p>
-                        <a href="http://devincompany.org/" class="site">devincompany.org</a>
+                        <a href="http://devincompany.org/" class="site" lang="en">devincompany.org</a>
 
                         <h3 class="projeto-title">Idealizadores</h3>
                         <div class="idealizadores">
@@ -109,11 +108,13 @@
                         </div>
                         <button class="projeto-button">Faça parte deste projeto também</button>
                     </article>
+
                     <article class="projeto devinuniversity">
                         <figure class="projeto-logo-container">
                             <img class="projeto-logo" src="/assets/images/projects/devinuniversity.png" alt="">
                         </figure>
-                        <h3 class="projeto-title">Dev in Unversity</h3>
+
+                        <h2 class="projeto-title" lang="en">Dev in Unversity</h2>
                         <p class="projeto-desc">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi maxime labore et delectus eligendi suscipit aspernatur est quia iste aliquid!
                         </p>
@@ -132,11 +133,13 @@
                         </div>
                         <button class="projeto-button">Faça parte deste projeto também</button>
                     </article>
+
                     <article class="projeto acessibilidadeurbana">
                         <figure class="projeto-logo-container">
-                            <img class="projeto-logo" src="/assets/images/projects/acessibilidadeurbana.png" alt="">
+                            <img class="projeto-logo" src="/assets/images/projects/acessibilidadeurbana.png" alt="Projeto de Acessibilidade Urbana">
                         </figure>
-                        <h3 class="projeto-title">Acessibilidade Urbana</h3>
+
+                        <h2 class="projeto-title">Acessibilidade Urbana</h2>
                         <p class="projeto-desc">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi maxime labore et delectus eligendi suscipit aspernatur est quia iste aliquid!
                         </p>
@@ -146,13 +149,13 @@
                         <div class="idealizadores">
                             <ul class="idealizador-container">
                                 <li class="idealizador-item">
-                                    <a href="" class="idealizador brunopulis">Beto Muniz</a>
+                                    <a href="" class="idealizador brunopulis">Bruno Pulis</a>
                                 </li>
                                 <li class="idealizador-item">
                                     <a href="" class="idealizador betomuniz">Beto Muniz</a>
                                 </li>
                                 <li class="idealizador-item">
-                                    <a href="" class="idealizador marcoscesar">Beto Muniz</a>
+                                    <a href="" class="idealizador marcoscesar">Marcos César</a>
                                 </li>
                             </ul>
                         </div>
@@ -163,33 +166,36 @@
         </section>
 
         <section class="proximos-eventos">
-            <div class="container align-center">
-                <h2 class="sprite-figures proximos-eventos-title">Próximos Eventos</h2>
+            <div class="container">
+                <h1 class="sprite-figures proximos-eventos-title">Próximos Eventos</h1>
                 <ul class="proximos-eventos-container">
                     <li class="first proximos-eventos-item">
-                        <h3 class="proximo-evento-date">32.02</h3>
-                        <h4 class="proximo-evento-name">Dev in Company</h4>
+                        <time datetime="" class="proximo-evento-date">32.02</time>
+                        <h2 class="proximo-evento-name" lang="en">Dev in Company</h2>
                         <p class="proximo-evento-text">SEED Minas Gerais</p>
                         <p class="proximo-evento-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam velit sunt hic at fuga amet, tenetur! Laborum repellat molestiae fugit!</p>
                         <a class="proximo-evento-link" href="">devincompany.org</a>
                     </li>
+
                     <li class="last proximos-eventos-item">
-                        <h3 class="proximo-evento-date">32.02</h3>
-                        <h4 class="proximo-evento-name">Dev in Company</h4>
+                        <time datetime="" class="proximo-evento-date">32.02</time>
+                        <h2 class="proximo-evento-name">Dev in Company</h2>
                         <p class="proximo-evento-text">SEED Minas Gerais</p>
                         <p class="proximo-evento-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo similique accusantium, esse nobis error, corrupti eum quis est accusamus eos?</p>
-                        <a class="proximo-evento-link" href="">devincompany.org</a>
+                        <a class="proximo-evento-link" href="" lang="en">devincompany.org</a>
                     </li>
+
                     <li class="first proximos-eventos-item">
-                        <h3 class="proximo-evento-date">32.02</h3>
-                        <h4 class="proximo-evento-name">Dev in Company</h4>
+                        <time datetime="" class="proximo-evento-date">32.02</time>
+                        <h2 class="proximo-evento-name" lang="en">Dev in Company</h2>
                         <p class="proximo-evento-text">SEED Minas Gerais</p>
                         <p class="proximo-evento-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus impedit quo eum ad consequatur, culpa consequuntur quis nihil ex repellat?</p>
                         <a class="proximo-evento-link" href="">devincompany.org</a>
                     </li>
+
                     <li class="last proximos-eventos-item">
-                        <h3 class="proximo-evento-date">32.02</h3>
-                        <h4 class="proximo-evento-name">Dev in Company</h4>
+                        <time datetime="" class="proximo-evento-date">32.02</time>
+                        <h2 class="proximo-evento-name" lang="en">Dev in Company</h2>
                         <p class="proximo-evento-text">SEED Minas Gerais</p>
                         <p class="proximo-evento-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptas unde eius provident sit ut rem illum deleniti, mollitia nemo?</p>
                         <a class="proximo-evento-link" href="">devincompany.org</a>
@@ -199,34 +205,35 @@
         </section>
 
         <section class="minasdev-beer">
-            <div class="container align-center">
+            <div class="container">
                 <div class="informacoes">
-                    <h3 class="minasdev-beer-title">Que tal participar de nossos encontros para definir metas e projetos?</h3>
-                    <h4 class="minasdev-beer-desc">Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-                    <h5 class="minasdev-beer-subtitle">Quando vai ser o próximo?</h5>
+                    <h1 class="minasdev-beer-title">Que tal participar de nossos encontros para definir metas e projetos?</h1>
+                    <p class="minasdev-beer-desc">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
 
-                    <h6 class="minasdev-beer-date">24.05</h6>
+                    <h2 class="minasdev-beer-subtitle">Quando vai ser o próximo?</h2>
+
+                    <time datetime="" class="minasdev-beer-date">24.05</time>
                     <span class="local">TAKê</span>
                     <p class="minasdev-beer-address">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                     <span class="more-infos">Informações no site</span>
-                    <a class="minasdev-beer-link" href="">take.com.br</a>
+                    <a class="minasdev-beer-link" href="" target="_blank">take.com.br</a>
                 </div>
-                <h2 class="sprite-figures minasdev-beer-logo">MinasDev Beer</h2>
+                <h3 class="sprite-figures minasdev-beer-logo">MinasDev Beer</h3>
             </div>
         </section>
 
         <section class="newsletter">
-            <div class="container align-center">
+            <div class="container">
                 <form class="newsletter-form" action="http://minasdev.us3.list-manage.com/subscribe/post?u=50258ba79635076ed976b3238&amp;id=c864b0ba02" method="post" target="_blank">
                     <label for="email" class="horz-middle-align newsletter-label">Newsletter</label>
-                    <input id="email" type="text" class="horz-middle-align newsletter-input-text" name="EMAIL" placeholder="Digite aqui seu email e receba novidades do Minas Dev">
+                    <input id="email" type="text" class="horz-middle-align newsletter-input-text" name="EMAIL" aria-label="Digite aqui seu email e receba novidades do Minas Dev" placeholder="Digite aqui seu email e receba novidades do Minas Dev">
                     <button type="submit" name="subscribe" class="horz-middle-align newsletter-button">Cadastrar</button>
                 </form>
             </div>
         </section>
 
         <section class="apoios-parceiros">
-            <div class="container align-center">
+            <div class="container">
                 <h2 class="apoios-parceiros-title">Apoios e Parceiros</h2>
                 <ul class="apoios-parceiros-container">
                     <li class="apoios-parceiros-item"><a href="#" class="sprite-figures apoios-parceiros-link frontinbh">Front in BH</a></li>
@@ -241,8 +248,8 @@
             </div>
         </section>
 
-        <footer class="footer-page">
-            <div class="container align-center overflow-hidden">
+        <footer class="footer-page" role="contentinfo">
+            <div class="container overflow-hidden">
                 <div class="pushto-left">
                     <h3 class="contact-title">
                         Quer ser nosso parceiro?
