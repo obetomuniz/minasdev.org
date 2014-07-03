@@ -15,7 +15,7 @@ $(function(){
     });
 
     // Tem que ter suporte via teclado
-    $(".navigation-link").on('click', function(e) {
+    $(".nav-link").on('click', function(e) {
         e.preventDefault();
         scrollToElement($(this).attr('data-anchor'), $(this).attr('data-offset'));
     });
