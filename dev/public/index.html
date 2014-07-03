@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
+        <title>Minas Dev</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
@@ -19,7 +20,7 @@
         <meta property="og:image" content="http://minasdev.org/assets/images/logo-minasdevorg.png">
         <meta property="og:site_name" content="MinasDev.org">
 
-        <title>Minas Dev</title>
+        
         <meta name="description" content="Somos um Movimento que visa fomentar o cenário de desenvolvimento de Minas Gerais. Faça parte também!">
 
         <!-- minasdev.org styles -->
@@ -28,7 +29,7 @@
         <!-- In Test -->
         <script src="//polyfill.io"></script>
         <noscript>
-            Seu navegador não suporta scripts. Experimente usar outro navegador, ou atualizar para um mais moderno.
+          Seu navegador não suporta scripts. Experimente usar outro navegador, ou atualizar para um mais moderno.
         </noscript>
     </head>
 
@@ -50,7 +51,7 @@
             </div>
         </header>
 
-        <main class="main-page" role="main">
+        <main class="main-page" id="main" role="main">
             <div class="container mapa-de-minas">
                 <div class="about">
                     <h1 class="about-title">Comunidade de Desenvolvedores de Minas Gerais</h1>
@@ -67,11 +68,11 @@
         <section class="como-participar-section">
             <div class="container como-participar">
                 <div class="sprite-figures ribbon-como-participar">
-                    <h2 class="como-participar-title">Como Participar?</h2>
+                    <h1 class="como-participar-title">Como Participar?</h1>
                     <p class="como-participar-text">
                         <strong class="como-participar-strong">VOCÊ É DESENVOLVEDOR E GOSTARIA DE APOIAR NOSSA IDEIA?</strong><br>
                         SEJA COLABORADOR EM NOSSOS PROJETOS OU CRIE JUNTO COM NOSSOS TIMES
-                        UM PROJETO QUE CONTRIBUA COM A COMUNIDADE DE MINAS GERAIS!
+                        UM PROJETO E CONTRIBUA COM A COMUNIDADE DE MINAS GERAIS!
                     </p>
                 </div>
             </div>
@@ -81,40 +82,40 @@
             <div class="container">
                 <h1 class="nossos-projetos-title">Nossos Projetos</h1>
                 <div class="projetos">
-                    <article class="projeto devincompany">
+                    <article class="projeto devincompany" itemscope itemtype="http://schema.org/Event">
                         <figure class="projeto-logo-container">
                             <img class="projeto-logo" src="/assets/images/projects/devincompany.png" alt="Dev In Company">
                         </figure>
 
-                        <h2 class="projeto-title" lang="en">Dev in Company</h2>
-                        <p class="projeto-desc">
+                        <h2 class="projeto-title" lang="en" itemprop="name">Dev in Company</h2>
+                        <p class="projeto-desc" itemprop="description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi maxime labore et delectus eligendi suscipit aspernatur est quia iste aliquid!
                         </p>
                         <a href="http://devincompany.org/" class="site" lang="en">devincompany.org</a>
 
                         <h3 class="projeto-title">Idealizadores</h3>
                         <div class="idealizadores">
-                            <ul class="idealizador-container">
+                            <ul class="idealizador-container"  itemscope itemtype="http://schema.org/Person">
                                 <li class="idealizador-item">
-                                    <a href="" class="sprite-team idealizador betomuniz">Beto Muniz</a>
+                                    <a href="" class="sprite-team idealizador betomuniz" itemprop="name">Beto Muniz</a>
                                 </li>
                                 <li class="idealizador-item">
-                                    <a href="" class="sprite-team idealizador paulafaria">Paula Faria</a>
+                                    <a href="" class="sprite-team idealizador paulafaria" itemprop="name">Paula Faria</a>
                                 </li>
                                 <li class="idealizador-item">
-                                    <a href="" class="sprite-team idealizador lurimendes">Luiz Augusto</a>
+                                    <a href="" class="sprite-team idealizador lurimendes" itemprop="name">Luiz Augusto</a>
                                 </li>
                             </ul>
                         </div>
                         <button class="projeto-button">Faça parte deste projeto também</button>
                     </article>
 
-                    <article class="projeto devinuniversity">
+                    <article class="projeto devinuniversity" itemscope itemtype="http://schema.org/Event">
                         <figure class="projeto-logo-container">
                             <img class="projeto-logo" src="/assets/images/projects/devinuniversity.png" alt="">
                         </figure>
 
-                        <h2 class="projeto-title" lang="en">Dev in Unversity</h2>
+                        <h2 class="projeto-title" lang="en" itemprop="name">Dev in Unversity</h2>
                         <p class="projeto-desc">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi maxime labore et delectus eligendi suscipit aspernatur est quia iste aliquid!
                         </p>
@@ -122,40 +123,40 @@
 
                         <h3 class="projeto-title">Idealizadores</h3>
                         <div class="idealizadores">
-                            <ul class="idealizador-container">
+                            <ul class="idealizador-container" itemscope itemtype="http://schema.org/Person">
                                 <li class="idealizador-item">
-                                    <a href="" class="sprite-team idealizador erickbelfort">Erick Belfort</a>
+                                    <a href="" class="sprite-team idealizador erickbelfort" itemprop="name">Erick Belfort</a>
                                 </li>
                                 <li class="idealizador-item">
-                                    <a href="" class="sprite-team idealizador andrepereira">André Pereira</a>
+                                    <a href="" class="sprite-team idealizador andrepereira" itemprop="name">André Pereira</a>
                                 </li>
                             </ul>
                         </div>
                         <button class="projeto-button">Faça parte deste projeto também</button>
                     </article>
 
-                    <article class="projeto acessibilidadeurbana">
+                    <article class="projeto acessibilidadeurbana" itemscope itemtype="http://schema.org/Event">
                         <figure class="projeto-logo-container">
                             <img class="projeto-logo" src="/assets/images/projects/acessibilidadeurbana.png" alt="Projeto de Acessibilidade Urbana">
                         </figure>
 
-                        <h2 class="projeto-title">Acessibilidade Urbana</h2>
-                        <p class="projeto-desc">
+                        <h2 class="projeto-title" itemprop="name">Acessibilidade Urbana</h2>
+                        <p class="projeto-desc" itemprop="description">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi maxime labore et delectus eligendi suscipit aspernatur est quia iste aliquid!
                         </p>
                         <a href="http://acessibilidadeurbana.com.br/" class="site">acessibilidadeurbana.com.br</a>
 
                         <h3 class="projeto-title">Idealizadores</h3>
                         <div class="idealizadores">
-                            <ul class="idealizador-container">
+                            <ul class="idealizador-container" itemscope itemtype="http://schema.org/Person">
                                 <li class="idealizador-item">
-                                    <a href="" class="idealizador brunopulis">Bruno Pulis</a>
+                                    <a href="" class="idealizador brunopulis" itemprop="name">Bruno Pulis</a>
                                 </li>
                                 <li class="idealizador-item">
-                                    <a href="" class="idealizador betomuniz">Beto Muniz</a>
+                                    <a href="" class="idealizador betomuniz" itemprop="name">Beto Muniz</a>
                                 </li>
                                 <li class="idealizador-item">
-                                    <a href="" class="idealizador marcoscesar">Marcos César</a>
+                                    <a href="" class="idealizador marcoscesar" itemprop="name">Marcos César</a>
                                 </li>
                             </ul>
                         </div>
@@ -169,36 +170,52 @@
             <div class="container">
                 <h1 class="sprite-figures proximos-eventos-title">Próximos Eventos</h1>
                 <ul class="proximos-eventos-container">
-                    <li class="first proximos-eventos-item">
-                        <time datetime="" class="proximo-evento-date">32.02</time>
-                        <h2 class="proximo-evento-name" lang="en">Dev in Company</h2>
-                        <p class="proximo-evento-text">SEED Minas Gerais</p>
-                        <p class="proximo-evento-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam velit sunt hic at fuga amet, tenetur! Laborum repellat molestiae fugit!</p>
-                        <a class="proximo-evento-link" href="">devincompany.org</a>
+                    <li class="first proximos-eventos-item" itemscope itemtype="http://schema.org/Event">
+                        <time itemprop="startDate" content="2014-07-14" datetime="2014-07-24" class="proximo-evento-date">14.07</time>
+                        <h2 itemprop="name" class="proximo-evento-name" lang="en">Dev in Company</h2>
+
+                        <div itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+                          <p itemprop="streetAddress" class="proximo-evento-text">SEED Minas Gerais</p>
+                        </div>
+
+                        <p itemprop="description" class="proximo-evento-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam velit sunt hic at fuga amet, tenetur! Laborum repellat molestiae fugit!</p>
+                        <a itemprop="url" class="proximo-evento-link" href="devincompany.org" target="_blank">www.devincompany.org</a>
                     </li>
 
-                    <li class="last proximos-eventos-item">
-                        <time datetime="" class="proximo-evento-date">32.02</time>
-                        <h2 class="proximo-evento-name">Dev in Company</h2>
-                        <p class="proximo-evento-text">SEED Minas Gerais</p>
-                        <p class="proximo-evento-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo similique accusantium, esse nobis error, corrupti eum quis est accusamus eos?</p>
-                        <a class="proximo-evento-link" href="" lang="en">devincompany.org</a>
+                    <li class="proximos-eventos-item" itemscope itemtype="http://schema.org/Event">
+                        <time itemprop="startDate" content="2014-07-14" datetime="2014-07-24" class="proximo-evento-date">14.07</time>
+                        <h2 itemprop="name" class="proximo-evento-name" lang="en">Dev in Company</h2>
+
+                        <div itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+                          <p itemprop="streetAddress" class="proximo-evento-text">SEED Minas Gerais</p>
+                        </div>
+
+                        <p itemprop="description" class="proximo-evento-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam velit sunt hic at fuga amet, tenetur! Laborum repellat molestiae fugit!</p>
+                        <a itemprop="url" class="proximo-evento-link" href="devincompany.org" target="_blank">devincompany.org</a>
                     </li>
 
-                    <li class="first proximos-eventos-item">
-                        <time datetime="" class="proximo-evento-date">32.02</time>
-                        <h2 class="proximo-evento-name" lang="en">Dev in Company</h2>
-                        <p class="proximo-evento-text">SEED Minas Gerais</p>
-                        <p class="proximo-evento-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus impedit quo eum ad consequatur, culpa consequuntur quis nihil ex repellat?</p>
-                        <a class="proximo-evento-link" href="">devincompany.org</a>
+                    <li class="proximos-eventos-item" itemscope itemtype="http://schema.org/Event">
+                        <time itemprop="startDate" content="2014-07-14" datetime="2014-07-24" class="proximo-evento-date">14.07</time>
+                        <h2 itemprop="name" class="proximo-evento-name" lang="en">Dev in Company</h2>
+
+                        <div itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+                          <p itemprop="streetAddress" class="proximo-evento-text">SEED Minas Gerais</p>
+                        </div>
+
+                        <p itemprop="description" class="proximo-evento-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam velit sunt hic at fuga amet, tenetur! Laborum repellat molestiae fugit!</p>
+                        <a itemprop="url" class="proximo-evento-link" href="devincompany.org" target="_blank">devincompany.org</a>
                     </li>
 
-                    <li class="last proximos-eventos-item">
-                        <time datetime="" class="proximo-evento-date">32.02</time>
-                        <h2 class="proximo-evento-name" lang="en">Dev in Company</h2>
-                        <p class="proximo-evento-text">SEED Minas Gerais</p>
-                        <p class="proximo-evento-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptas unde eius provident sit ut rem illum deleniti, mollitia nemo?</p>
-                        <a class="proximo-evento-link" href="">devincompany.org</a>
+                    <li class="last proximos-eventos-item" itemscope itemtype="http://schema.org/Event">
+                        <time itemprop="startDate" content="2014-07-14" datetime="2014-07-24" class="proximo-evento-date">14.07</time>
+                        <h2 itemprop="name" class="proximo-evento-name" lang="en">Dev in Company</h2>
+
+                        <div itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+                          <p itemprop="streetAddress" class="proximo-evento-text">SEED Minas Gerais</p>
+                        </div>
+
+                        <p itemprop="description" class="proximo-evento-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam velit sunt hic at fuga amet, tenetur! Laborum repellat molestiae fugit!</p>
+                        <a itemprop="url" class="proximo-evento-link" href="devincompany.org" target="_blank">devincompany.org</a>
                     </li>
                 </ul>
             </div>
@@ -206,17 +223,21 @@
 
         <section class="minasdev-beer">
             <div class="container">
-                <div class="informacoes">
+                <div class="informacoes" itemscope itemtype="http://schema.org/Event">
                     <h1 class="minasdev-beer-title">Que tal participar de nossos encontros para definir metas e projetos?</h1>
                     <p class="minasdev-beer-desc">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
 
                     <h2 class="minasdev-beer-subtitle">Quando vai ser o próximo?</h2>
-
-                    <time datetime="" class="minasdev-beer-date">24.05</time>
-                    <span class="local">TAKê</span>
-                    <p class="minasdev-beer-address">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                    <span class="more-infos">Informações no site</span>
-                    <a class="minasdev-beer-link" href="" target="_blank">take.com.br</a>
+                    <time datetime="2014-07-24" itemprop="startDate" content="2014-12-01" class="minasdev-beer-date">24.05</time>
+                    
+                    <div itemprop="location" itemscope itemtype="http://schema.org/Restaurant">
+                         <span class="local" itemprop="name">TAKÊ</span>
+                         <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <p class="minasdev-beer-address" itemprop="streetAddress">Rua Professor Moraes, 659 - <span itemprop="addressLocality">Funcionários.</span></p>
+                            <span class="more-infos">Informações no site</span>
+                            <a class="minasdev-beer-link" itemprop="url" href="http://www.takebh.com.br/" target="_blank">TAKÊ</a>
+                         </div>
+                    </div>
                 </div>
                 <h3 class="sprite-figures minasdev-beer-logo">MinasDev Beer</h3>
             </div>
@@ -260,7 +281,6 @@
                     <ul class="minasdev-socials">
                         <li class="minasdev-social"><a class="sprite-icons minasdev-social-link active facebook" href="#">Facebook do MinasDev</a></li>
                         <li class="minasdev-social"><a class="sprite-icons minasdev-social-link active twitter" href="#">Twitter do MinasDev</a></li>
-                        <li class="minasdev-social"><a class="sprite-icons minasdev-social-link active google-plus" href="#">Google Plus do MinasDev</a></li>
                     </ul>
                     <p class="copyright">2013-2014 Minas Dev</p>
                 </div>
