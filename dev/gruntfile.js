@@ -58,7 +58,7 @@ module.exports = function( grunt ) {
         'destCSS': 'sources/stylus/sprites/figures.styl'
       },
       icons: {
-        'padding': 3,
+        'padding': 40,
         'src': ['sources/images/icons/*.png'],
         'destImg': 'public/assets/images/icons.png',
         'destCSS': 'sources/stylus/sprites/icons.styl'

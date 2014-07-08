@@ -48,6 +48,11 @@
             color #fff
             font-size 14px
         }
+        &.animate-error{
+            -webkit-animation: animateInptError 0.2s
+            -moz-animation: animateInptError 0.2s
+            animation: animateInptError 0.2s
+        }
     }
     .newsletter-button {
         font-family "PN-Bold"
@@ -62,6 +67,69 @@
         cursor pointer
         padding 15px 45px
         border-radius 5px
-
+        -webkit-transition all 0.2s ease
+        -moz-transition all 0.2s ease
+        transition all 0.2s ease
+        -webkit-transform translateZ(0)
+        -moz-transform translateZ(0)
+        transform translateZ(0)
+        backface-visibility hidden
+        &:hover{
+            -webkit-transform rotate(-4deg) scale3d(1.05,1.05,1.05) translateZ(0)
+            -moz-transform rotate(-4deg) scale3d(1.05,1.05,1.05) translateZ(0)
+            transform rotate(-4deg) scale3d(1.05,1.05,1.05) translateZ(0)
+            backface-visibility hidden
+        }
+    }
+}
+@-webkit-keyframes animateInptError{
+    0% {
+        -webkit-transform translate3d(-5px,0,0)
+        -moz-transform translate3d(-5px,0,0)
+        transform translate3d(-5px,0,0)
+    }
+    50% {
+        -webkit-transform translate3d(5px,0,0)
+        -moz-transform translate3d(5px,0,0)
+        transform translate3d(5px,0,0)
+    }
+    100% {
+        -webkit-transform translate3d(0,0,0)
+        -moz-transform translate3d(0,0,0)
+        transform translate3d(0,0,0)
+    }
+}
+@-moz-keyframes animateInptError{
+    0% {
+        -webkit-transform translate3d(-5px,0,0)
+        -moz-transform translate3d(-5px,0,0)
+        transform translate3d(-5px,0,0)
+    }
+    50% {
+        -webkit-transform translate3d(5px,0,0)
+        -moz-transform translate3d(5px,0,0)
+        transform translate3d(5px,0,0)
+    }
+    100% {
+        -webkit-transform translate3d(0,0,0)
+        -moz-transform translate3d(0,0,0)
+        transform translate3d(0,0,0)
+    }
+}
+@keyframes animateInptError{
+    0% {
+        -webkit-transform translate3d(-5px,0,0)
+        -moz-transform translate3d(-5px,0,0)
+        transform translate3d(-5px,0,0)
+    }
+    50% {
+        -webkit-transform translate3d(5px,0,0)
+        -moz-transform translate3d(5px,0,0)
+        transform translate3d(5px,0,0)
+    }
+    100% {
+        -webkit-transform translate3d(0,0,0)
+        -moz-transform translate3d(0,0,0)
+        transform translate3d(0,0,0)
     }
 }

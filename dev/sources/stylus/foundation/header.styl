@@ -48,6 +48,12 @@
             text-transform uppercase
             text-decoration none
             color #1e1e1e
+            -webkit-transition color 0.3s ease
+            -moz-transition color 0.3s ease
+            transition color 0.3s ease
+            &:hover{
+                color lighten(#1e1e1e, 40%)
+            }
         }
     }
 

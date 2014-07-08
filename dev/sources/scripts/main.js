@@ -15,9 +15,12 @@ $(function(){
     });
 
     $('.newsletter-form').on('submit', function(){
-
-        if($("#email").val() === "" || !validateEmail($("#email").val()))
+        var emailInpt = $("#email");
+        if(emailInpt.val() === "" || !validateEmail(emailInpt.val())){
+            emailInpt.addClass("animate-error");
+            setTimeout(function(){ emailInpt.removeClass('animate-error') }, 300);
             return false;
+        }
 
     });
 
