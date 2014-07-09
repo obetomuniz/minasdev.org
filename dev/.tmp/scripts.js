@@ -1,17 +1,17 @@
 $(function(){
+    navBarPosition();
+
+    $('header').addClass('show');
 
     $(document).on('scroll', function(){
-        if($(window).scrollTop() < 170){
-            $('header').addClass('on-top');
-        }else{
-            $('header').removeClass('on-top');
-        }
+        navBarPosition();
     });
 
     // Tem que ter suporte via teclado
     $(".nav-link").on('click', function(e) {
         e.preventDefault();
-        scrollToElement($(this).attr('data-anchor'), $(this).attr('data-offset'));
+        var _this = $(this);
+        scrollToElement(_this.attr('data-anchor'), _this.attr('data-offset'));
     });
 
     $('.newsletter-form').on('submit', function(){
@@ -25,6 +25,14 @@ $(function(){
     });
 
 });
+
+function navBarPosition() {
+    if($(window).scrollTop() < 170){
+        $('header').addClass('on-top');
+    }else{
+        $('header').removeClass('on-top');
+    }
+}
 
 function scrollToElement(selector, offset){
     $('html, body').animate({

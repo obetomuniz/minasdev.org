@@ -13,11 +13,6 @@
     background-repeat no-repeat
 }
 
-.sprite-team{
-    background-image url("/assets/images/team.png")
-    background-repeat no-repeat
-}
-
 .minasdev-socials {
     display block
 
@@ -36,6 +31,15 @@
             width $facebook_width
             padding-top $facebook_height
             background-position $facebook_offset_x $facebook_offset_y
+            -webkit-transition -webkit-transform 0.2s ease
+            -moz-transition -moz-transform 0.2s ease
+            transition transform 0.2s ease
+            &:hover{
+                -webkit-transform rotate(-5deg) scale3d(1.1,1.1,1.1) translateZ(0)
+                -moz-transform rotate(-5deg) scale3d(1.1,1.1,1.1) translateZ(0)
+                transform rotate(-5deg) scale3d(1.1,1.1,1.1) translateZ(0)
+                backface-visibility hidden
+            }
             &:hover, &.active{
                 width $facebook_hover_width
                 padding-top $facebook_hover_height
@@ -47,6 +51,15 @@
             width $twitter_width
             padding-top $twitter_height
             background-position $twitter_offset_x $twitter_offset_y
+            -webkit-transition -webkit-transform 0.2s ease
+            -moz-transition -moz-transform 0.2s ease
+            transition transform 0.2s ease
+            &:hover{
+                -webkit-transform rotate(-5deg) scale3d(1.1,1.1,1.1) translateZ(0)
+                -moz-transform rotate(-5deg) scale3d(1.1,1.1,1.1) translateZ(0)
+                transform rotate(-5deg) scale3d(1.1,1.1,1.1) translateZ(0)
+                backface-visibility hidden
+            }
             &:hover, &.active{
                 width $twitter_hover_width
                 padding-top $twitter_hover_height

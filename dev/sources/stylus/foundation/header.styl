@@ -4,6 +4,7 @@
     width 100%
     z-index 4
     border-bottom 3px solid #c84c3d
+    display none
 
     .container{
         position relative
@@ -12,7 +13,7 @@
     .logo {
         display block
         position absolute
-        left 0
+        left 55px
         top 0
 
         .logo-link {
@@ -21,8 +22,10 @@
             height 0
             width 130px
             padding-top 130px
-            background-position 0 -295px
-            background-size 720px auto
+            background-image url("/assets/images/svgs/minasdev-logo.svg")
+            background-position 0 0
+            background-size 100% auto
+            background-repeat no-repeat
             transition all 0.3s ease
         }
     }
@@ -60,10 +63,8 @@
     &.on-top{
         .logo {
             .logo-link {
-                width $logo-minadev_width
-                padding-top $logo-minadev_height
-                background-position $logo-minadev_offset_x $logo-minadev_offset_y
-                background-size 937px auto
+                width 170px
+                padding-top 170px
             }
         }
 

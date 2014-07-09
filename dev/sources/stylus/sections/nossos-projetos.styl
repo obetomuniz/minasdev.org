@@ -81,6 +81,7 @@
         display block
         color #fff
         font-size 12px
+        line-height 14px
         &:after{
             display block
             content ''
@@ -118,42 +119,42 @@
             -moz-transition all 0.3s ease
             transition all 0.3s ease
             &.link{
-                background-position center ($min-link_offset_y + 30)
+                background-position ($min-link_offset_x + 12) ($min-link_offset_y + 30)
             }
             &.github{
-                background-position center ($min-github_offset_y + 30)
+                background-position ($min-github_offset_x + 12) ($min-github_offset_y + 30)
             }
             &.facebook{
-                background-position center ($min-facebook_offset_y + 30)
+                background-position ($min-facebook_offset_x + 12) ($min-facebook_offset_y + 30)
             }
             &.twitter{
-                background-position center ($min-twitter_offset_y + 30)
+                background-position ($min-twitter_offset_x + 12) ($min-twitter_offset_y + 30)
             }
             &.google-plus{
-                background-position center ($min-google-plus_offset_y + 30)
+                background-position ($min-google-plus_offset_x + 12) ($min-google-plus_offset_y + 30)
             }
             &.linkedin{
-                background-position center ($min-linkedin_offset_y + 30)
+                background-position ($min-linkedin_offset_x + 12) ($min-linkedin_offset_y + 30)
             }
             &:hover{
                 background-color rgba(red, 0.2)
                 &.link{
-                    background-position center ($min-link_offset_y + 7)
+                    background-position ($min-link_offset_x + 12) ($min-link_offset_y + 13)
                 }
                 &.github{
-                    background-position center ($min-github_offset_y + 7)
+                    background-position ($min-github_offset_x + 12) ($min-github_offset_y + 13)
                 }
                 &.facebook{
-                    background-position center ($min-facebook_offset_y + 7)
+                    background-position ($min-facebook_offset_x + 12) ($min-facebook_offset_y + 13)
                 }
                 &.twitter{
-                    background-position center ($min-twitter_offset_y + 7)
+                    background-position ($min-twitter_offset_x + 12) ($min-twitter_offset_y + 13)
                 }
                 &.google-plus{
-                    background-position center ($min-google-plus_offset_y + 7)
+                    background-position ($min-google-plus_offset_x + 12) ($min-google-plus_offset_y + 13)
                 }
                 &.linkedin{
-                    background-position center ($min-linkedin_offset_y + 7)
+                    background-position ($min-linkedin_offset_x + 12) ($min-linkedin_offset_y + 13)
                 }
                 .idealizador{
                     opacity 0.2
@@ -214,6 +215,7 @@
         color #fff
         border-radius 5px
         width 100%
+        text-decoration none
         margin-bottom 65px
         -webkit-transition all 0.2s ease
         -moz-transition all 0.2s ease
@@ -221,6 +223,10 @@
         &:hover{
             color #e8422f
             border 1px solid #e8422f
+            -webkit-transform rotate(-2deg) scale3d(1.05,1.05,1.05) translateZ(0)
+            -moz-transform rotate(-2deg) scale3d(1.05,1.05,1.05) translateZ(0)
+            transform rotate(-2deg) scale3d(1.05,1.05,1.05) translateZ(0)
+            backface-visibility hidden
         }
     }
 }
