@@ -18,6 +18,6 @@ app.get('*', function(req, res){
     res.redirect('/');
 });
 
-server.listen(process.env.PORT || 4005, function(){
+server.listen(process.env.PORT || 4000, function(){
   console.log('MinasDev.org are running on port 4005');
 });
