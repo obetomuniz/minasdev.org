@@ -1,4 +1,0 @@
-minasdev
-========
-
-landing page

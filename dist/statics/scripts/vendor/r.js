@@ -1,3 +1,0 @@
-function beto () {
-  return;
-}
