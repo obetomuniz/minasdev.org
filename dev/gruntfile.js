@@ -13,7 +13,7 @@ module.exports = function( grunt ) {
           collapseWhitespace: true
         },
         files: {
-          '../production/index.html': 'public/index.html'
+          '../dist/index.html': 'public/index.html'
         }
       }
     },
@@ -71,9 +71,9 @@ module.exports = function( grunt ) {
         },
         files: [{
           expand: true,
-          cwd: '../production/public/assets/images/',
+          cwd: '../dist/public/assets/images/',
           src: ['**/*.{png,jpg,gif}'],
-          dest: '../production/public/assets/images/'
+          dest: '../dist/public/assets/images/'
         }]
       }
     },
@@ -84,7 +84,7 @@ module.exports = function( grunt ) {
           quitAfter: true,
           // jpegMini: true
         },
-        src: ['../production/public/assets/images/']
+        src: ['../dist/public/assets/images/']
       }
     },
     copy: {
@@ -94,11 +94,11 @@ module.exports = function( grunt ) {
           {expand: true, cwd: 'sources/images/projects/', src: ['**'], dest: 'public/assets/images/projects/'}
         ]
       },
-      production: {
+      dist: {
         files: [
-          {expand: true, src: ['public/**'], dest: '../production/'},
-          {expand: true, src: ['./package.json'], dest: '../production/', filter: 'isFile'},
-          {expand: true, src: ['./minasdev.js'], dest: '../production/', filter: 'isFile'}
+          {expand: true, src: ['public/**'], dest: '../dist/'},
+          {expand: true, src: ['./package.json'], dest: '../dist/', filter: 'isFile'},
+          {expand: true, src: ['./minasdev.js'], dest: '../dist/', filter: 'isFile'}
         ]
       },
     },
@@ -113,7 +113,7 @@ module.exports = function( grunt ) {
           'sources/stylus/sprites/figures.styl',
           'public/assets/images/icons.png',
           'sources/stylus/sprites/icons.styl',
-          '../production/'
+          '../dist/'
         ]
       },
       tmp: {
@@ -133,11 +133,11 @@ module.exports = function( grunt ) {
           'sources/stylus/sprites/icons.styl'
         ]
       },
-      production: {
+      dist: {
         options: {
           force: true
         },
-        src: ['../production/']
+        src: ['../dist/']
       }
     },
     watch: {
@@ -208,8 +208,8 @@ module.exports = function( grunt ) {
   ]);
 
   grunt.registerTask('build', [
-    'clean:production',
-    'copy:production',
+    'clean:dist',
+    'copy:dist',
     'htmlmin:compile',
     'imagemin:dynamic',
     // 'imageoptim:dynamic'
