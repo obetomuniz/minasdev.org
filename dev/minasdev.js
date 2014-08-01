@@ -19,5 +19,5 @@ app.get('*', function(req, res){
 });
 
 server.listen(process.env.PORT || 4000, function(){
-  console.log('MinasDev.org are running on port 4005');
+  console.log('MinasDev.org are running on port 4000');
 });

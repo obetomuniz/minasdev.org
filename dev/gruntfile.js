@@ -212,7 +212,7 @@ module.exports = function( grunt ) {
     'copy:dist',
     'htmlmin:compile',
     'imagemin:dynamic',
-    // 'imageoptim:dynamic'
+    'imageoptim:dynamic'
   ]);
 
 };
