@@ -77,16 +77,16 @@ module.exports = function( grunt ) {
         }]
       }
     },
-    imageoptim: {
-      dynamic: {
-        options: {
-          imageAlpha: true,
-          quitAfter: true,
-          // jpegMini: true
-        },
-        src: ['../dist/public/assets/images/']
-      }
-    },
+    // imageoptim: {
+    //   dynamic: {
+    //     options: {
+    //       imageAlpha: true,
+    //       quitAfter: true,
+    //       // jpegMini: true
+    //     },
+    //     src: ['../dist/public/assets/images/']
+    //   }
+    // },
     copy: {
       development: {
         files: [
@@ -212,7 +212,7 @@ module.exports = function( grunt ) {
     'copy:dist',
     'htmlmin:compile',
     'imagemin:dynamic',
-    'imageoptim:dynamic'
+    // 'imageoptim:dynamic'
   ]);
 
 };
