@@ -184,7 +184,7 @@
                         <h2 itemprop="name" class="proximo-evento-name" lang="en">{{name}}</h2>
 
                         <div itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
-                          <p itemprop="streetAddress" class="proximo-evento-text">{{local.name}}</p>
+                          <a href="{{local.googlemaps_link}}" itemprop="streetAddress" target="_blank" class="proximo-evento-text">{{local.name}} &#10144;</a>
                         </div>
 
                         <p itemprop="description" class="proximo-evento-text">{{description}}</p>
@@ -209,7 +209,7 @@
                     <div itemprop="location" itemscope itemtype="http://schema.org/Restaurant">
                          <span class="local" itemprop="name">{{local.name}}</span>
                          <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                            <p class="minasdev-beer-address" itemprop="streetAddress">{{local.address}}</p>
+                            <a href="{{local.googlemaps_link}}" target="_blank" class="minasdev-beer-address" itemprop="streetAddress">{{local.address}} &#10144;</a>
                             <span class="more-infos">Para mais informações:</span>
                             <a class="minasdev-beer-link" itemprop="url" href="{{local.site}}" target="_blank">Acesse a página deste local</a>
                          </div>

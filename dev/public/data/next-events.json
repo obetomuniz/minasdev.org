@@ -1,0 +1,94 @@
+{
+    "events": [
+        {
+            "name": "BrazilJS Conf",
+            "date": "2014-08-21",
+            "local": {
+                "name": "Teatro do Bourbon Country",
+                "googlemaps_link": "https://goo.gl/maps/hkQ5Z"
+            },
+            "description": "A maior conferência de javascript do universo! E para este ano a comunidade JavaScript do Brasil pode esperar um evento surpreendente!",
+            "url": "http://braziljs.com.br/"
+        },
+        {
+            "name": "Meetup de D3.JS e visualização de dados",
+            "date": "2014-08-27",
+            "local": {
+                "name": "SEED Minas Gerais",
+                "googlemaps_link": "https://goo.gl/maps/Uj0t5"
+            },
+            "description": "Já em sua sexta edição, o encontro é feito para todos aqueles interessados em visualização de dados, do projeto à implementação.",
+            "url": "http://bit.ly/meetup-d3-bh"
+        },
+        {
+            "name": "FrontInterior",
+            "date": "2014-08-30",
+            "local": {
+                "name": "Obeid Plaza Hotel",
+                "googlemaps_link": "https://goo.gl/maps/qhhXC"
+            },
+            "description": "O FrontInterior é a edição do interior paulista da franquia de sucesso dos eventos \"FrontIns\". Em 2012, o evento foi inaugurado com sua primeira edição na cidade de Bauru, coração do estado de São Paulo. Em 2014, Bauru foi escolhida novamente, através de pesquisa pública, para sediar o evento.",
+            "url": "http://frontinterior.com.br/"
+        },
+        {
+            "name": "W3C WEB.BR",
+            "date": "2014-09-25",
+            "local": {
+                "name": "Blue Tree Towers Morumbi",
+                "googlemaps_link": "https://goo.gl/maps/SkLdv"
+            },
+            "description": "A Web.br, como ficou conhecida, apresenta tendências e debate temas que impactam a sociedade e contribuem para o constante desenvolvimento Web.",
+            "url": "http://conferenciaweb.w3c.br/"
+        },
+        {
+            "name": "Front-End Carioca",
+            "date": "2014-09-27",
+            "local": {
+                "name": "Universidade Veiga de Almeida - Rio de Janeiro",
+                "googlemaps_link": "https://goo.gl/maps/VfNCJ"
+            },
+            "description": "O Front End Carioca está realizando sua primeira edição, e está vindo com muitas novidades para o público profissional de desenvolvimento e de áreas adjacentes. A proposta de evento que temos em mente é de reunir uma galera que gosta de desenvolvimento web em geral e está a fim de aprender muito mais com nosso meetup.",
+            "url": "http://frontendcarioca.com.br/"
+        },
+        {
+            "name": "3º Tabless Conference",
+            "date": "2014-10-23",
+            "local": {
+                "name": "Centro Britanico Brasileiro",
+                "googlemaps_link": "https://goo.gl/maps/E5h3m"
+            },
+            "description": "Evento indicado para qualquer profissional, visa disseminar, compartilhar, divulgar e ensinar os desenvolvedores a produzir serviços, websites e produtos para internet de forma inteligente, usando de boas práticas e padrões web.",
+            "url": "http://tableless.com.br/tablelessconf/"
+        },
+        {
+            "name": "Front in Sampa",
+            "date": "2014-10-25",
+            "local": {
+                "name": "INFERNO CLUB",
+                "googlemaps_link": "https://goo.gl/maps/uzTjf"
+            },
+            "description": "O Front in Sampa é a edição paulista da franquia de sucesso dos eventos \"FrontIns\".",
+            "url": "http://frontinsampa.com.br/"
+        },
+        {
+            "name": "Front in Maceió",
+            "date": "2014-11-15",
+            "local": {
+                "name": "Centro Cultural Rute Cardoso",
+                "googlemaps_link": "https://goo.gl/maps/4RQat"
+            },
+            "description": "O Primeiro Front in do Nordeste está de volta trazendo ideias inovadoras, conhecimento e muita diversão no dia 15 de Novembro de 2014.",
+            "url": "http://frontinsampa.com.br/"
+        },
+        {
+            "name": "DevDay 2014",
+            "date": "2014-11-01",
+            "local": {
+                "name": "Escola de Engenharia da UFMG",
+                "googlemaps_link": "https://goo.gl/maps/TEKOl"
+            },
+            "description": "Evento que já está em sua 5ª edição e que conta com profissionais reconhecidos pelo mercado nacional para compartilhar seus conhecimentos nas 20 palestras que compõem a grade do evento.",
+            "url": "http://devday.devisland.com/"
+        }
+    ]
+}

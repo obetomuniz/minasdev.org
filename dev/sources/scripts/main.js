@@ -1,6 +1,11 @@
 $(function(){
     $.get("https://rawgit.com/minasdev/minasdev-events/master/next-events.json", function(data){
-        renderTemplate($("#next-events"), data.events, {max: 4, sortBy: "date"}, function(){
+        events = _.sortBy(data.events, "date");
+        var events = _.remove(events, function(r) {
+            return moment(r.date+"T22:00:00") >= moment();
+        });
+
+        renderTemplate($("#next-events"), events, {max: 4}, function(){
             var itens = $("#next-events li");
             itens.first().addClass("first");
             itens.last().addClass("last");
@@ -9,7 +14,9 @@ $(function(){
     });
 
     $.get("https://rawgit.com/minasdev/minasdev-events/master/minasdevbeer.json", function(data){
-        renderTemplate($("#minasdevbeer"), data.events, {sortBy: "date"}, function(){
+        events = _.sortBy(data.events, "date");
+
+        renderTemplate($("#minasdevbeer"), events, {}, function(){
             $(".minasdev-beer").show();
         });
     });
@@ -44,13 +51,9 @@ $(function(){
 function renderTemplate(block, results, options, done){
     if (typeof options === 'undefined') var options = {};
     if (typeof options.max === 'undefined') options.max = 1;
-    if (typeof options.sortBy === 'undefined') options.sortBy = false;
 
     var tpl = block.html(),
         output = "";
-
-    if(options.sortBy)
-        results = _.sortBy(results, options.sortBy);
 
     $.each(results, function(i,v){
         _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
