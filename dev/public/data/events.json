@@ -1,0 +1,41 @@
+{
+    "events": [
+        {
+            "name": "BrazilJS Conf",
+            "date": "2014-08-21",
+            "local": {
+                "name": "Teatro do Bourbon Country"
+            },
+            "description": "A maior conferência de javascript do universo! E para este ano a comunidade JavaScript do Brasil pode esperar um evento surpreendente!",
+            "url": "http://braziljs.com.br/"
+        },
+        {
+            "name": "Meetup de D3.JS e visualização de dados",
+            "date": "2014-08-27",
+            "local": {
+                "name": "SEED Minas Gerais",
+                "googlemaps_link": ""
+            },
+            "description": "Já em sua sexta edição, o encontro é feito para todos aqueles interessados em visualização de dados, do projeto à implementação.",
+            "url": "http://bit.ly/meetup-d3-bh"
+        },
+        {
+            "name": "FrontInterior",
+            "date": "2014-08-30",
+            "local": {
+                "name": "Obeid Plaza Hotel"
+            },
+            "description": "O FrontInterior é a edição do interior paulista da franquia de sucesso dos eventos \"FrontIns\". Em 2012, o evento foi inaugurado com sua primeira edição na cidade de Bauru, coração do estado de São Paulo. Em 2014, Bauru foi escolhida novamente, através de pesquisa pública, para sediar o evento.",
+            "url": "http://frontinterior.com.br/"
+        },
+        {
+            "name": "W3C WEB.BR",
+            "date": "2014-09-25",
+            "local": {
+                "name": "Blue Tree Towers Morumbi"
+            },
+            "description": "A Web.br, como ficou conhecida, apresenta tendências e debate temas que impactam a sociedade e contribuem para o constante desenvolvimento Web.",
+            "url": "http://conferenciaweb.w3c.br/"
+        }
+    ]
+}

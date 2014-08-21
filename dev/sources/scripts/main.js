@@ -1,4 +1,19 @@
 $(function(){
+    $.get("https://rawgit.com/minasdev/minasdev-events/master/next-events.json", function(data){
+        renderTemplate($("#next-events"), data.events, {max: 4, sortBy: "date"}, function(){
+            var itens = $("#next-events li");
+            itens.first().addClass("first");
+            itens.last().addClass("last");
+            $(".proximos-eventos").show();
+        });
+    });
+
+    $.get("https://rawgit.com/minasdev/minasdev-events/master/minasdevbeer.json", function(data){
+        renderTemplate($("#minasdevbeer"), data.events, {sortBy: "date"}, function(){
+            $(".minasdev-beer").show();
+        });
+    });
+
     navBarPosition();
 
     $('header').addClass('show');
@@ -25,6 +40,28 @@ $(function(){
     });
 
 });
+
+function renderTemplate(block, results, options, done){
+    if (typeof options === 'undefined') var options = {};
+    if (typeof options.max === 'undefined') options.max = 1;
+    if (typeof options.sortBy === 'undefined') options.sortBy = false;
+
+    var tpl = block.html(),
+        output = "";
+
+    if(options.sortBy)
+        results = _.sortBy(results, options.sortBy);
+
+    $.each(results, function(i,v){
+        _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
+        output += _.template(tpl, v);
+        return (i < (options.max - 1)) ? true : false;
+    });
+
+    block.html(output);
+
+    done();
+}
 
 function navBarPosition() {
     if($(window).scrollTop() < 170){

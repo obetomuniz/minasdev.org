@@ -25,7 +25,12 @@ module.exports = function( grunt ) {
         dest: '.tmp/scripts.js'
       },
       vendors: {
-        src: ['sources/libraries/jquery/dist/jquery.min.js', 'sources/libraries/jquery.easing/js/jquery.easing.min.js'],
+        src: [
+          'sources/libraries/jquery/dist/jquery.min.js',
+          'sources/libraries/jquery.easing/js/jquery.easing.min.js',
+          'sources/libraries/lodash/dist/lodash.underscore.min.js',
+          'sources/libraries/momentjs/min/moment-with-locales.min.js'
+        ],
         dest: '.tmp/vendors.js'
       },
       compile:{
