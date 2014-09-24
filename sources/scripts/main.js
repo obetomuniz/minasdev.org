@@ -15,8 +15,16 @@ $(function(){
 
     $.get("https://rawgit.com/minasdev/minasdev-events/master/minasdevbeer.json", function(data){
         events = _.sortBy(data.events, "date");
+        events.reverse();
+
+        var eventDate = new Date(events[0].date);
+        var todayDate = new Date();
 
         renderTemplate($("#minasdevbeer"), events, {}, function(){
+            if(eventDate >= todayDate){
+                $('.minasdev-beer-no-date-container').hide();
+                $('.minasdev-beer-date-container').show();
+            }
             $(".minasdev-beer").show();
         });
     });
