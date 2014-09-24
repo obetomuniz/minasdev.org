@@ -17,8 +17,8 @@ $(function(){
         events = _.sortBy(data.events, "date");
         events.reverse();
 
-        var eventDate = new Date(events[0].date);
-        var todayDate = new Date();
+        var eventDate = new Date(events[0].date),
+            todayDate = new Date();
 
         renderTemplate($("#minasdevbeer"), events, {}, function(){
             if(eventDate >= todayDate){
