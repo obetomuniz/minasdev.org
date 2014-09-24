@@ -8,21 +8,28 @@ minasdev.org v1
 - Grunt
 - Bower
 
-### How Contribute? ###
+### How to contribute? ###
 
-First install the dependencies with command:
+1. Fork this repository
+2. Create your feature branch: git checkout -b my-new-feature
+3. Commit your changes
+4. Push to the branch: git push origin my-new-feature
+5. Submit a pull request
 
-    npm install
 
 ### Development ###
 
-To develop, simply run the following command:
+First install the dependencies using:
+
+    npm install && bower install
+
+Start grunt server:
 
     grunt
 
 It will create a local server on port 4000
 
-### Scaffolding ###
+### Structure ###
 
 ```javascript
 public/             // This folder is which will be published
@@ -40,7 +47,7 @@ sources/            // All sources used for development
 README.md
 ```
 
-## DEVELOPMENT TEAM: ##
+## Development Team ##
 
 - [Beto Muniz](https://github.com/obetomuniz)
 - [Bruno Pulis](https://github.com/brunopulis)
@@ -49,6 +56,6 @@ README.md
 - [Rafael Pimentao](https://github.com/rafapimentao)
 - [Thiago Alvernaz](https://github.com/ThiagoAlvernaz)
 
-## CONTRIBUTORS: ##
+## Contributors ##
 
 - [Gabriel Izaias](https://github.com/gabrielizaias)
