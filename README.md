@@ -53,9 +53,10 @@ README.md
 - [Bruno Pulis](https://github.com/brunopulis)
 - [Marcos César](https://github.com/marcoscesar)
 - [Paula Faria](https://github.com/paulahfaria)
-- [Rafael Pimentao](https://github.com/rafapimentao)
-- [Thiago Alvernaz](https://github.com/ThiagoAlvernaz)
+- [Luiz Augusto](https://github.com/lurimendes)
 
 ## Contributors ##
 
 - [Gabriel Izaias](https://github.com/gabrielizaias)
+- [Rafael Pimentao](https://github.com/rafapimentao)
+- [Thiago Alvernaz](https://github.com/ThiagoAlvernaz)
