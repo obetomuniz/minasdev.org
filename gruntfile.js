@@ -56,18 +56,18 @@ module.exports = function( grunt ) {
         }
       }
     },
-    sprite: {
-      figures: {
-        'padding': 5,
-        'src': ['sources/images/figures/*.png', 'sources/images/partners/*.png'],
-        'destImg': 'public/assets/images/figures.png',
-        'destCSS': 'sources/stylus/sprites/figures.styl'
+    sprite:{
+      partners: {
+        padding: 5,
+        src: ['sources/images/partners/*.png'],
+        dest: 'public/assets/images/partners.png',
+        destCss: 'sources/stylus/sprites/partners.styl'
       },
       icons: {
-        'padding': 40,
-        'src': ['sources/images/icons/*.png'],
-        'destImg': 'public/assets/images/icons.png',
-        'destCSS': 'sources/stylus/sprites/icons.styl'
+        padding: 40,
+        src: ['sources/images/icons/*.png'],
+        dest: 'public/assets/images/icons.png',
+        destCss: 'sources/stylus/sprites/icons.styl'
       }
     },
     imagemin: {
@@ -115,8 +115,8 @@ module.exports = function( grunt ) {
         },
         src: [
           '.tmp/',
-          'public/assets/images/figures.png',
-          'sources/stylus/sprites/figures.styl',
+          'public/assets/images/partners.png',
+          'sources/stylus/sprites/partners.styl',
           'public/assets/images/icons.png',
           'sources/stylus/sprites/icons.styl',
           '../dist/'
@@ -133,8 +133,8 @@ module.exports = function( grunt ) {
           force: true
         },
         src: [
-          'public/assets/images/figures.png',
-          'sources/stylus/sprites/figures.styl',
+          'public/assets/images/partners.png',
+          'sources/stylus/sprites/partners.styl',
           'public/assets/images/icons.png',
           'sources/stylus/sprites/icons.styl'
         ]

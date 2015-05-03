@@ -38,7 +38,7 @@
     "grunt-imageoptim": "^1.4.1",
     "grunt-nodemon": "^0.2.1",
     "grunt-shell": "^0.7.0",
-    "grunt-spritesmith": "^2.1.0",
+    "grunt-spritesmith": "^4.5.3",
     "matchdep": "~0.1.2"
   }
 }
