@@ -197,32 +197,6 @@
             </div>
         </section>
 
-        <section class="minasdev-beer">
-            <div class="container">
-                <div id="minasdevbeer" class="informacoes" itemscope itemtype="http://schema.org/Event">
-                    <h1 class="minasdev-beer-title">Que tal participar dos nossos encontros?</h1>
-                    <p class="minasdev-beer-desc">Sabe aquela vontade de falar sobre código que<br> ninguém mais aguenta?  Vem matar ela com a gente!</p>
-
-                    <h2 class="minasdev-beer-subtitle minasdev-beer-no-date-container">Fique de olho na próxima data e participe!</h2>
-
-                    <div class="minasdev-beer-date-container">
-                      <h2 class="minasdev-beer-subtitle">Quando vai ser o próximo?</h2>
-                      <time datetime="{{date}}" itemprop="startDate" content="{{moment(date).format('YYYY-MM-DD')}}" class="minasdev-beer-date">{{moment(date).format('DD.MM')}} às {{moment(date).format('HH[h]mm')}}</time>
-                      <div itemprop="location" itemscope itemtype="http://schema.org/Restaurant">
-                           <span class="local" itemprop="name">{{local.name}}</span>
-                           <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                              <a href="{{local.googlemaps_link}}" target="_blank" class="minasdev-beer-address" itemprop="streetAddress">{{local.address}} &#10144;</a>
-                              <span class="more-infos">Para mais informações:</span>
-                              <a class="minasdev-beer-link" itemprop="url" href="{{local.site}}" target="_blank">Acesse a página deste local</a>
-                           </div>
-                      </div>
-                    </div>
-
-                </div>
-                <h3 class="sprite-figures minasdev-beer-logo">MinasDev Beer</h3>
-            </div>
-        </section>
-
         <section class="newsletter">
             <div class="container">
                 <form class="newsletter-form" action="http://minasdev.us3.list-manage.com/subscribe/post?u=50258ba79635076ed976b3238&amp;id=c864b0ba02" method="post" target="_blank">
