@@ -214,6 +214,14 @@ module.exports = function( grunt ) {
   ]);
 
   grunt.registerTask('build', [
+    'clean:old',
+    'shell:bower',
+    'concat:vendors',
+    'concat:scripts',
+    'uglify:scripts',
+    'concat:compile',
+    'sprite',
+    'stylus:compile',
     'clean:dist',
     'copy:dist',
     'htmlmin:compile',
