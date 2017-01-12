@@ -9,7 +9,7 @@ $(function(){
             var itens = $("#next-events li");
             itens.first().addClass("first");
             itens.last().addClass("last");
-            $(".proximos-eventos").show();
+            if(itens.length > 0) $(".proximos-eventos").show();
         });
     });
 
