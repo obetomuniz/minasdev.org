@@ -46,42 +46,32 @@
         <header class="header-page on-top" role="banner">
             <div class="container">
                 <h1 class="logo"><a class="logo-link" href="/">Minas Dev</a></h1>
+                <div class="minasdev-pullright-header">
+
+                </div>
             </div>
         </header>
 
-        <main class="main-page" id="main" role="main">
+        <section class="about-page">
+            <div class="container contacts">
+              <div class="contacts-wrapper">
+                <ul class="minasdev-socials">
+                    <li class="minasdev-social"><a class="sprite-icons minasdev-social-link facebook" href="https://www.facebook.com/minasdev" target="_blank">Facebook do MinasDev</a></li>
+                    <li class="minasdev-social"><a class="sprite-icons minasdev-social-link twitter" href="https://twitter.com/minasdev" target="_blank">Twitter do MinasDev</a></li>
+                </ul>
+
+                <p class="minasdev-slack">
+                  <a href="http://slack.minasdev.org">slack.minasdev.org</a>
+                </p>
+              </div>
+            </div>
+
             <div class="container mapa-de-minas">
                 <div class="about">
                     <h1 class="about-title">Comunidade de Desenvolvedores de Minas Gerais</h1>
                     <p class="about-text">Acreditamos que a troca de conhecimento é a base do crescimento profissional. Queremos unir desenvolvedores para que juntos todos possam contribuir e fortalecer o mercado em Minas Gerais.</p>
                     <p class="about-text">Tudo isso, através da criação de iniciativas que contribuam para essa troca e apoio de parceiros com a mesma visão.</p>
                 </div>
-                <ul class="minasdev-socials">
-                    <li class="minasdev-social"><a class="sprite-icons minasdev-social-link facebook" href="https://www.facebook.com/minasdev" target="_blank">Facebook do MinasDev</a></li>
-                    <li class="minasdev-social"><a class="sprite-icons minasdev-social-link twitter" href="https://twitter.com/minasdev" target="_blank">Twitter do MinasDev</a></li>
-                </ul>
-                <p class="minasdev-slack">
-                  <a href="http://slack.minasdev.org">slack.minasdev.org</a>
-                </p>
-            </div>
-        </main>
-
-        <section class="proximos-eventos">
-            <div class="container">
-                <h1 class="sprite-partners proximos-eventos-title">Próximos Eventos</h1>
-                <ul id="next-events" class="proximos-eventos-container">
-                    <li class="proximos-eventos-item" itemscope itemtype="http://schema.org/Event">
-                        <time itemprop="startDate" content="{{date}}" datetime="{{date}}" class="proximo-evento-date">{{moment(date).format("DD.MM")}}</time>
-                        <h2 itemprop="name" class="proximo-evento-name" lang="en">{{name}}</h2>
-
-                        <div itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
-                          <a href="{{local.googlemaps_link}}" itemprop="streetAddress" target="_blank" class="proximo-evento-text">{{local.name}} &#10144;</a>
-                        </div>
-
-                        <p itemprop="description" class="proximo-evento-text">{{description}}</p>
-                        <a itemprop="url" class="proximo-evento-link" href="{{url}}" target="_blank">Visite o site deste evento</a>
-                    </li>
-                </ul>
             </div>
         </section>
 
@@ -95,15 +85,31 @@
             </div>
         </section>
 
+        <section class="proximos-eventos">
+            <div class="container">
+                <h1 class="sprite-partners proximos-eventos-title">Próximos Eventos</h1>
+                <template id="next-events">
+                    <div class="proximos-eventos-item" itemscope itemtype="http://schema.org/Event">
+                        <time itemprop="startDate" content="{{date}}" datetime="{{date}}" class="proximo-evento-date">{{moment(date).format("DD.MM")}}</time>
+                        <h2 itemprop="name" class="proximo-evento-name" lang="en">{{name}}</h2>
+
+                        <div itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+                          <a href="{{local.googlemaps_link}}" itemprop="streetAddress" target="_blank" class="proximo-evento-text">{{local.name}} &#10144;</a>
+                        </div>
+
+                        <p itemprop="description" class="proximo-evento-text">{{description}}</p>
+                        <a itemprop="url" class="proximo-evento-link" href="{{url}}" target="_blank">Visite o site deste evento</a>
+                    </div>
+                </template>
+            </div>
+        </section>
+
         <footer class="footer-page" role="contentinfo">
-            <p class="copyright">2013-2017 Minas Dev</p>
+            <p class="copyright">2013-2017 © Minas Dev</p>
         </footer>
 
          <!-- minasdev.org scripts -->
         <script src="/assets/javascripts/minasdev.js"></script>
-
-        <!-- In Test -->
-        <script src="https://cdn.polyfill.io/v1/polyfill.min.js"></script>
 
         <script>
             var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-46088004-1']);

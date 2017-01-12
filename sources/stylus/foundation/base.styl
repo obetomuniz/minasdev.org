@@ -34,12 +34,6 @@
             -webkit-transition -webkit-transform 0.2s ease
             -moz-transition -moz-transform 0.2s ease
             transition transform 0.2s ease
-            &:hover{
-                -webkit-transform rotate(-5deg) scale3d(1.1,1.1,1.1) translateZ(0)
-                -moz-transform rotate(-5deg) scale3d(1.1,1.1,1.1) translateZ(0)
-                transform rotate(-5deg) scale3d(1.1,1.1,1.1) translateZ(0)
-                backface-visibility hidden
-            }
             &:hover, &.active{
                 width $facebook_hover_width
                 padding-top $facebook_hover_height
@@ -54,27 +48,10 @@
             -webkit-transition -webkit-transform 0.2s ease
             -moz-transition -moz-transform 0.2s ease
             transition transform 0.2s ease
-            &:hover{
-                -webkit-transform rotate(-5deg) scale3d(1.1,1.1,1.1) translateZ(0)
-                -moz-transform rotate(-5deg) scale3d(1.1,1.1,1.1) translateZ(0)
-                transform rotate(-5deg) scale3d(1.1,1.1,1.1) translateZ(0)
-                backface-visibility hidden
-            }
             &:hover, &.active{
                 width $twitter_hover_width
                 padding-top $twitter_hover_height
                 background-position $twitter_hover_offset_x $twitter_hover_offset_y
-            }
-        }
-
-        &.google-plus {
-            width $google-plus_width
-            padding-top $google-plus_height
-            background-position $google-plus_offset_x $google-plus_offset_y
-            &:hover, &.active{
-                width $google-plus_hover_width
-                padding-top $google-plus_hover_height
-                background-position $google-plus_hover_offset_x $google-plus_hover_offset_y
             }
         }
 
