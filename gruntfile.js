@@ -56,20 +56,6 @@ module.exports = function( grunt ) {
         }
       }
     },
-    sprite:{
-      partners: {
-        padding: 5,
-        src: ['sources/images/partners/*.png'],
-        dest: 'public/assets/images/partners.png',
-        destCss: 'sources/stylus/sprites/partners.styl'
-      },
-      icons: {
-        padding: 40,
-        src: ['sources/images/icons/*.png'],
-        dest: 'public/assets/images/icons.png',
-        destCss: 'sources/stylus/sprites/icons.styl'
-      }
-    },
     imagemin: {
       dynamic: {
         options: {
@@ -83,21 +69,11 @@ module.exports = function( grunt ) {
         }]
       }
     },
-    // imageoptim: {
-    //   dynamic: {
-    //     options: {
-    //       imageAlpha: true,
-    //       quitAfter: true,
-    //       // jpegMini: true
-    //     },
-    //     src: ['../dist/public/assets/images/']
-    //   }
-    // },
     copy: {
       development: {
         files: [
-          {expand: true, cwd: 'sources/images/background/', src: ['**'], dest: 'public/assets/images/'},
-          {expand: true, cwd: 'sources/images/projects/', src: ['**'], dest: 'public/assets/images/projects/'}
+          {expand: true, cwd: 'sources/images/svgs/', src: ['**'], dest: 'public/assets/images/svgs/'},
+          {expand: true, cwd: 'sources/images/background/', src: ['**'], dest: 'public/assets/images/'}
         ]
       },
       dist: {
@@ -115,10 +91,6 @@ module.exports = function( grunt ) {
         },
         src: [
           '.tmp/',
-          'public/assets/images/partners.png',
-          'sources/stylus/sprites/partners.styl',
-          'public/assets/images/icons.png',
-          'sources/stylus/sprites/icons.styl',
           '../dist/'
         ]
       },
@@ -127,17 +99,6 @@ module.exports = function( grunt ) {
           force: true
         },
         src: ['.tmp/']
-      },
-      sprites: {
-        options: {
-          force: true
-        },
-        src: [
-          'public/assets/images/partners.png',
-          'sources/stylus/sprites/partners.styl',
-          'public/assets/images/icons.png',
-          'sources/stylus/sprites/icons.styl'
-        ]
       },
       dist: {
         options: {
@@ -207,7 +168,6 @@ module.exports = function( grunt ) {
     'concat:scripts',
     'uglify:scripts',
     'concat:compile',
-    'sprite',
     'stylus:compile',
     'copy:development',
     'concurrent'
@@ -220,17 +180,11 @@ module.exports = function( grunt ) {
     'concat:scripts',
     'uglify:scripts',
     'concat:compile',
-    'sprite',
     'stylus:compile',
     'clean:dist',
     'copy:dist',
     'htmlmin:compile',
-    'imagemin:dynamic',
-    // 'imageoptim:dynamic'
+    'imagemin:dynamic'
   ]);
 
 };
-
-
-
-

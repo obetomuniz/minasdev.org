@@ -3,55 +3,46 @@
   margin 0 auto
 }
 
-.sprite-partners {
-    background-image url("/assets/images/partners.png")
-    background-repeat no-repeat
-}
-
-.sprite-icons {
-    background-image url("/assets/images/icons.png")
-    background-repeat no-repeat
-}
-
 .minasdev-socials {
     display block
 
     .minasdev-social{
         display inline-block
         vertical-align middle
-        margin 0 25px
+        margin 0 15px
     }
 
     .minasdev-social-link {
         display block
         height 0
         overflow hidden
+        background-repeat no-repeat
+        background-size contain
+
+        &.github {
+            width 32px
+            padding-top 26px
+            background-image url("/assets/images/svgs/github.svg")
+            &:hover, &.active{
+              background-image url("/assets/images/svgs/github_hover.svg")
+            }
+        }
 
         &.facebook{
-            width $facebook_width
-            padding-top $facebook_height
-            background-position $facebook_offset_x $facebook_offset_y
-            -webkit-transition -webkit-transform 0.2s ease
-            -moz-transition -moz-transform 0.2s ease
-            transition transform 0.2s ease
+            width 32px
+            padding-top 26px
+            background-image url("/assets/images/svgs/facebook.svg")
             &:hover, &.active{
-                width $facebook_hover_width
-                padding-top $facebook_hover_height
-                background-position $facebook_hover_offset_x $facebook_hover_offset_y
+              background-image url("/assets/images/svgs/facebook_hover.svg")
             }
         }
 
         &.twitter {
-            width $twitter_width
-            padding-top $twitter_height
-            background-position $twitter_offset_x $twitter_offset_y
-            -webkit-transition -webkit-transform 0.2s ease
-            -moz-transition -moz-transform 0.2s ease
-            transition transform 0.2s ease
+            width 32px
+            padding-top 26px
+            background-image url("/assets/images/svgs/twitter.svg")
             &:hover, &.active{
-                width $twitter_hover_width
-                padding-top $twitter_hover_height
-                background-position $twitter_hover_offset_x $twitter_hover_offset_y
+              background-image url("/assets/images/svgs/twitter_hover.svg")
             }
         }
 
