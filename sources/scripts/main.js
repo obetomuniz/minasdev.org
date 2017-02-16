@@ -1,10 +1,5 @@
 $(function(){
-    $.get("https://rawgit.com/minasdev/minasdev-events/master/events.json", function(data){
-        events = _.sortBy(data.events, "date");
-        var events = _.remove(events, function(r) {
-            return moment(r.date+"T22:00:00") >= moment();
-        });
-
+    $.get("https://api.minasdev.org/events", function(events){
         renderTemplate($("#next-events"), events, {max: 100}, function(){
             if($(".proximos-eventos-item").length > 0) $(".proximos-eventos").show();
         });
@@ -45,7 +40,9 @@ function renderTemplate(block, results, options, done){
         output = "";
 
     $.each(results, function(i,v){
+        _.templateSettings.evaluate = /{%([\s\S]+?)%}/g;
         _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
+
         output += _.template(tpl, v);
         return (i < (options.max - 1)) ? true : false;
     });
