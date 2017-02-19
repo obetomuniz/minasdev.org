@@ -1,0 +1,14 @@
+/* Configurations */
+@import 'foundation/reset';
+@import 'foundation/base';
+
+/* Header */
+@import 'foundation/header';
+
+/* Main Content */
+@import 'sections/about';
+@import 'sections/newsletter';
+@import 'sections/events';
+
+/* Footer */
+@import 'foundation/footer';
