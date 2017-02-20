@@ -34,7 +34,7 @@ blockquote, q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after, {
+blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
@@ -50,20 +50,20 @@ img {
 }
 
 
-input[type]{
+input[type] {
   user-select:text
 }
 
-a{
+a {
   text-decoration:none;
   color:inherit
 }
 
-a:focus, input:focus{
+a:focus, input:focus {
   outline:0
 }
 
-fieldset, input{
+fieldset, input {
   appearance:none;
   border:0;
   padding:0;

@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://minasdev.org/">
 
         <!-- minasdev.org font -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800,900" rel="stylesheet">
 
         <!-- minasdev.org font -->
         <link href="/styles.css" rel="stylesheet">
@@ -46,35 +46,40 @@
     </head>
 
     <body>
-        <header>
-          <h1><a href="/">Minas Dev</a></h1>
+        <header class="header">
+          <div class="header-container minasdev-container">
+            <h1 class="logo"><a href="/" class="logo-link">Minas Dev</a></h1>
+
+            <div class="contacts">
+              <ul class="contact-list">
+                <li class="contact-list-item"><a class="contact contact-icon contact-github" href="https://github.com/minasdev">GitHub do Minas Dev</a></li>
+                <li class="contact-list-item"><a class="contact contact-icon contact-facebook" href="https://www.facebook.com/minasdev">Facebook do Minas Dev</a></li>
+                <li class="contact-list-item"><a class="contact contact-icon contact-twitter" href="https://twitter.com/minasdev">Twitter do Minas Dev</a></li>
+              </ul>
+              <a class="contact contact-inline contact-slack" href="https://slack.minasdev.org">slack.minasdev.org</a>
+            </div>
+          </div>
         </header>
 
-        <section>
-          <ul>
-            <li><a href="https://github.com/minasdev">GitHub do MinasDev</a></li>
-            <li><a href="https://www.facebook.com/minasdev">Facebook do MinasDev</a></li>
-            <li><a href="https://twitter.com/minasdev">Twitter do MinasDev</a></li>
-          </ul>
-
-          <a href="https://slack.minasdev.org">slack.minasdev.org</a>
-        </section>
-
-        <main>
-          <h1>Comunidade de Desenvolvedores de Minas Gerais</h1>
-          <p>Acreditamos que a troca de conhecimento é a base do crescimento profissional. Queremos unir desenvolvedores para que juntos todos possam contribuir e fortalecer o mercado em Minas Gerais.</p>
-          <p>Tudo isso, através da criação de iniciativas que contribuam para essa troca e apoio de parceiros com a mesma visão.</p>
+        <main class="about">
+          <div class="about-container minasdev-container">
+            <div class="about-content">
+              <h1 class="about-title">Comunidade de Desenvolvedores de Minas Gerais</h1>
+              <p class="about-text">Acreditamos que a troca de conhecimento é a base do crescimento profissional. Queremos unir desenvolvedores para que juntos todos possam contribuir e fortalecer o mercado em Minas Gerais.</p>
+              <p class="about-text">Tudo isso, através da criação de iniciativas que contribuam para essa troca e apoio de parceiros com a mesma visão.</p>
+            </div>
+          </div>
         </main>
 
-        <section>
-          <form action="https://minasdev.us3.list-manage.com/subscribe/post?u=50258ba79635076ed976b3238&amp;id=c864b0ba02">
-            <label for="email">Newsletter</label>
-            <input id="email" type="text" name="EMAIL" placeholder="Digite aqui seu email e receba novidades do Minas Dev">
-            <button type="submit" name="subscribe">Cadastrar</button>
+        <section class="newsletter">
+          <form class="newsletter-form minasdev-container" action="https://minasdev.us3.list-manage.com/subscribe/post?u=50258ba79635076ed976b3238&amp;id=c864b0ba02" method="post">
+            <label class="newsletter-title" for="email">Newsletter</label>
+            <input class="newsletter-email-input" id="email" type="text" name="EMAIL" placeholder="Digite aqui seu email e receba novidades do Minas Dev">
+            <button class="newsletter-action" type="submit" name="subscribe">Cadastrar</button>
           </form>
         </section>
 
-        <section>
+        <section class="off">
           <h1>Próximos Eventos</h1>
 
           <template>
@@ -87,7 +92,7 @@
           </template>
         </section>
 
-        <footer class="footer-page" role="contentinfo">
+        <footer class="footer">
           <small class="copyright">2013-2017 &copy; Minas Dev</small>
         </footer>
 

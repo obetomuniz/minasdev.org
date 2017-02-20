@@ -44,12 +44,18 @@ module.exports = {
           }]
         },
         {
-          test: /\.(png|jpg|gif|svg)$/,
+          test: /\.(png|jpg|gif)$/,
           use: [{
             loader: 'file-loader',
             options: {
               name: 'images/[sha512:hash:base64:7].[ext]'
             }
+          }]
+        },
+        {
+          test: /\.svg$/,
+          use: [{
+            loader: 'url-loader'
           }]
         }
       ]

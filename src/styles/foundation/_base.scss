@@ -1,4 +1,16 @@
 body {
   font-family: 'Montserrat', sans-serif;
-  background-image: url('../images/objects/banner.jpg');
+  border-top: 3px #E64C3B solid;
+  background-color: #babaca;
+  font-weight: 400;
+}
+
+.minasdev-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.off {
+  display: none;
 }

@@ -1,0 +1,87 @@
+.header{
+  position: absolute;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  height: 170px;
+  width: 170px;
+  overflow: hidden;
+  .logo-link {
+    display: block;
+    background: url('../images/objects/minasdev-logo.svg') no-repeat 0 0;
+    background-size: contain;
+    width: 100%;
+    padding-top: 100%;
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .contact-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .contact-list-item {
+    width: 26px;
+    height: 26px;
+    overflow: hidden;
+    margin: 10px 15px 10px;
+  }
+
+  .contact {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &.contact-icon {
+      width: 100%;
+      padding-top: 100%;
+    }
+
+    &.contact-github {
+      background-image: url('../images/icons/github.svg');
+      &:hover {
+        background-image: url('../images/icons/github_hover.svg');
+      }
+    }
+
+    &.contact-facebook {
+      background-image: url('../images/icons/facebook.svg');
+      &:hover {
+        background-image: url('../images/icons/facebook_hover.svg');
+      }
+    }
+
+    &.contact-twitter {
+      background-image: url('../images/icons/twitter.svg');
+      &:hover {
+        background-image: url('../images/icons/twitter_hover.svg');
+      }
+    }
+
+    &.contact-inline {
+      color: #ffffff;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px #000;
+
+      &:hover {
+        color: #E64C3B;
+      };
+    }
+  }
+}
