@@ -1,5 +1,5 @@
 .newsletter {
-  background-color: #e84230;
+  background-color: #E64C3B;
   padding: 40px 0;
 }
 
@@ -50,7 +50,36 @@
   letter-spacing: -0.5px;
   text-transform: uppercase;
   padding: 15px;
-  color: #e84230;
+  color: #E64C3B;
   flex: 1;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .newsletter {
+    padding: 20px 0;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-title {
+    margin-bottom: 20px;
+  }
+
+  .newsletter-title {
+    margin-bottom: 20px;
+  }
+
+  .newsletter-email-input {
+    width: 95%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .newsletter-action {
+    width: 95%;
+    margin-bottom: 10px;
+  }
 }

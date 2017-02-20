@@ -1,0 +1,124 @@
+.events {
+  background-color: #ffffff;
+}
+
+.events-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 20px;
+}
+
+.events-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.events-title {
+  display: block;
+  background: url('../images/objects/proximos-eventos.svg') no-repeat;
+  background-position: 70% center;
+  background-size: 55% auto;
+  height: 0;
+  padding-top: 204px;
+  width: 512px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.event {
+  width: 256px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.event-day {
+  display: block;
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 2.7rem;
+  letter-spacing: -1px;
+  color: #242424;
+  &:after {
+    display: block;
+    content: '';
+    width: 100px;
+    height: 5px;
+    margin: 12px 0 14px;
+    background-color: #E64C3B;
+  }
+}
+
+.event-name {
+  display: block;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1.3rem;
+  color: #242424;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  max-width: 150px;
+}
+
+.event-community {
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  color: #444444;
+  margin-bottom: 5px;
+  max-width: 150px;
+}
+
+.event-url {
+  text-decoration: none;
+  color: #E64C3B;
+  font-weight: 700;
+  display: block;
+  font-size: 12px;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+@media screen and (max-width: 1024px) {
+  .events-title {
+    padding-top: 152px;
+    width: 255px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .events-container {
+    padding: 30px 0 0;
+  }
+
+  .events-title {
+    background-position: center;
+    width: 320px;
+    padding-top: 110px;
+    margin: 0 auto 30px;
+  }
+
+  .event {
+    width: 50%;
+  }
+
+  .event-day {
+    font-size: 40px;
+  }
+
+  .event-name {
+    font-size: 12px;
+    max-width: 120px;
+  }
+
+  .event-community {
+    font-size: 10px;
+    max-width: 120px;
+  }
+
+  .event-url {
+    font-size: 10px;
+  }
+}

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
         <title>Minas Dev</title>
 
@@ -79,17 +79,26 @@
           </form>
         </section>
 
-        <section class="off">
-          <h1>Próximos Eventos</h1>
-
-          <template>
-            <li>
-              <time>{{date}}</time>
-              <h2>{{name}}</h2>
-              <p>{{community}}</p>
-              <a href="{{url}}">Visite o site deste evento</a>
-            </li>
-          </template>
+        <section class="events">
+          <div class="events-container minasdev-container">
+            <div class="events-content">
+              <h1 class="events-title">Próximos Eventos</h1>
+              <template id="event-tpl">
+                {{#each .}}
+                  <div class="event">
+                    <div itemscope itemtype="http://schema.org/Event">
+                      <time class="event-day" itemprop="startDate" datetime="{{date}}">{{formatDate date}}</time>
+                      <h2 class="event-name" temprop="name">{{name}}</h2>
+                      {{#if community}}
+                      <p class="event-community" itemprop="organizer">{{community}}</p>
+                      {{/if}}
+                      <a href="{{url}}" class="event-url" target="_blank" itemprop="url">Visite o site deste evento</a>
+                    </div>
+                  </div>
+                {{/each}}
+              </template>
+            </div>
+          </div>
         </section>
 
         <footer class="footer">

@@ -73,4 +73,9 @@ module.exports = {
         'process.env.NODE_ENV': DEV_MODE ? '"development"' : '"production"',
       })
     ],
+    resolve: {
+      alias: {
+        'handlebars' : 'handlebars/dist/handlebars.js'
+      }
+    }
 };
