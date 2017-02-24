@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const OfflinePlugin = require('offline-plugin');
 
 const DEV_MODE = process.env.NODE_ENV === 'development';
 
@@ -48,7 +49,7 @@ module.exports = {
           use: [{
             loader: 'file-loader',
             options: {
-              name: 'images/[sha512:hash:base64:7].[ext]'
+              name: 'images/[name].[ext]'
             }
           }]
         },
@@ -66,9 +67,21 @@ module.exports = {
         filename: 'index.html'
       }),
       new CopyWebpackPlugin([
-        { from: './src/images/misc', to: 'images/misc' }
+        { from: './src/images/misc', to: 'images/misc' },
+        { from: './src/manifest.json', to: 'manifest.json' },
+        { from: './src/robots.txt', to: 'robots.txt' },
+        { from: './src/sitemap.xml', to: 'sitemap.xml' }
       ]),
       new ExtractTextPlugin("styles.css"),
+      new OfflinePlugin({
+        safeToUseOptionalCaches: true,
+        caches: 'all',
+        ServiceWorker: {
+          output: 'service-worker.js',
+          events: true
+        },
+        responseStrategy: 'network-first'
+      }),
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': DEV_MODE ? '"development"' : '"production"',
       })

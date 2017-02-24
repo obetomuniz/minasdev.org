@@ -3,8 +3,6 @@
     <head>
         <meta charset="UTF-8">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
         <title>Minas Dev</title>
 
         <meta name="description" content="O Minas Dev é um Movimento que visa fomentar o cenário de desenvolvimento de Minas Gerais.">
@@ -16,12 +14,22 @@
         <link rel="canonical" href="https://minasdev.org/">
 
         <!-- minasdev.org font -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800,900" rel="stylesheet">
+        <link id="fonts" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800,900" rel="stylesheet" disabled media="none">
 
         <!-- minasdev.org font -->
-        <link href="/styles.css" rel="stylesheet">
+        <link id="styles" href="/styles.css" rel="stylesheet" disabled media="none">
 
-        <!-- Favicons -->
+        <!-- PWA configs -->
+        <link rel="manifest" href="manifest.json">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Minas Dev">
+        <meta name="apple-mobile-web-app-title" content="Minas Dev">
+        <meta name="theme-color" content="#e64c3b">
+        <meta name="msapplication-navbutton-color" content="#e64c3b">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-starturl" content="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
         <link rel="shortcut icon" href="https://minasdev.org/images/misc/favicons/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="https://minasdev.org/images/misc/favicons/apple-touch-icon.png" />
         <link rel="apple-touch-icon" sizes="57x57" href="https://minasdev.org/images/misc/favicons/apple-touch-icon-57x57.png" />
@@ -92,7 +100,7 @@
                       {{#if community}}
                       <p class="event-community" itemprop="organizer">{{community}}</p>
                       {{/if}}
-                      <a href="{{url}}" class="event-url" target="_blank" itemprop="url">Visite o site deste evento</a>
+                      <a href="{{url}}" class="event-url" target="_blank" rel="noopener" itemprop="url">Visite o site deste evento</a>
                     </div>
                   </div>
                 {{/each}}

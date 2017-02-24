@@ -1,22 +1,36 @@
 import 'whatwg-fetch';
-import Handlebars from 'handlebars';
-import format from 'date-fns/format';
+import OfflinePlugin from 'offline-plugin/runtime';
+import eventListRender from './event-list-render';
+import asyncLink from './async-link';
 
-Handlebars.registerHelper('formatDate', function(date) {
-  return format(date, 'DD.MM');
+OfflinePlugin.install({
+  onInstalled: function() {
+    console.log('onInstalled');
+  },
+  onUpdating: function() {
+    console.log('onUpdating');
+  },
+  onUpdateReady: function() {
+    console.log('onUpdateReady');
+    OfflinePlugin.applyUpdate();
+  },
+  onUpdated: function() {
+    console.log('onUpdated');
+    window.location.reload();
+  }
 });
 
 window.addEventListener('load', () =>{
-  const template = document.querySelector('#event-tpl');
-
   fetch('https://api.minasdev.org/events').then((response) => {
-    response.json().then((data) => renderEvents(template, data));
+    response.json().then((data) => {
+      eventListRender(document.querySelector('#event-tpl'), data);
+      localStorage.setItem('events', JSON.stringify(data));
+    });
+
+  }).catch(() => {
+    eventListRender(document.querySelector('#event-tpl'), JSON.parse(localStorage.getItem('events')))
   });
 
+  asyncLink('#fonts');
+  asyncLink('#styles');
 });
-
-function renderEvents (template, events) {
-  const render = Handlebars.compile(template.innerHTML);
-  const html = render(events);
-  template.parentNode.insertAdjacentHTML('beforeend', html);
-}
