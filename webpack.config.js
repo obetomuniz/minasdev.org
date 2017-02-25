@@ -76,11 +76,17 @@ module.exports = {
       new OfflinePlugin({
         safeToUseOptionalCaches: true,
         caches: 'all',
+        responseStrategy: 'cache-first',
         ServiceWorker: {
-          output: 'service-worker.js',
-          events: true
+          events: true,
+          output: 'service-worker.js'
         },
-        responseStrategy: 'network-first'
+        AppCache: {
+          events: false,
+          disableInstall: true,
+          directory: './',
+          FALLBACK: { '/': '/index.html' }
+        }
       }),
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': DEV_MODE ? '"development"' : '"production"',
