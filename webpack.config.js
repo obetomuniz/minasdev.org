@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const OfflinePlugin = require('offline-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 const DEV_MODE = process.env.NODE_ENV === 'development';
 
@@ -54,6 +55,15 @@ module.exports = {
           }]
         },
         {
+          test: /\.(eot|ttf|woff|woff2)$/,
+          use: [{
+            loader: 'file-loader',
+            options: {
+              name: 'fonts/[name].[ext]'
+            }
+          }]
+        },
+        {
           test: /\.svg$/,
           use: [{
             loader: 'url-loader'
@@ -62,11 +72,15 @@ module.exports = {
       ]
     },
     plugins: [
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': DEV_MODE ? '"development"' : '"production"',
+      }),
       new HtmlWebpackPlugin({
         template: 'src/index.html',
         filename: 'index.html'
       }),
       new CopyWebpackPlugin([
+        { from: './src/images/game', to: 'images/game' },
         { from: './src/images/misc', to: 'images/misc' },
         { from: './src/manifest.json', to: 'manifest.json' },
         { from: './src/robots.txt', to: 'robots.txt' },
@@ -88,9 +102,7 @@ module.exports = {
           FALLBACK: { '/': '/index.html' }
         }
       }),
-      new webpack.DefinePlugin({
-        'process.env.NODE_ENV': DEV_MODE ? '"development"' : '"production"',
-      })
+      new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
     ],
     resolve: {
       alias: {

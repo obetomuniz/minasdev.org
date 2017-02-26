@@ -1,5 +1,6 @@
 /* Configurations */
 @import 'foundation/reset';
+@import 'foundation/fonts';
 @import 'foundation/base';
 
 /* Header */
@@ -9,6 +10,7 @@
 @import 'sections/about';
 @import 'sections/newsletter';
 @import 'sections/events';
+@import 'sections/game';
 
 /* Footer */
 @import 'foundation/footer';

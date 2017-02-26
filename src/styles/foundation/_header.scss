@@ -1,6 +1,9 @@
 .header{
-  position: absolute;
+  position: fixed;
+  z-index: 2;
   width: 100%;
+  border-top: 3px #E64C3B solid;
+  top: 0;
 }
 
 .header-container {
@@ -76,7 +79,7 @@
 
     &.contact-inline {
       color: #ffffff;
-      font-weight: 700;
+      font-family: 'Montserrat-Bold', sans-serif;
       text-shadow: 1px 1px 2px #000;
 
       &:hover {

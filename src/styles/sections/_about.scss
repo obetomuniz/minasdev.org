@@ -4,8 +4,12 @@
   background-position: center 0;
   background-size: cover;
   height: 835px;
+  width: 100%;
   display: flex;
   align-items: center;
+  position: fixed;
+  z-index: 1;
+  top: 0;
 }
 
 .about-container {
@@ -26,7 +30,7 @@
 }
 
 .about-title {
-  font-weight: 800;
+  font-family: 'Montserrat-ExtraBold', sans-serif;
   font-size: 45px;
   text-transform: uppercase;
   line-height: 2.7rem;
@@ -37,7 +41,7 @@
 }
 
 .about-text {
-  font-weight: 700;
+  font-family: 'Montserrat-Bold', sans-serif;
   font-size: 14px;
   line-height: 1.2rem;
   margin-bottom: 10px;

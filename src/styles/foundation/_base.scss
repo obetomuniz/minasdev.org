@@ -1,8 +1,6 @@
 body {
-  font-family: 'Montserrat', sans-serif;
-  border-top: 3px #E64C3B solid;
+  font-family: 'Montserrat-Regular', sans-serif;
   background-color: #babaca;
-  font-weight: 400;
 }
 
 .minasdev-container {
@@ -11,14 +9,28 @@ body {
   padding: 0 20px;
 }
 
+.parallax {
+  position: relative;
+  z-index: 2;
+  margin-top: 835px;
+}
+
 @media screen and (max-width: 1024px) {
   .minasdev-container {
     max-width: 768px;
+  }
+
+  .parallax {
+    margin-top: 630px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .minasdev-container {
     max-width: 100%;
+  }
+
+  .parallax {
+    margin-top: 450px;
   }
 }
