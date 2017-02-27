@@ -96,9 +96,7 @@ module.exports = {
           output: 'service-worker.js'
         },
         AppCache: {
-          events: false,
-          disableInstall: true,
-          directory: './',
+          events: true,
           FALLBACK: { '/': '/index.html' }
         }
       }),

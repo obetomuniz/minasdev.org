@@ -1,6 +1,20 @@
+::-moz-selection {
+    color: #ffffff;
+    background-color: #E64C3B;
+}
+
+::selection {
+    color: #ffffff;
+    background-color: #E64C3B;
+}
+
 body {
   font-family: 'Montserrat-Regular', sans-serif;
-  background-color: #babaca;
+  background-color: #E64C3B;
+
+  &.offline-state {
+    background-color: #ffffff;
+  }
 }
 
 .minasdev-container {

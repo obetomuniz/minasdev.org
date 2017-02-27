@@ -3,6 +3,12 @@
   padding: 40px 0;
 }
 
+body.offline-state {
+  .newsletter {
+    display: none;
+  }
+}
+
 .newsletter-form {
   display: flex;
   align-items: center;
@@ -31,6 +37,10 @@
   color: #ffffff;
   margin: 0 60px;
   flex: 3;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 
   &::-webkit-input-placeholder { color: #ffffff; }
   &:-moz-placeholder { color: #ffffff; }
@@ -53,6 +63,33 @@
   color: #E64C3B;
   flex: 1;
   cursor: pointer;
+}
+
+/*
+ * Animation for webkit
+*/
+@-webkit-keyframes bounce {
+    0% {-webkit-transform: translateX(0);}
+    20% {-webkit-transform: translateX(15px);}
+    40% {-webkit-transform: translateX(-30px);}
+    60% {-webkit-transform: translateX(30px);}
+    80% {-webkit-transform: translateX(-15px);}
+    100% {-webkit-transform: translateX(0);}
+}
+@keyframes bounce {
+    0% {-webkit-transform: translateX(0);}
+    20% {-webkit-transform: translateX(15px);}
+    40% {-webkit-transform: translateX(-30px);}
+    60% {-webkit-transform: translateX(30px);}
+    80% {-webkit-transform: translateX(-15px);}
+    100% {-webkit-transform: translateX(0);}
+}
+/*
+ * Adding the animation to our element
+*/
+.bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
 }
 
 @media screen and (max-width: 1024px) {
