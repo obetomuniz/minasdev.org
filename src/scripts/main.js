@@ -3,21 +3,18 @@ import OfflinePlugin from 'offline-plugin/runtime';
 import eventListRender from './event-list-render';
 import asyncLink from './async-link';
 import tRexGame from './t-rex-game';
-import { validateEmail } from './utils';
+import { validateEmail, offlineModeReady } from './utils';
 
 OfflinePlugin.install({
   onInstalled: function() {
-    console.log('onInstalled');
+    offlineModeReady(1000);
   },
   onUpdating: function() {
-    console.log('onUpdating');
   },
   onUpdateReady: function() {
-    console.log('onUpdateReady');
     OfflinePlugin.applyUpdate();
   },
   onUpdated: function() {
-    console.log('onUpdated');
     window.location.reload();
   }
 });

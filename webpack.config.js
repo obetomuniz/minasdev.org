@@ -14,7 +14,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
+        filename: 'main.js',
         publicPath: '/'
     },
     module: {
@@ -55,7 +55,7 @@ module.exports = {
           }]
         },
         {
-          test: /\.(eot|ttf|woff|woff2)$/,
+          test: /\.(woff2?)$/,
           use: [{
             loader: 'file-loader',
             options: {
@@ -80,24 +80,35 @@ module.exports = {
         filename: 'index.html'
       }),
       new CopyWebpackPlugin([
-        { from: './src/images/game', to: 'images/game' },
         { from: './src/images/misc', to: 'images/misc' },
         { from: './src/manifest.json', to: 'manifest.json' },
         { from: './src/robots.txt', to: 'robots.txt' },
         { from: './src/sitemap.xml', to: 'sitemap.xml' }
       ]),
-      new ExtractTextPlugin("styles.css"),
+      new ExtractTextPlugin("main.css"),
       new OfflinePlugin({
         safeToUseOptionalCaches: true,
-        caches: 'all',
-        responseStrategy: 'cache-first',
+
+        caches: {
+          main: [
+            'main.js',
+            'main.css',
+            'index.html',
+            '**/*.woff',
+            '**/*.woff2',
+            'images/offline-sprite-1x.png',
+            'images/offline-sprite-2x.png',
+            'images/banner.jpg',
+            'images/mapa-de-minas.png'
+          ]
+        },
+
         ServiceWorker: {
           events: true,
           output: 'service-worker.js'
         },
         AppCache: {
-          events: true,
-          FALLBACK: { '/': '/index.html' }
+          events: true
         }
       }),
       new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })

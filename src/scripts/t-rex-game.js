@@ -78,7 +78,7 @@
      * Default game width.
      * @const
      */
-    var DEFAULT_WIDTH = 700;
+    var DEFAULT_WIDTH = 600;
 
     /**
      * Frames per second.
@@ -113,7 +113,7 @@
         GRAVITY: 0.6,
         INITIAL_JUMP_VELOCITY: 12,
         INVERT_FADE_DURATION: 12000,
-        INVERT_DISTANCE: 700,
+        INVERT_DISTANCE: 600,
         MAX_BLINK_COUNT: 3,
         MAX_CLOUDS: 6,
         MAX_OBSTACLE_LENGTH: 3,
@@ -308,7 +308,8 @@
          */
         loadSounds: function () {
             if (!IS_IOS) {
-                this.audioContext = new AudioContext();
+                var AudioContext = window.AudioContext || window.webkitAudioContext || false;
+                this.audioContext = (AudioContext) ? new AudioContext() : AudioContext;
 
                 var resourceTemplate =
                     document.getElementById(this.config.RESOURCE_TEMPLATE_ID).content;
@@ -1565,7 +1566,7 @@
      * Blinking coefficient.
      * @const
      */
-    Trex.BLINK_TIMING = 7000;
+    Trex.BLINK_TIMING = 6000;
 
 
     /**
@@ -2379,7 +2380,7 @@
      * @enum {number}
      */
     HorizonLine.dimensions = {
-        WIDTH: 700,
+        WIDTH: 600,
         HEIGHT: 12,
         YPOS: 127
     };
