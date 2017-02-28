@@ -121,7 +121,7 @@
         MAX_SPEED: 13,
         MIN_JUMP_HEIGHT: 35,
         MOBILE_SPEED_COEFFICIENT: 1.2,
-        RESOURCE_TEMPLATE_ID: 'audio-resources',
+        RESOURCE_TEMPLATE_ID: 'resources',
         SPEED: 6,
         SPEED_DROP_COEFFICIENT: 3
     };
@@ -286,10 +286,13 @@
          * definition.
          */
         loadImages: function () {
+            var template = document.getElementById(this.config.RESOURCE_TEMPLATE_ID).content;
             if (IS_HIDPI) {
+                document.querySelector('#offline-resources').appendChild(template.getElementById('offline-resources-2x'));
                 Runner.imageSprite = document.getElementById('offline-resources-2x');
                 this.spriteDef = Runner.spriteDefinition.HDPI;
             } else {
+                document.querySelector('#offline-resources').appendChild(template.getElementById('offline-resources-1x'));
                 Runner.imageSprite = document.getElementById('offline-resources-1x');
                 this.spriteDef = Runner.spriteDefinition.LDPI;
             }

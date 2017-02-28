@@ -4,7 +4,7 @@ export function validateEmail(email) {
 }
 
 export function offlineModeReady(delay) {
-    alert('cached!')
+    // alert('cached!');
     document.querySelector('body').classList.add('offline-mode-ready');
     setTimeout(() => document.querySelector('body').classList.remove('offline-mode-ready'), delay);
 }

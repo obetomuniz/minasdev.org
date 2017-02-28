@@ -1,12 +1,83 @@
 const path = require('path');
+const glob = require('glob');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const StyleExtHtmlPlugin = require("style-ext-html-webpack-plugin");
+const PurifyCSSPlugin = require('purifycss-webpack');
 const OfflinePlugin = require('offline-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const imageminMozjpeg = require('imagemin-mozjpeg');
 
 const DEV_MODE = process.env.NODE_ENV === 'development';
+
+
+const Define = new webpack.DefinePlugin({
+  'process.env.NODE_ENV': DEV_MODE ? '"development"' : '"production"',
+});
+
+const HtmlWebpack = new HtmlWebpackPlugin({
+  template: 'src/index.html',
+  filename: 'index.html'
+});
+
+const CopyWebpack = new CopyWebpackPlugin([
+  { from: './src/images/misc', to: 'images/misc' },
+  { from: './src/manifest.json', to: 'manifest.json' },
+  { from: './src/robots.txt', to: 'robots.txt' },
+  { from: './src/sitemap.xml', to: 'sitemap.xml' }
+]);
+
+const ExtractText = new ExtractTextPlugin("main.css");
+
+const StyleExtHtml = new StyleExtHtmlPlugin('main.css');
+
+const PurifyCSS = new PurifyCSSPlugin({
+  paths: glob.sync(path.join(__dirname, 'dist/*.html')),
+  minimize: false,
+  purifyOptions: {
+    rejected: true
+  }
+});
+
+const Offline = new OfflinePlugin({
+  safeToUseOptionalCaches: true,
+
+  caches: {
+    main: [
+      'main.js',
+      'index.html',
+      '**/*.woff',
+      '**/*.woff2',
+      'images/offline-sprite-1x.png',
+      'images/offline-sprite-2x.png',
+      'images/banner.jpg',
+      'images/mapa-de-minas.png'
+    ]
+  },
+
+  ServiceWorker: {
+    events: true,
+    output: 'service-worker.js'
+  },
+  AppCache: {
+    events: true
+  }
+});
+
+const Imagemin = new ImageminPlugin({
+  test: /\.(jpe?g|png|gif|svg)$/i,
+  pngquant: {
+    quality: 1
+  },
+  plugins: [
+    imageminMozjpeg({
+      quality: 80,
+      progressive: true
+    })
+  ]
+})
 
 module.exports = {
     entry: {
@@ -71,47 +142,21 @@ module.exports = {
         }
       ]
     },
-    plugins: [
-      new webpack.DefinePlugin({
-        'process.env.NODE_ENV': DEV_MODE ? '"development"' : '"production"',
-      }),
-      new HtmlWebpackPlugin({
-        template: 'src/index.html',
-        filename: 'index.html'
-      }),
-      new CopyWebpackPlugin([
-        { from: './src/images/misc', to: 'images/misc' },
-        { from: './src/manifest.json', to: 'manifest.json' },
-        { from: './src/robots.txt', to: 'robots.txt' },
-        { from: './src/sitemap.xml', to: 'sitemap.xml' }
-      ]),
-      new ExtractTextPlugin("main.css"),
-      new OfflinePlugin({
-        safeToUseOptionalCaches: true,
-
-        caches: {
-          main: [
-            'main.js',
-            'main.css',
-            'index.html',
-            '**/*.woff',
-            '**/*.woff2',
-            'images/offline-sprite-1x.png',
-            'images/offline-sprite-2x.png',
-            'images/banner.jpg',
-            'images/mapa-de-minas.png'
-          ]
-        },
-
-        ServiceWorker: {
-          events: true,
-          output: 'service-worker.js'
-        },
-        AppCache: {
-          events: true
-        }
-      }),
-      new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
+    plugins: (DEV_MODE) ? [
+      Define,
+      HtmlWebpack,
+      CopyWebpack,
+      ExtractText,
+      Imagemin
+    ] : [
+      Define,
+      HtmlWebpack,
+      CopyWebpack,
+      ExtractText,
+      StyleExtHtml,
+      // PurifyCSS,
+      Offline,
+      Imagemin
     ],
     resolve: {
       alias: {

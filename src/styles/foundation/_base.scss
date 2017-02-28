@@ -17,6 +17,12 @@ body {
   }
 }
 
+.unset-text {
+  text-indent: -9999px;
+  display: block;
+  position: absolute;
+}
+
 .minasdev-container {
   max-width: 1024px;
   margin: 0 auto;
