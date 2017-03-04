@@ -77,7 +77,9 @@ const Imagemin = new ImageminPlugin({
       progressive: true
     })
   ]
-})
+});
+
+const IgnorePlugin = new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/);
 
 module.exports = {
     entry: {
@@ -144,12 +146,14 @@ module.exports = {
     },
     plugins: (DEV_MODE) ? [
       Define,
+      IgnorePlugin,
       HtmlWebpack,
       CopyWebpack,
       ExtractText,
       Imagemin
     ] : [
       Define,
+      IgnorePlugin,
       HtmlWebpack,
       CopyWebpack,
       ExtractText,

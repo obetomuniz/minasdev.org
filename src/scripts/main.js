@@ -1,12 +1,12 @@
 import 'whatwg-fetch';
 import OfflinePlugin from 'offline-plugin/runtime';
-import eventListRender from './event-list-render';
-import tRexGame from './t-rex-game';
-import { validateEmail, offlineModeReady } from './utils';
+import EventListRender from './EventListRender';
+import TRexGame from './TRexGame';
+import { validateEmail, offlineModeReady } from './Utils';
 
 OfflinePlugin.install({
   onInstalled: function() {
-    offlineModeReady(1000);
+    offlineModeReady();
   },
   onUpdating: function() {
   },
@@ -14,7 +14,7 @@ OfflinePlugin.install({
     OfflinePlugin.applyUpdate();
   },
   onUpdated: function() {
-    window.location.reload();
+    // window.location.reload();
   }
 });
 
@@ -22,19 +22,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // If offline: Enable the game and disable the newsletter form
   if (!navigator.onLine) {
     document.querySelector('body').classList.add('offline-state');
-    new tRexGame('.interstitial-wrapper');
+    new TRexGame('.interstitial-wrapper');
   }
 
   // Fetching the events
   fetch('https://api.minasdev.org/events').then((response) => {
     // If online: Render and save locally the event list
-    response.json().then((data) => {
-      eventListRender(document.querySelector('#event-tpl'), data);
-      localStorage.setItem('events', JSON.stringify(data));
+    response.json().then((events) => {
+      EventListRender(document.querySelector('#event-tpl'), events);
+      localStorage.setItem('events', JSON.stringify(events));
     });
   }).catch(() => {
     // If offline: Render the last local event list saved
-    eventListRender(document.querySelector('#event-tpl'), JSON.parse(localStorage.getItem('events')))
+    EventListRender(document.querySelector('#event-tpl'), events)
   });
 });
 

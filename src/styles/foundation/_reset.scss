@@ -6,7 +6,7 @@
   -webkit-tap-highlight-color:transparent
 }
 
-html, body, div, span, h1, h2, h3, p, ,a, img, small, ul, li, form, label, canvas, figure, footer, header, section, time, audio {
+html, body, div, span, h1, h2, h3, p, ,a, img, small, ul, li, form, label, canvas, figure, footer, header, section, time, audio, dialog {
   margin: 0;
   padding: 0;
   border: 0;
@@ -15,7 +15,7 @@ html, body, div, span, h1, h2, h3, p, ,a, img, small, ul, li, form, label, canva
   vertical-align: baseline;
 }
 
-article, aside, figure, footer, header, section, main, time, img {
+article, aside, figure, footer, header, section, main, time, img, dialog {
   display: block;
 }
 

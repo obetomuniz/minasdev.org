@@ -3,8 +3,7 @@ export function validateEmail(email) {
     return re.test(email);
 }
 
-export function offlineModeReady(delay) {
-    // alert('cached!');
+export function offlineModeReady() {
     document.querySelector('body').classList.add('offline-mode-ready');
-    setTimeout(() => document.querySelector('body').classList.remove('offline-mode-ready'), delay);
+    // setTimeout(() => document.querySelector('body').classList.remove('offline-mode-ready'), delay);
 }
