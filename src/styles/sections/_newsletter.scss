@@ -3,12 +3,6 @@
   padding: 40px 0;
 }
 
-body.offline-state {
-  .newsletter {
-    display: none;
-  }
-}
-
 .newsletter-form {
   display: flex;
   align-items: center;
@@ -48,8 +42,7 @@ body.offline-state {
   &::-moz-placeholder { color: #ffffff; }
   &:-ms-input-placeholder { color: #ffffff; }
 
-  &:focus,
-  &:active {
+  &:focus {
     box-shadow: 0 0 10px white;
   }
 }
@@ -71,8 +64,7 @@ body.offline-state {
   cursor: pointer;
   outline: gold;
 
-  &:focus,
-  &:active {
+  &:focus {
     box-shadow: inset 0 0 10px #E64C3B;
   }
 }
@@ -100,8 +92,8 @@ body.offline-state {
  * Adding the animation to our element
 */
 .bounce {
-    -webkit-animation-name: bounce;
-    animation-name: bounce;
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
 }
 
 @media screen and (max-width: 1024px) {

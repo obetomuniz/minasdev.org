@@ -3,12 +3,6 @@
   display: none;
 }
 
-body.offline-state {
-  .game {
-    display: block;
-  }
-}
-
 .game-container {
   max-width: 600px;
   margin: 0 auto;
@@ -69,6 +63,7 @@ body.offline-state {
   .suggested-left > #control-buttons, .suggested-right > #control-buttons {
     float: none;
   }
+
   .snackbar {
     left: 0;
     bottom: 0;
@@ -81,12 +76,15 @@ body.offline-state {
   h1 {
     margin: 0 0 15px;
   }
+
   .icon-offline {
     margin: 0 0 10px;
   }
+
   .interstitial-wrapper {
     margin-top: 5%;
   }
+
   .nav-wrapper {
     margin-top: 30px;
   }
@@ -109,6 +107,7 @@ body.offline-state {
   .icon-offline {
     margin-bottom: 0;
   }
+  
   .offline .runner-container {
     top: 10px;
   }
