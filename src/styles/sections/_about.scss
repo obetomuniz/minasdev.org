@@ -33,7 +33,7 @@
   font-family: 'Montserrat-ExtraBold', sans-serif;
   font-size: 45px;
   text-transform: uppercase;
-  line-height: 2.7rem;
+  line-height: 3.2rem;
   letter-spacing: -1px;
   margin-bottom: 25px;
   color: #ffffff;
@@ -44,9 +44,27 @@
   font-family: 'Montserrat-Bold', sans-serif;
   font-size: 14px;
   line-height: 1.2rem;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   color: #ffffff;
   text-shadow: 1px 1px 2px #000;
+}
+
+.about-manifesto-action {
+  width: 291px;
+  display: block;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 5px;
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  color: #E64C3B;
+  cursor: pointer;
+  outline: gold;
+  text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -87,5 +105,11 @@
 
   .about-text {
     font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .about-manifesto-action {
+    width: 100%;
+    font-size: 16px;
   }
 }
