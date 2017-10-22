@@ -8,8 +8,7 @@ OfflinePlugin.install({
   onInstalled() {
     offlineModeReady();
   },
-  onUpdating() {
-  },
+  onUpdating() {},
   onUpdateReady() {
     OfflinePlugin.applyUpdate();
   },
@@ -26,20 +25,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Fetching the events
-  fetch('https://api.minasdev.org/events').then((response) => {
-    // If online: Render and save locally the event list
-    response.json().then((events) => {
-      localStorage.setItem('events', JSON.stringify(events));
-      EventListRender(document.querySelector('#event-tpl'), events);
+  fetch('https://api.minasdev.org/events')
+    .then(response => {
+      // If online: Render and save locally the event list
+      response.json().then(events => {
+        localStorage.setItem('events', JSON.stringify(events));
+        EventListRender(document.querySelector('#event-tpl'), events);
+      });
+    })
+    .catch(() => {
+      // If offline: Render the last local event list saved
+      EventListRender(document.querySelector('#event-tpl'), JSON.parse(localStorage.getItem('events')));
     });
-  }).catch(() => {
-    // If offline: Render the last local event list saved
-    EventListRender(document.querySelector('#event-tpl'), JSON.parse(localStorage.getItem('events')));
-  });
 });
 
 // Newsletter email validation
-document.querySelector('#newsletter-form').addEventListener('submit', (e) => {
+document.querySelector('#newsletter-form').addEventListener('submit', e => {
   const input = document.querySelector('#newsletter-form-email-input');
   input.classList.remove('bounce');
   if (!validateEmail(input.value)) {

@@ -1,6 +1,5 @@
-.DS_Store
-node_modules/
 *.log
-Thumbs.db
-__MACOSX
+.DS_Store
+.sass-cache
 dist/
+node_modules/

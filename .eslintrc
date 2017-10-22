@@ -4,16 +4,18 @@
     "es6": true,
     "node": true
   },
-  "extends": "airbnb-base",
-  "rules" : {
-    "comma-dangle": [2, "never"],
-    "indent": ["error", 2],
-    "prefer-template": 2,
-    "no-console": 0,
-    "new-cap": 0,
-    "no-underscore-dangle": 0,
-    "global-require": 0,
-    "import/no-extraneous-dependencies": 0,
-    "no-new": 0
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "curly": ["error", "multi-line"],
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 150,
+        "singleQuote": true
+      }
+    ]
   }
 }
