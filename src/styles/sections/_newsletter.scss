@@ -64,6 +64,11 @@
   strong {
     font-family: 'Montserrat-Bold', sans-serif;
   }
+
+  &:focus {
+    border-radius: 3px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.8);
+  }
 }
 
 .newsletter-action {
