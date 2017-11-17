@@ -1,0 +1,17 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "max-empty-lines": 4,
+    "indentation": 2,
+    "string-quotes": "single",
+    "function-url-quotes": "always",
+    "color-hex-length": "long",
+    "number-leading-zero": "never",
+    "declaration-block-semicolon-newline-after": "always",
+    "selector-list-comma-newline-after": "always-multi-line",
+    "comment-whitespace-inside": "always",
+    "max-nesting-depth": 3,
+    "block-no-empty": true,
+    "no-missing-end-of-source-newline": true
+  }
+}

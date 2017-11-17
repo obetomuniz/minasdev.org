@@ -1,0 +1,47 @@
+{
+  "name": "minasdev.org",
+  "version": "3.0.0",
+  "description": "minasdev.org",
+  "main": "server.js",
+  "scripts": {
+    "gulp-build": "./node_modules/.bin/cross-env NODE_ENV=development ./node_modules/.bin/gulp",
+    "dev-server": "./node_modules/.bin/cross-env NODE_ENV=development ./node_modules/.bin/babel-node server.js",
+    "dev": "./node_modules/.bin/concurrently --kill-others \"npm run gulp-build\" \"npm run dev-server\"",
+    "build": "./node_modules/.bin/gulp build",
+    "test": "echo 123"
+  },
+  "license": "MIT",
+  "author": "Beto Muniz <contato@betomuniz.com>",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "concurrently": "^3.5.0",
+    "del": "^3.0.0",
+    "detect-port": "^1.2.2",
+    "eslint": "^4.11.0",
+    "eslint-config-prettier": "^2.7.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-csso": "^3.0.0",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-shell": "^0.6.3",
+    "gulp-sourcemaps": "^2.6.1",
+    "prettier": "^1.8.2",
+    "stylelint": "^8.2.0",
+    "stylelint-config-standard": "^17.0.0",
+    "uglifyjs-webpack-plugin": "^1.0.1",
+    "webpack": "^3.8.1",
+    "webpack-stream": "^4.0.0"
+  },
+  "dependencies": {
+    "cross-env": "^5.1.1",
+    "express": "^4.16.2"
+  }
+}
