@@ -1,0 +1,17 @@
+::-moz-selection {
+  color: #ffffff;
+  background-color: #E64C3B;
+}
+
+::selection {
+  color: #ffffff;
+  background-color: #E64C3B;
+}
+
+body {
+  font-family: $font-regular;
+  background-color: $red;
+  color: $black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
