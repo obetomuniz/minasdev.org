@@ -1,0 +1,29 @@
+.alert {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 25px;
+  z-index: 2000;
+  border: 0;
+  -webkit-animation-duration: 9s;
+  animation-duration: 9s;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -500%, 0);
+
+  &--warning {
+    font-size: 0.94rem;
+    line-height: 1.45rem;
+    background-color: $yellow;
+    border-bottom: 3px solid $black;
+    color: $black;
+    font-family: $font-regular;
+    letter-spacing: 0.2px;
+  }
+
+  &__strong-text {
+    font-family: $font-bold;
+  }
+}

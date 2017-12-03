@@ -4,7 +4,7 @@
   "description": "minasdev.org",
   "main": "server.js",
   "scripts": {
-    "gulp-build": "./node_modules/.bin/cross-env NODE_ENV=development ./node_modules/.bin/gulp",
+    "gulp-build": "./node_modules/.bin/cross-env NODE_ENV=development ./node_modules/.bin/gulp dev",
     "dev-server": "./node_modules/.bin/cross-env NODE_ENV=development ./node_modules/.bin/babel-node server.js",
     "dev": "./node_modules/.bin/concurrently --kill-others \"npm run gulp-build\" \"npm run dev-server\"",
     "build": "./node_modules/.bin/gulp build",
@@ -33,12 +33,19 @@
     "gulp-sass": "^3.1.0",
     "gulp-shell": "^0.6.3",
     "gulp-sourcemaps": "^2.6.1",
+    "handlebars": "^4.0.11",
+    "handlebars-loader": "^1.6.0",
+    "lodash.remove": "^4.7.0",
+    "moment": "^2.19.3",
+    "offline-plugin": "^4.8.4",
     "prettier": "^1.8.2",
     "stylelint": "^8.2.0",
     "stylelint-config-standard": "^17.0.0",
+    "sw-precache": "^5.2.0",
     "uglifyjs-webpack-plugin": "^1.0.1",
     "webpack": "^3.8.1",
-    "webpack-stream": "^4.0.0"
+    "webpack-stream": "^4.0.0",
+    "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
     "cross-env": "^5.1.1",

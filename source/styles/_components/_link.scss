@@ -1,0 +1,19 @@
+.link {
+  display: inline-block;
+  text-decoration: none;
+
+  &--black {
+    border-bottom: 1px solid $black;
+    color: $black;
+  }
+
+  &--red {
+    border-bottom: 1px solid $red;
+    color: $red;
+  }
+
+  &--white {
+    border-bottom: 1px solid $white;
+    color: $white;
+  }
+}

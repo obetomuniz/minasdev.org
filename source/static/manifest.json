@@ -2,7 +2,7 @@
   "name": "Minas Dev",
   "short_name": "Minas Dev",
   "description":
-    "O Minas Dev é um Movimento que visa fomentar o cenário de desenvolvimento de Minas Gerais.",
+    "O Minas Dev visa unir comunidades e membros dos setores de Tecnologia da Informação de Minas Gerais.",
   "start_url": "/",
   "lang": "pt-BR",
   "display": "standalone",
@@ -11,12 +11,12 @@
   "theme_color": "#E64C3B",
   "icons": [
     {
-      "src": "/images/misc/favicons/android-chrome-192x192.png",
+      "src": "/assets/images/favicons/android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/images/misc/favicons/android-chrome-512x512.png",
+      "src": "/assets/images/favicons/android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
