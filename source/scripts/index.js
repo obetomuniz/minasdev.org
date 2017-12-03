@@ -17,23 +17,23 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('body').classList.add('offline-mode');
   }
 
-  // OfflinePlugin.install({
-  //   onInstalled() {
-  //     console.log('onInstalled()');
-  //     // offlineModeReady();
-  //   },
-  //   onUpdating() {
-  //     console.log('onUpdating()');
-  //   },
-  //   onUpdateReady() {
-  //     console.log('onUpdateReady()');
-  //     OfflinePlugin.applyUpdate();
-  //   },
-  //   onUpdated() {
-  //     console.log('onUpdated()');
-  //     // window.location.reload();
-  //   }
-  // });
+  OfflinePlugin.install({
+    onInstalled() {
+      console.log('Installed!');
+      document.querySelector('body').classList.add('offline-mode-ready');
+    },
+    onUpdating() {
+      console.log('Updating...');
+    },
+    onUpdateReady() {
+      console.log('Update Ready!');
+      OfflinePlugin.applyUpdate();
+    },
+    onUpdated() {
+      console.log('Updated!');
+      // window.location.reload();
+    }
+  });
 
   // Fetching the events
   fetch('https://api.minasdev.org/events')

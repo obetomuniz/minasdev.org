@@ -60,6 +60,12 @@
   }
 }
 
+.offline-mode {
+  .newsletter {
+    display: none;
+  }
+}
+
 @-webkit-keyframes newsletterError {
   0% {
     -webkit-transform: translateX(0);
