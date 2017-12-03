@@ -186,16 +186,14 @@ gulp.task('generate-service-worker', ['scripts'], callback => {
   );
 });
 
-gulp.task('default', ['clean-old-build', 'shell', 'styles', 'autoprefix', 'csso', 'images', 'fonts'], () => {
+gulp.task('default', ['clean-old-build', 'shell', 'styles', 'autoprefix', 'csso', 'images', 'fonts']);
+
+gulp.task('dev', ['default', 'scripts'], () => {
   gulpLivereload.listen();
   gulp.watch([path.join('source/static/**')], ['shell']);
   gulp.watch(path.join('source/styles/**/*.scss'), ['styles', 'autoprefix', 'csso']);
   gulp.watch(path.join('source/images/**/*'), ['images']);
   gulp.watch(path.join('source/fonts/**/*'), ['fonts']);
-});
-
-gulp.task('dev', ['default', 'scripts'], () => {
-  gulpLivereload.listen();
   gulp.watch(path.join('source/scripts/**/*.js'), ['scripts']);
 });
 
