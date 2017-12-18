@@ -40,7 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
   myHeaders.append('pragma', 'no-cache');
   myHeaders.append('cache-control', 'no-cache');
 
+<<<<<<< HEAD
   fetch('https://api.minasdev.org/events')
+=======
+  fetch('https://api.minasdev.org/events', {
+    method: 'GET',
+    headers: myHeaders
+  })
+>>>>>>> bf7bdd397f43e44f37bfcfc5f06862d954a18271
     .then(response => {
       // If online: Render and save locally the event list
       response.json().then(events => {
