@@ -36,7 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Fetching the events
-  fetch('https://api.minasdev.org/events')
+  let myHeaders = new Headers();
+  myHeaders.append('pragma', 'no-cache');
+  myHeaders.append('cache-control', 'no-cache');
+
+  fetch('https://api.minasdev.org/events', {
+    method: 'GET',
+    headers: myHeaders
+  })
     .then(response => {
       // If online: Render and save locally the event list
       response.json().then(events => {
