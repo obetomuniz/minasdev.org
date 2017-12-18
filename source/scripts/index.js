@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  fetch('https://api.minasdev.org/events', { cache: 'no-store' })
+  fetch('https://api.minasdev.org/events', { cache: 'reload' })
     .then(response => {
       // If online: Render and save locally the event list
       response.json().then(events => {
