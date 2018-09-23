@@ -1,5 +1,31 @@
 {
   "presets": [
-    "env"
+    [
+      "env",
+      {
+        "loose": true
+      }
+    ],
+    "react",
+    "stage-2"
+  ],
+  "plugins": [
+    [
+      "module-alias",
+      [
+        { "src": "./src/components", "expose": "@components" },
+        { "src": "./src/containers", "expose": "@containers" },
+        { "src": "./src/pages", "expose": "@pages" },
+        { "src": "./src/reducers", "expose": "@reducers" },
+        { "src": "./src/sagas", "expose": "@sagas" },
+        { "src": "./src/services", "expose": "@services" },
+        { "src": "./src/assets", "expose": "@assets" },
+        { "src": "./src/helpers", "expose": "@helpers" }
+      ]
+    ],
+    ["styled-components", { "ssr": true, "minify": true }],
+    "transform-decorators-legacy",
+    "react-hot-loader/babel",
+    "styled-components"
   ]
 }

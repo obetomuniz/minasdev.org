@@ -1,0 +1,30 @@
+{
+  "name": "Minas Dev",
+  "short_name": "Minas Dev",
+  "description":
+    "O Minas Dev visa unir comunidades e membros dos setores de Tecnologia da Informação de Minas Gerais.",
+  "start_url": "/",
+  "lang": "pt-BR",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#E64C3B",
+  "theme_color": "#E64C3B",
+  "icons": [
+    {
+      "src": "/images/favicons/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/favicons/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "author": {
+    "name": "Beto Muniz",
+    "website": "https://minasdev.org",
+    "github": "https://github.com/minasdev",
+    "source-repo": "https://github.com/minasdev/minasdev.org"
+  }
+}
