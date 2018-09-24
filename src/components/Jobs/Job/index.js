@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { format, addDays } from "date-fns";
+import { format } from "date-fns";
 import {
   Wrapper,
   PublicationDate,

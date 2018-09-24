@@ -2,6 +2,7 @@ import OfflinePlugin from "offline-plugin/runtime";
 import React from "react";
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
+import ReactGA from "react-ga";
 import createHistory from "history/createBrowserHistory";
 import Root from "@components/Common/Root";
 import configureStore from "@services/Store";
@@ -10,6 +11,12 @@ const DOMRoot = document.getElementById("container");
 const initialState = window.__INITIAL_STATE__;
 const history = createHistory();
 const store = configureStore(initialState, history);
+
+ReactGA.initialize("UA-46088004-1");
+history.listen((location, action) => {
+  ReactGA.set({ page: location.pathname });
+  ReactGA.pageview(location.pathname);
+});
 
 OfflinePlugin.install({
   onInstalled() {
