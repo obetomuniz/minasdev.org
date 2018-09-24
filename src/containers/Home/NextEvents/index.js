@@ -22,7 +22,9 @@ export default class NextEvents extends Component {
   };
 
   componentWillMount() {
-    this.props.dispatch(getMinasDevEvents());
+    if (typeof document === "undefined" || process.env.NODE_ENV === "development") {
+      this.props.dispatch(getMinasDevEvents());
+    }
   }
 
   render() {

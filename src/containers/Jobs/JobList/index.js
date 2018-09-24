@@ -14,7 +14,9 @@ export default class JobList extends Component {
   };
 
   componentWillMount() {
-    this.props.dispatch(getMinasDevJobs());
+    if (typeof document === "undefined" || process.env.NODE_ENV === "development") {
+      this.props.dispatch(getMinasDevJobs());
+    }
   }
 
   render() {
