@@ -17,7 +17,7 @@ const Job = ({ data }) => (
     <PublicationDate>
       Publicado em
       <time itemProp="datePosted" dateTime={data.get("date")}>
-        {format(addDays(data.get("date"), 1), "DD/MM/YYYY")}
+        {format(data.get("date").replace("T00:00:00.000Z", ""), "DD/MM/YYYY")}
       </time>
       <JobLanguage>{data.get("language") === "en-us" ? "🌐" : "🇧🇷"}</JobLanguage>
     </PublicationDate>

@@ -7,11 +7,7 @@ import { Home, Jobs, NotFound } from "@pages";
 export const routes = [
   {
     component: Layout,
-    routes: [
-      { path: "/vagas", component: Jobs },
-      { path: "/", exact: true, component: Home },
-      { component: NotFound }
-    ]
+    routes: [{ path: "/vagas", component: Jobs }, { path: "/", exact: true, component: Home }]
   }
 ];
 

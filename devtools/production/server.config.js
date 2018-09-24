@@ -30,10 +30,10 @@ app.use((req, res) => {
   store
     .runSaga(rootSagas)
     .done.then(() => {
-      if (context.url) {
-        res.redirect(302, context.url);
-        return;
-      }
+      // if (context.url) {
+      //   res.redirect(302, context.url);
+      //   return;
+      // }
 
       res.set("content-type", "text/html");
       res.send(
