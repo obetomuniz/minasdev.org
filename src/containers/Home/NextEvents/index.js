@@ -21,7 +21,7 @@ export default class NextEvents extends Component {
     minasDevEvents: PropTypes.object
   };
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.dispatch(getMinasDevEvents());
   }
 

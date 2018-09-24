@@ -7,13 +7,22 @@ import {
 } from "@reducers/MinasDev/actions";
 import { getMinasDevEvents, getMinasDevJobs } from "@services/Api";
 
+if (typeof window === "undefined") {
+  global.window = {
+    localStorage: {
+      setItem: () => null,
+      getItem: () => null
+    }
+  };
+}
+
 export function* fetchMinasDevEvents() {
   try {
     const events = yield call(getMinasDevEvents);
-    localStorage.setItem("events", JSON.stringify(events.data));
+    window.localStorage.setItem("events", JSON.stringify(events.data));
     yield put(getMinasDevEventsSuccess(events.data));
   } catch (error) {
-    const events = JSON.parse(localStorage.getItem("events"));
+    const events = JSON.parse(window.localStorage.getItem("events"));
     yield put(getMinasDevEventsFailure(error, events));
   }
 }
@@ -21,10 +30,10 @@ export function* fetchMinasDevEvents() {
 export function* fetchMinasDevJobs() {
   try {
     const jobs = yield call(getMinasDevJobs);
-    localStorage.setItem("jobs", JSON.stringify(jobs.data));
+    window.localStorage.setItem("jobs", JSON.stringify(jobs.data));
     yield put(getMinasDevJobsSuccess(jobs.data));
   } catch (error) {
-    const jobs = JSON.parse(localStorage.getItem("jobs"));
+    const jobs = JSON.parse(window.localStorage.getItem("jobs"));
     yield put(getMinasDevJobsFailure(error, jobs));
   }
 }

@@ -13,7 +13,7 @@ export default class JobList extends Component {
     minasDevJobs: PropTypes.object
   };
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.dispatch(getMinasDevJobs());
   }
 
