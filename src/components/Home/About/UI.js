@@ -15,11 +15,12 @@ export const Wrapper = styled.main`
   flex-direction: column;
   position: relative;
   z-index: 1;
-  top: -95px;
+  top: -35px;
 
   @media screen and (max-width: 1023px) {
     max-width: 600px;
     height: 489px;
+    top: -85px;
   }
 
   @media screen and (max-width: 767px) {

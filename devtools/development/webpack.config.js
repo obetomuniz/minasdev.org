@@ -2,7 +2,6 @@ const path = require("path");
 const webpack = require("webpack");
 const WebpackIsomorphicToolsPlugin = require("webpack-isomorphic-tools/plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const OfflinePlugin = require("offline-plugin");
 
 const srcPath = path.join(__dirname, "../", "../", "/src/");
 const distPath = path.join(__dirname, "../", "../", "/dist/");
@@ -114,35 +113,6 @@ module.exports = () => {
         { from: `${srcPath}assets/images/favicons`, to: `${distPath}images/favicons` },
         { from: `${srcPath}assets/static`, to: distPath }
       ]),
-      new OfflinePlugin({
-        safeToUseOptionalCaches: true,
-        externals: [
-          "index.html",
-          "index.js",
-          "images/background.jpg",
-          "images/icons.svg",
-          "images/mapa-de-minas.png",
-          "images/objects.svg",
-          "fonts/Montserrat-Black.woff2",
-          "fonts/Montserrat-Black.woff",
-          "fonts/Montserrat-Bold.woff2",
-          "fonts/Montserrat-Bold.woff",
-          "fonts/Montserrat-ExtraBold.woff2",
-          "fonts/Montserrat-ExtraBold.woff",
-          "fonts/Montserrat-Light.woff2",
-          "fonts/Montserrat-Light.woff",
-          "fonts/Montserrat-Regular.woff2",
-          "fonts/Montserrat-Regular.woff",
-          "fonts/Montserrat-SemiBold.woff2",
-          "fonts/Montserrat-SemiBold.woff",
-          "fonts/Montserrat-Thin.woff2",
-          "fonts/Montserrat-Thin.woff"
-        ],
-        ServiceWorker: {
-          events: true,
-          output: "service-worker.js"
-        }
-      }),
       webpackIsomorphicTools.development()
     ],
     resolve: {

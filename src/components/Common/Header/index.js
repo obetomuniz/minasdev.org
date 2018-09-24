@@ -23,6 +23,9 @@ const Header = () => {
               <NavigationLink href="https://minasdev.org/vagas">VAGAS</NavigationLink>
             </NavigationItem>
             <NavigationItem>
+              <NavigationLink href="https://slack.minasdev.org/">Slack</NavigationLink>
+            </NavigationItem>
+            <NavigationItem>
               <NavigationLink
                 href="https://github.com/minasdev/manifesto"
                 target="_blank"
@@ -39,9 +42,6 @@ const Header = () => {
               >
                 Código de Conduta
               </NavigationLink>
-            </NavigationItem>
-            <NavigationItem>
-              <NavigationLink href="https://slack.minasdev.org/">slack.minasdev.org</NavigationLink>
             </NavigationItem>
             <NavigationItem>
               <Socials>

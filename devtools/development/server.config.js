@@ -19,7 +19,7 @@ const serverOptions = {
   hot: false,
   inline: true,
   lazy: false,
-  historyApiFallback: true,
+  historyApiFallback: false,
   compress: false,
   publicPath: `http://localhost:3000`,
   headers: { "Access-Control-Allow-Origin": "*" },

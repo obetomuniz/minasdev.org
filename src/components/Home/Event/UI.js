@@ -49,4 +49,8 @@ export const Link = styled.a`
   color: #e64c3b;
   display: inline-block;
   text-decoration: none;
+
+  @media screen and (max-width: 767px) {
+    font-size: 0.65rem;
+  }
 `;

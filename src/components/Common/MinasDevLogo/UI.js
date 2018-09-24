@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.h1`
-  width: 210px;
+  width: 170px;
   height: 0;
-  padding-top: 210px;
+  padding-top: 145px;
   overflow: hidden;
   position: relative;
   z-index: 2;

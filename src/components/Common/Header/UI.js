@@ -1,13 +1,9 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.header`
-  margin-top: 3px;
+  padding-top: 3px;
   position: relative;
   z-index: 2;
-
-  @media screen and (max-width: 767px) {
-    padding-top: 20px;
-  }
 
   &:before {
     content: "";
@@ -23,29 +19,45 @@ export const Wrapper = styled.header`
 `;
 
 export const Content = styled.div`
-  max-width: 1024px;
   padding: 0 20px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 
   @media screen and (max-width: 767px) {
     align-items: flex-start;
+    padding: 20px 20px 0;
   }
 `;
 
 export const Navigation = styled.ul`
-  width: 170px;
+  display: flex;
+  margin-top: 30px;
+
+  @media screen and (max-width: 1023px) {
+    margin-top: 0;
+    display: block;
+    width: 170px;
+    margin-top: 10px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-top: 0;
+  }
 `;
 
 export const NavigationItem = styled.li`
-  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  text-align: right;
-  margin-bottom: 18px;
+  justify-content: center;
+  margin: 0 20px;
+
+  @media screen and (max-width: 1023px) {
+    justify-content: flex-end;
+    margin: 0 0 18px 0;
+    width: 100%;
+  }
 `;
 
 export const NavigationLink = styled.a`
@@ -61,6 +73,10 @@ export const NavigationLink = styled.a`
   &:hover {
     color: #e85849;
   }
+
+  @media screen and (max-width: 1023px) {
+    font-size: 0.85rem;
+  }
 `;
 
 export const Socials = styled.ul`
@@ -73,10 +89,10 @@ export const Social = styled.li``;
 
 export const SocialLink = styled.a`
   display: block;
-  width: 16px;
-  margin: 0 0 0 32px;
+  width: 20px;
+  margin: 0 10px;
   height: 0;
-  padding-top: 16px;
+  padding-top: 20px;
   stroke-width: 0;
   overflow: hidden;
   position: relative;
