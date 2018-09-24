@@ -20,45 +20,24 @@ export const Wrapper = styled.header`
 
 export const Content = styled.div`
   max-width: 1024px;
-  padding: 0 20px;
+  padding: 10px 20px 0px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-
-  @media screen and (max-width: 767px) {
-    align-items: flex-start;
-    padding: 20px 20px 0;
-  }
 `;
 
 export const Navigation = styled.ul`
-  display: flex;
-  margin-top: 30px;
-
-  @media screen and (max-width: 1023px) {
-    margin-top: 0;
-    display: block;
-    width: 170px;
-    margin-top: 10px;
-  }
-
-  @media screen and (max-width: 767px) {
-    margin-top: 0;
-  }
+  display: block;
+  width: 170px;
 `;
 
 export const NavigationItem = styled.li`
   display: flex;
-  justify-content: center;
-  margin: 0 20px;
-
-  @media screen and (max-width: 1023px) {
-    justify-content: flex-end;
-    margin: 0 0 18px 0;
-    width: 100%;
-  }
+  justify-content: flex-end;
+  width: 100%;
+  margin: 0px 0px 18px;
 `;
 
 export const NavigationLink = styled.a`

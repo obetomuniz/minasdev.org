@@ -2,6 +2,7 @@
 import http from "http";
 import path from "path";
 import express from "express";
+import compression from "compression";
 import React from "react";
 import { renderToString, renderToStaticMarkup } from "react-dom/server";
 import { Provider } from "react-redux";
@@ -13,7 +14,12 @@ import configureStore from "@services/Store";
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "../", "../", "dist")));
+app.use(compression());
+app.use(
+  express.static(path.join(__dirname, "../", "../", "dist"), {
+    maxAge: 1 * 365 * 24 * 60 * 60 * 1000
+  })
+);
 const server = new http.Server(app);
 
 app.use((req, res) => {
@@ -30,10 +36,10 @@ app.use((req, res) => {
   store
     .runSaga(rootSagas)
     .done.then(() => {
-      // if (context.url) {
-      //   res.redirect(302, context.url);
-      //   return;
-      // }
+      if (context.url) {
+        res.redirect(302, context.url);
+        return;
+      }
 
       res.set("content-type", "text/html");
       res.send(
