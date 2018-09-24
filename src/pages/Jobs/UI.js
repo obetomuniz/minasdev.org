@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import jobsBackground from "@assets/images/background.jpg";
 
-export const Wrapper = styled.section``;
+export const Wrapper = styled.div``;
 
 export const ParallaxTop = styled.div`
   background-image: url(${jobsBackground});
