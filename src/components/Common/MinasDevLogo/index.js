@@ -5,7 +5,7 @@ import { Wrapper } from "./UI";
 const MinasDevLogo = () => {
   return (
     <Wrapper>
-      <a href="">
+      <a href="https://minasdev.org/">
         <svg aria-hidden="">
           <use xlinkHref="/images/vectors/objects.svg#minasdev-logo" />
         </svg>

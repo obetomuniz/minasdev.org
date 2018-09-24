@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { NextEvents } from "@containers/Home";
-import { Header, MinasDevLogo, Newsletter, Footer } from "@components/Common";
+import { Header, Newsletter, Footer } from "@components/Common";
 import { About } from "@components/Home";
 import { Wrapper, ParallaxTop, ParallaxBottom } from "./UI";
 

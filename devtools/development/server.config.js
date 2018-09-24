@@ -16,11 +16,7 @@ const serverOptions = {
   contentBase: `http://localhost:3000`,
   quiet: true,
   noInfo: true,
-  hot: false,
-  inline: true,
-  lazy: false,
-  historyApiFallback: false,
-  compress: false,
+  hot: true,
   publicPath: `http://localhost:3000`,
   headers: { "Access-Control-Allow-Origin": "*" },
   stats: { colors: true }

@@ -5,7 +5,7 @@ import { Wrapper, Time, Title, Community, Link } from "./UI";
 
 const Event = ({ data }) => (
   <Wrapper itemScope itemType="http://schema.org/Event">
-    <Time itemprop="startDate" dateTime={data.get("date")}>
+    <Time itemProp="startDate" dateTime={data.get("date")}>
       {format(addDays(data.get("date"), 1), "DD.MM")}
     </Time>
     <Title itemProp="name">{data.get("name")}</Title>

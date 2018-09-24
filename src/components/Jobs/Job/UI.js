@@ -1,0 +1,58 @@
+import styled from "styled-components";
+
+export const Wrapper = styled.li`
+  margin-bottom: 30px;
+`;
+
+export const PublicationDate = styled.p`
+  font-family: "montserrat-regular", sans-serif;
+  font-size: 0.7rem;
+  color: #666;
+  max-width: 65%;
+  margin-bottom: 5px;
+  display: flex;
+
+  time {
+    margin-left: 3px;
+  }
+`;
+
+export const JobLanguage = styled.span`
+  font-size: 0.7rem;
+  margin-left: 5px;
+`;
+
+export const JobTitle = styled.h2`
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 1.8rem;
+  color: #e64c3b;
+  margin-bottom: 5px;
+
+  @media screen and (max-width: 1023px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
+
+export const JobLink = styled.a`
+  margin: 0 8px 0 0;
+`;
+
+export const JobCompany = styled.span`
+  font-family: "montserrat-light", sans-serif;
+  font-size: 0.8rem;
+  color: #777;
+  display: block;
+  margin: 5px 0;
+`;
+
+export const Source = styled.p`
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 0.7rem;
+  color: #4a4a4a;
+`;
+
+export const Tags = styled.span`
+  font-family: "montserrat-regular", sans-serif;
+  color: #777;
+`;

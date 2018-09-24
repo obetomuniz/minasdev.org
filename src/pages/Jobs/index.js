@@ -1,6 +1,8 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { Wrapper } from "./UI";
+import { JobList } from "@containers/Jobs";
+import { Header, Footer } from "@components/Common";
+import { Wrapper, ParallaxTop, ParallaxBottom } from "./UI";
 
 const URL = "https://minasdev.org/vagas";
 const TITLE = "Minas Dev - Vagas";
@@ -33,6 +35,15 @@ const Jobs = () => {
         <meta itemProp="name" content={TITLE} />
         <meta itemProp="description" content={DESCRIPTION} />
       </Helmet>
+
+      <ParallaxTop>
+        <Header />
+      </ParallaxTop>
+
+      <ParallaxBottom>
+        <JobList />
+        <Footer />
+      </ParallaxBottom>
     </Wrapper>
   );
 };

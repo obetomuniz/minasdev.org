@@ -2,4 +2,6 @@ import axios from "axios";
 
 const getMinasDevEvents = () => axios.get("https://api.minasdev.org/events");
 
-export { getMinasDevEvents };
+const getMinasDevJobs = () => axios.get("https://api.minasdev.org/jobs");
+
+export { getMinasDevEvents, getMinasDevJobs };
