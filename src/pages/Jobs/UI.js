@@ -9,11 +9,11 @@ export const ParallaxTop = styled.div`
   background-position: center 0;
   background-size: cover;
   position: fixed;
-  height: 195px;
+  height: 210px;
   width: 100%;
 `;
 
 export const ParallaxBottom = styled.div`
   position: relative;
-  top: 195px;
+  top: 210px;
 `;

@@ -47,8 +47,11 @@ export const JobCompany = styled.span`
 `;
 
 export const Source = styled.p`
-  font-family: "montserrat-bold", sans-serif;
   font-size: 0.7rem;
+`;
+
+export const SourceLink = styled.a`
+  font-family: "montserrat-bold", sans-serif;
   color: #4a4a4a;
 `;
 
