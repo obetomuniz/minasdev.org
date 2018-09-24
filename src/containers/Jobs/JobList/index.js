@@ -1,17 +1,27 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { getMinasDevJobs } from "@reducers/MinasDev/actions";
-import { selectMinasDevJobs } from "@reducers/MinasDev/selectors";
+import _ from "lodash";
+import { getMinasDevJobs, filterMinasDevJobs } from "@reducers/MinasDev/actions";
+import { selectMinasDevJobs, selectMinasDevJobsFiltered } from "@reducers/MinasDev/selectors";
 import { Job } from "@components/Jobs";
-import { Wrapper, Content } from "./UI";
+import { Wrapper, Content, Title, Search } from "./UI";
 
-@connect(state => ({ minasDevJobs: selectMinasDevJobs(state) }))
+@connect(state => ({
+  minasDevJobs: selectMinasDevJobs(state),
+  minasDevJobsFiltered: selectMinasDevJobsFiltered(state)
+}))
 export default class JobList extends Component {
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
     minasDevJobs: PropTypes.object
   };
+
+  constructor(props) {
+    super(props);
+
+    this.filterMinasDevJobs = _.debounce(this.filterMinasDevJobs, 300);
+  }
 
   componentWillMount() {
     if (typeof document === "undefined" || process.env.NODE_ENV === "development") {
@@ -19,11 +29,27 @@ export default class JobList extends Component {
     }
   }
 
+  filterMinasDevJobs(field, value) {
+    this.props.dispatch(filterMinasDevJobs(this.props.minasDevJobs, { field, value }));
+  }
+
+  renderFilters = () => {
+    return (
+      <Search
+        type="search"
+        placeholder="Digite React, Python, QA, Manager, etc."
+        onChange={event => this.filterMinasDevJobs("query", event.target.value)}
+      />
+    );
+  };
+
   render() {
     return (
       <Wrapper>
+        <Title>VAGAS</Title>
+        {this.renderFilters()}
         <Content>
-          {this.props.minasDevJobs.map((minasDevJob, key) => (
+          {this.props.minasDevJobsFiltered.map((minasDevJob, key) => (
             <Job key={`job-${key}`} data={minasDevJob} />
           ))}
         </Content>

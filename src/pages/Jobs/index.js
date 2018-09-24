@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { JobList } from "@containers/Jobs";
-import { Header, Footer } from "@components/Common";
+import { Header, Newsletter, Footer } from "@components/Common";
 import { Wrapper, ParallaxTop, ParallaxBottom } from "./UI";
 
 const URL = "https://minasdev.org/vagas";
@@ -41,6 +41,7 @@ const Jobs = () => {
       </ParallaxTop>
 
       <ParallaxBottom>
+        <Newsletter />
         <JobList />
         <Footer />
       </ParallaxBottom>
