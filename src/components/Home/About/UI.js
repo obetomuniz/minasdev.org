@@ -15,7 +15,7 @@ export const Wrapper = styled.main`
   flex-direction: column;
   position: relative;
   z-index: 1;
-  top: -35px;
+  top: -95px;
 
   @media screen and (max-width: 1023px) {
     max-width: 600px;

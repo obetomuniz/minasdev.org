@@ -20,7 +20,7 @@ export const Wrapper = styled.header`
 
 export const Content = styled.div`
   max-width: 1024px;
-  padding: 10px 20px 0px;
+  padding: 0 20px 0px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -31,6 +31,7 @@ export const Content = styled.div`
 export const Navigation = styled.ul`
   display: block;
   width: 170px;
+  margin-top: 20px;
 `;
 
 export const NavigationItem = styled.li`
