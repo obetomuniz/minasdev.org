@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import { NextEvents } from "@containers/Home";
 import { Header, Newsletter, Footer } from "@components/Common";
 import { About } from "@components/Home";
-import { Wrapper, ParallaxTop, ParallaxBottom } from "./UI";
+import { Wrapper, HeaderContent } from "./UI";
 
 const URL = "https://minasdev.org/vagas";
 const TITLE = "Minas Dev";
@@ -36,16 +36,14 @@ const Home = () => (
       <meta itemProp="description" content={DESCRIPTION} />
     </Helmet>
 
-    <ParallaxTop>
+    <HeaderContent>
       <Header />
       <About />
-    </ParallaxTop>
+    </HeaderContent>
 
-    <ParallaxBottom>
-      <Newsletter />
-      <NextEvents />
-      <Footer />
-    </ParallaxBottom>
+    <Newsletter />
+    <NextEvents />
+    <Footer />
   </Wrapper>
 );
 

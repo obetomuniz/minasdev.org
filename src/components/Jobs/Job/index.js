@@ -13,6 +13,23 @@ import {
   Tags
 } from "./UI";
 
+const jobLabels = {
+  programming: "Programação",
+  blockchain: "Blockchain",
+  mobile: "Mobile",
+  backend: "Back-End",
+  frontend: "Front-End",
+  devops: "DevOps",
+  qa: "QA",
+  design: "Design",
+  content: "Conteúdo",
+  social: "Social Media",
+  support: "Suporte",
+  manager: "Manager",
+  sales: "Sales",
+  finance: "Finanças"
+};
+
 const Job = ({ data }) => (
   <Wrapper itemScope itemType="http://schema.org/JobPosting">
     <PublicationDate>
@@ -32,7 +49,13 @@ const Job = ({ data }) => (
       <SourceLink href={data.get("sourceURL")} target="_blank" rel="noopener">
         {data.get("source")}
       </SourceLink>
-      <Tags>, {data.get("tags").join(", ")}</Tags>
+      <Tags>
+        ,{" "}
+        {data
+          .get("tags")
+          .map(tag => jobLabels[tag])
+          .join(", ")}
+      </Tags>
     </Source>
   </Wrapper>
 );

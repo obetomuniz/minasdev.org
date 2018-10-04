@@ -1,4 +1,5 @@
 import { fromJS } from "immutable";
+import _ from "lodash";
 import {
   FETCH_MINASDEV_EVENTS_REQUEST,
   FETCH_MINASDEV_EVENTS_SUCCESS,
@@ -49,20 +50,35 @@ export const getMinasDevJobsFailure = (error, jobs = []) => {
   };
 };
 
-export const filterMinasDevJobs = (jobs, filters) => {
-  let jobsFiltered = jobs.toJS().filter(job => {
-    return (
-      job.position.toLowerCase().indexOf(filters.value.toLowerCase()) >= 0 ||
-      job.tags
-        .join(",")
-        .toLowerCase()
-        .indexOf(filters.value.toLowerCase()) >= 0 ||
-      job.source.toLowerCase().indexOf(filters.value.toLowerCase()) >= 0
-    );
+export const filterMinasDevJobs = (jobs, { filters }) => {
+  const { searchTerm, tags } = filters;
+  const searchTerms = searchTerm.split(",");
+
+  let jobsFiltered = jobs.toJS();
+
+  jobsFiltered = jobsFiltered.filter(job => {
+    const regexString = searchTerms.map(term => `(?=.*${term.trim().toLowerCase()})`).join("");
+    const regex = new RegExp(`${regexString}.*`, "");
+    const str = `${job.position.toLowerCase()} ${job.source.toLowerCase()} ${job.tags
+      .join(" ")
+      .toLowerCase()}`;
+    const result = str.match(regex);
+    return result;
   });
+
+  if (tags.length > 0) {
+    jobsFiltered = jobsFiltered.filter(job => {
+      const regexString = tags.map(tag => `(?=.*${tag.trim().toLowerCase()})`).join("");
+      const regex = new RegExp(`${regexString}.*`, "");
+      const str = job.tags.join(" ").toLowerCase();
+      const result = str.match(regex);
+      return result;
+    });
+  }
 
   return {
     type: FILTER_MINASDEV_JOBS,
+    // payload: { jobsFiltered: jobs }
     payload: { jobsFiltered: fromJS(jobsFiltered) }
   };
 };

@@ -5,13 +5,18 @@ import _ from "lodash";
 import { getMinasDevJobs, filterMinasDevJobs } from "@reducers/MinasDev/actions";
 import { selectMinasDevJobs, selectMinasDevJobsFiltered } from "@reducers/MinasDev/selectors";
 import { Job } from "@components/Jobs";
-import { Wrapper, Content, Title, Search } from "./UI";
+import { Wrapper, Content, Title, Search, Filters, ButtonFilter } from "./UI";
 
 @connect(state => ({
   minasDevJobs: selectMinasDevJobs(state),
   minasDevJobsFiltered: selectMinasDevJobsFiltered(state)
 }))
 export default class JobList extends Component {
+  state = {
+    searchTerm: "",
+    tags: []
+  };
+
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
     minasDevJobs: PropTypes.object
@@ -20,7 +25,7 @@ export default class JobList extends Component {
   constructor(props) {
     super(props);
 
-    this.filterMinasDevJobs = _.debounce(this.filterMinasDevJobs, 300);
+    this.filterMinasDevJobsBySearchTerm = _.debounce(this.filterMinasDevJobsBySearchTerm, 300);
   }
 
   componentWillMount() {
@@ -29,24 +34,143 @@ export default class JobList extends Component {
     }
   }
 
-  filterMinasDevJobs(field, value) {
-    this.props.dispatch(filterMinasDevJobs(this.props.minasDevJobs, { field, value }));
+  filterMinasDevJobsBySearchTerm(searchTerm) {
+    this.setState(
+      {
+        searchTerm
+      },
+      () => {
+        this.props.dispatch(
+          filterMinasDevJobs(this.props.minasDevJobs, {
+            filters: {
+              searchTerm: this.state.searchTerm,
+              tags: this.state.tags
+            }
+          })
+        );
+      }
+    );
   }
+
+  filterMinasDevJobsByTag = tag => {
+    const { tags } = this.state;
+    const removeElementByValue = (elements, value) => {
+      for (var i = 0; i < elements.length; i++)
+        if (elements[i] === value) {
+          elements.splice(i, 1);
+          break;
+        }
+      return elements;
+    };
+    const newTags = tags.includes(tag) ? removeElementByValue(tags, tag) : [...tags, tag];
+
+    this.setState(
+      {
+        tags: newTags
+      },
+      () => {
+        this.props.dispatch(
+          filterMinasDevJobs(this.props.minasDevJobs, {
+            filters: {
+              searchTerm: this.state.searchTerm,
+              tags: this.state.tags
+            }
+          })
+        );
+      }
+    );
+  };
 
   renderFilters = () => {
     return (
-      <Search
-        type="search"
-        placeholder="Digite React, Python, QA, Manager, etc."
-        onChange={event => this.filterMinasDevJobs("query", event.target.value)}
-      />
+      <div>
+        <Search
+          type="search"
+          placeholder="Digite React, Python, QA, Manager, etc."
+          onChange={event => this.filterMinasDevJobsBySearchTerm(event.target.value)}
+        />
+        <Filters>
+          <ButtonFilter
+            active={this.state.tags.includes("programming")}
+            onClick={event => this.filterMinasDevJobsByTag("programming")}
+          >
+            Programação
+          </ButtonFilter>
+          <ButtonFilter
+            active={this.state.tags.includes("frontend")}
+            onClick={event => this.filterMinasDevJobsByTag("frontend")}
+          >
+            Front-End
+          </ButtonFilter>
+          <ButtonFilter
+            active={this.state.tags.includes("backend")}
+            onClick={event => this.filterMinasDevJobsByTag("backend")}
+          >
+            Back-End
+          </ButtonFilter>
+          <ButtonFilter
+            active={this.state.tags.includes("mobile")}
+            onClick={event => this.filterMinasDevJobsByTag("mobile")}
+          >
+            Mobile
+          </ButtonFilter>
+          <ButtonFilter
+            active={this.state.tags.includes("devops")}
+            onClick={event => this.filterMinasDevJobsByTag("devops")}
+          >
+            DevOps
+          </ButtonFilter>
+          <ButtonFilter
+            active={this.state.tags.includes("blockchain")}
+            onClick={event => this.filterMinasDevJobsByTag("blockchain")}
+          >
+            Blockchain
+          </ButtonFilter>
+          <ButtonFilter
+            active={this.state.tags.includes("design")}
+            onClick={event => this.filterMinasDevJobsByTag("design")}
+          >
+            Design
+          </ButtonFilter>
+          <ButtonFilter
+            active={this.state.tags.includes("content")}
+            onClick={event => this.filterMinasDevJobsByTag("content")}
+          >
+            Conteúdo
+          </ButtonFilter>
+          <ButtonFilter
+            active={this.state.tags.includes("social")}
+            onClick={event => this.filterMinasDevJobsByTag("social")}
+          >
+            Social Media
+          </ButtonFilter>
+          <ButtonFilter
+            active={this.state.tags.includes("support")}
+            onClick={event => this.filterMinasDevJobsByTag("support")}
+          >
+            Suporte
+          </ButtonFilter>
+          <ButtonFilter
+            active={this.state.tags.includes("manager")}
+            onClick={event => this.filterMinasDevJobsByTag("manager")}
+          >
+            Manager
+          </ButtonFilter>
+          <ButtonFilter
+            active={this.state.tags.includes("sales")}
+            onClick={event => this.filterMinasDevJobsByTag("sales")}
+          >
+            Sales
+          </ButtonFilter>
+        </Filters>
+      </div>
     );
   };
 
   render() {
     return (
       <Wrapper>
-        <Title>VAGAS</Title>
+        <Title>{this.props.minasDevJobsFiltered.size} VAGAS </Title>
         {this.renderFilters()}
         <Content>
           {this.props.minasDevJobsFiltered.map((minasDevJob, key) => (

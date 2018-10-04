@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { JobList } from "@containers/Jobs";
 import { Header, Newsletter, Footer } from "@components/Common";
-import { Wrapper, ParallaxTop, ParallaxBottom } from "./UI";
+import { Wrapper, HeaderContent } from "./UI";
 
 const URL = "https://minasdev.org/vagas";
 const TITLE = "Minas Dev - Vagas";
@@ -36,15 +36,13 @@ const Jobs = () => {
         <meta itemProp="description" content={DESCRIPTION} />
       </Helmet>
 
-      <ParallaxTop>
+      <HeaderContent>
         <Header />
-      </ParallaxTop>
+      </HeaderContent>
 
-      <ParallaxBottom>
-        <Newsletter />
-        <JobList />
-        <Footer />
-      </ParallaxBottom>
+      <JobList />
+      <Newsletter />
+      <Footer />
     </Wrapper>
   );
 };
