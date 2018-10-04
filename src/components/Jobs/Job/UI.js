@@ -27,6 +27,7 @@ export const JobTitle = styled.h2`
   font-size: 1.8rem;
   color: #e64c3b;
   margin-bottom: 5px;
+  word-break: break-word;
 
   @media screen and (max-width: 1023px) {
     flex-direction: column;
