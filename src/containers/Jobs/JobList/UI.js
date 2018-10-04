@@ -20,6 +20,10 @@ export const Title = styled.h2`
   color: rgb(230, 76, 59);
   text-align: center;
   margin-bottom: 30px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 2.5rem;
+  }
 `;
 
 export const Search = styled.input`
@@ -47,6 +51,11 @@ export const Search = styled.input`
 
   &:-ms-input-placeholder {
     color: #e64c3b;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+    padding: 10px;
   }
 `;
 
