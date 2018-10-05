@@ -8,6 +8,15 @@ export const Wrapper = styled.li`
   &:hover {
     border-left: 3px solid #e64c3b;
   }
+
+  @media screen and (max-width: 1023px) {
+    border-left: 0;
+    padding-left: 0;
+
+    &:hover {
+      border-left: 0;
+    }
+  }
 `;
 
 export const PublicationDate = styled.p`
