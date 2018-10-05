@@ -1,7 +1,13 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.li`
   margin-bottom: 30px;
+  border-left: 3px solid transparent;
+  padding-left: 10px;
+
+  &:hover {
+    border-left: 3px solid #e64c3b;
+  }
 `;
 
 export const PublicationDate = styled.p`
