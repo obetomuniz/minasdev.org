@@ -8,14 +8,12 @@ import { Job } from "@components/Jobs";
 import { Wrapper, Content, Title, Search, Filters, ButtonFilter, ResultsNotFound } from "./UI";
 
 const notFoundImages = [
-  "https://i.giphy.com/media/YyKPbc5OOTSQE/giphy.webp",
-  "https://i.giphy.com/media/VwoJkTfZAUBSU/giphy.webp",
-  "https://i.giphy.com/media/14uQ3cOFteDaU/giphy.webp",
   "https://media.giphy.com/media/BEYRc8P1IaiaY/giphy.gif",
   "https://media.giphy.com/media/yZgHsSVnzIjew/giphy.gif",
-  "https://i.giphy.com/media/9J7tdYltWyXIY/giphy.webp",
-  "https://i.giphy.com/media/l1J9EdzfOSgfyueLm/giphy.webp",
-  "https://i.giphy.com/media/3o7bu5AoSsr2bfe4fK/giphy.webp"
+  "https://media1.tenor.com/images/0289ce650765491b752d3f9f23015688/tenor.gif",
+  "https://media1.tenor.com/images/d00aea19494a9c502f732de87b2e9069/tenor.gif",
+  "https://media1.tenor.com/images/6a22b36d7658ceb0d6984bf28c759100/tenor.gif",
+  "https://media.tenor.com/images/71656fc182ad63d50fbcd7c5496aa09d/tenor.gif"
 ];
 
 @connect(state => ({
