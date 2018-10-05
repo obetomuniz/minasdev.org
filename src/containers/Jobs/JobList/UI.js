@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.section`
+  border-top: 3px solid #e64c3b;
   background-color: #fff;
   padding: 30px 20px 0;
 `;
@@ -87,4 +88,15 @@ export const ButtonFilter = styled.button`
   display: inline-block;
   padding: 10px;
   color: ${({ active }) => (active ? "#ffffff" : "#e64c3b")};
+`;
+
+export const ResultsNotFound = styled.img`
+  width: auto;
+  max-height: 500px;
+  margin-bottom: 30px;
+  align-self: center;
+
+  @media screen and (max-width: 767px) {
+    max-width: 80%;
+  }
 `;

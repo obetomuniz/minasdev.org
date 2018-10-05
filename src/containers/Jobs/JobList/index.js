@@ -5,7 +5,18 @@ import _ from "lodash";
 import { getMinasDevJobs, filterMinasDevJobs } from "@reducers/MinasDev/actions";
 import { selectMinasDevJobs, selectMinasDevJobsFiltered } from "@reducers/MinasDev/selectors";
 import { Job } from "@components/Jobs";
-import { Wrapper, Content, Title, Search, Filters, ButtonFilter } from "./UI";
+import { Wrapper, Content, Title, Search, Filters, ButtonFilter, ResultsNotFound } from "./UI";
+
+const notFoundImages = [
+  "https://i.giphy.com/media/YyKPbc5OOTSQE/giphy.webp",
+  "https://i.giphy.com/media/VwoJkTfZAUBSU/giphy.webp",
+  "https://i.giphy.com/media/14uQ3cOFteDaU/giphy.webp",
+  "https://media.giphy.com/media/BEYRc8P1IaiaY/giphy.gif",
+  "https://media.giphy.com/media/yZgHsSVnzIjew/giphy.gif",
+  "https://i.giphy.com/media/9J7tdYltWyXIY/giphy.webp",
+  "https://i.giphy.com/media/l1J9EdzfOSgfyueLm/giphy.webp",
+  "https://i.giphy.com/media/3o7bu5AoSsr2bfe4fK/giphy.webp"
+];
 
 @connect(state => ({
   minasDevJobs: selectMinasDevJobs(state),
@@ -176,6 +187,12 @@ export default class JobList extends Component {
           {this.props.minasDevJobsFiltered.map((minasDevJob, key) => (
             <Job key={`job-${key}`} data={minasDevJob} />
           ))}
+          {this.props.minasDevJobsFiltered.size === 0 && (
+            <ResultsNotFound
+              src={notFoundImages[Math.floor(Math.random() * notFoundImages.length)]}
+              alt="Nenhum resultado encontrado."
+            />
+          )}
         </Content>
       </Wrapper>
     );
