@@ -3,7 +3,11 @@ import styled from "styled-components";
 export const Wrapper = styled.section`
   border-top: 3px solid #e64c3b;
   background-color: #fff;
-  padding: 30px 20px 0;
+  padding: 40px 20px 0;
+
+  @media screen and (max-width: 767px) {
+    padding: 20px 20px 0;
+  }
 `;
 
 export const Content = styled.ul`
@@ -20,10 +24,11 @@ export const Title = styled.h2`
   line-height: 3.2rem;
   color: rgb(230, 76, 59);
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 
   @media screen and (max-width: 767px) {
     font-size: 2.5rem;
+    margin-bottom: 20px;
   }
 `;
 
@@ -66,7 +71,7 @@ export const Filters = styled.div`
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  margin: 0px auto 30px;
+  margin: 0px auto 40px;
   gap: 10px;
 
   @media screen and (max-width: 1023px) {
@@ -74,6 +79,7 @@ export const Filters = styled.div`
   }
 
   @media screen and (max-width: 767px) {
+    margin: 0px auto 30px;
     display: none;
   }
 `;

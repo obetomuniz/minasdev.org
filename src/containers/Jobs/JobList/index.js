@@ -97,6 +97,7 @@ export default class JobList extends Component {
           type="search"
           placeholder="Digite React, Python, QA, Manager, etc."
           onChange={event => this.filterMinasDevJobsBySearchTerm(event.target.value)}
+          autoFocus
         />
         <Filters>
           <ButtonFilter
