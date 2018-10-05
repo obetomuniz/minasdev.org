@@ -14,6 +14,7 @@ import {
 } from "./UI";
 
 const jobLabels = {
+  remote: "Remoto",
   programming: "Programação",
   blockchain: "Blockchain",
   mobile: "Mobile",
