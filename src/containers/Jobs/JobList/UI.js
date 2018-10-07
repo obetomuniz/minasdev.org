@@ -41,7 +41,7 @@ export const Search = styled.input`
   border: 2px #e64c3b solid;
   border-radius: 5px;
   color: #e64c3b;
-  margin: 0 auto 15px;
+  margin: 0 auto 10px;
 
   &::-webkit-input-placeholder {
     color: #e64c3b;
@@ -70,12 +70,12 @@ export const Filters = styled.div`
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   margin: 0px auto 40px;
   gap: 10px;
 
   @media screen and (max-width: 1023px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 
   @media screen and (max-width: 767px) {
@@ -85,14 +85,14 @@ export const Filters = styled.div`
 `;
 
 export const ButtonFilter = styled.button`
-  font-family: "Montserrat-Bold", sans-serif;
+  font-family: "Montserrat-SemiBold", sans-serif;
   font-size: 0.88rem;
   background-color: ${({ active }) => (active ? "#e64c3b" : "#ffffff")};
   border: 2px solid #e64c3b;
   border-radius: 5px;
   cursor: pointer;
   display: inline-block;
-  padding: 10px;
+  padding: 5px;
   color: ${({ active }) => (active ? "#ffffff" : "#e64c3b")};
 `;
 

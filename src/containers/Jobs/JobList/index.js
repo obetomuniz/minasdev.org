@@ -101,6 +101,12 @@ export default class JobList extends Component {
         />
         <Filters>
           <ButtonFilter
+            active={this.state.tags.includes("remote")}
+            onClick={event => this.filterMinasDevJobsByTag("remote")}
+          >
+            Remoto
+          </ButtonFilter>
+          <ButtonFilter
             active={this.state.tags.includes("programming")}
             onClick={event => this.filterMinasDevJobsByTag("programming")}
           >
@@ -117,6 +123,12 @@ export default class JobList extends Component {
             onClick={event => this.filterMinasDevJobsByTag("backend")}
           >
             Back-End
+          </ButtonFilter>
+          <ButtonFilter
+            active={this.state.tags.includes("qa")}
+            onClick={event => this.filterMinasDevJobsByTag("qa")}
+          >
+            QA
           </ButtonFilter>
           <ButtonFilter
             active={this.state.tags.includes("mobile")}
@@ -152,7 +164,7 @@ export default class JobList extends Component {
             active={this.state.tags.includes("social")}
             onClick={event => this.filterMinasDevJobsByTag("social")}
           >
-            Social Media
+            Social
           </ButtonFilter>
           <ButtonFilter
             active={this.state.tags.includes("support")}
