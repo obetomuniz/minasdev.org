@@ -13,21 +13,25 @@ import { routes, renderRoutes } from "@services/Routes";
 import configureStore from "@services/Store";
 
 const app = express();
-
-app.use(compression());
-app.use(
-  express.static(path.join(__dirname, "../", "../", "dist"), {
-    maxAge: 1 * 365 * 24 * 60 * 60 * 1000
-  })
-);
 const server = new http.Server(app);
-
-app.use((req, res) => {
-  const store = configureStore({});
+const clearRequireCache = () => {
+  Object.keys(require.cache).forEach(function(key) {
+    delete require.cache[key];
+  });
+};
+const setRenderContext = (data, route, { res }) => {
+  const store = configureStore({
+    minasdev: {
+      ...data.reduce((d, { key, data }) => {
+        d[key] = data;
+        return d;
+      }, {})
+    }
+  });
   const context = {};
   const component = (
     <Provider store={store}>
-      <StaticRouter location={req.url} context={context}>
+      <StaticRouter location={route} context={context}>
         {renderRoutes(routes)}
       </StaticRouter>
     </Provider>
@@ -54,6 +58,69 @@ app.use((req, res) => {
   renderToString(component);
 
   store.close();
+};
+
+app.use(compression());
+app.use(
+  express.static(path.join(__dirname, "../", "../", "dist"), {
+    maxAge: 1 * 365 * 24 * 60 * 60 * 1000
+  })
+);
+
+app.get("/vagas", (req, res) => {
+  clearRequireCache();
+
+  let data;
+
+  try {
+    data = [
+      {
+        key: "jobs",
+        data: require("../../../api.minasdev.org/data/jobs.json")
+      },
+      {
+        key: "jobsFiltered",
+        data: require("../../../api.minasdev.org/data/jobs.json")
+      }
+    ];
+  } catch (error) {
+    data = [
+      {
+        key: "jobs",
+        data: require("@data/jobs.json")
+      },
+      {
+        key: "jobsFiltered",
+        data: require("@data/jobs.json")
+      }
+    ];
+  }
+
+  setRenderContext(data, "/vagas", { res });
+});
+
+app.get("/", (req, res) => {
+  clearRequireCache();
+
+  let data;
+
+  try {
+    data = [
+      {
+        key: "events",
+        data: require("../../../api.minasdev.org/data/events.json")
+      }
+    ];
+  } catch (error) {
+    data = [
+      {
+        key: "events",
+        data: require("@data/events.json")
+      }
+    ];
+  }
+
+  setRenderContext(data, "/", { res });
 });
 
 server.listen(4000, err => {

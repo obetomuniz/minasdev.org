@@ -37,11 +37,11 @@ export default class JobList extends Component {
     this.filterMinasDevJobsBySearchTerm = _.debounce(this.filterMinasDevJobsBySearchTerm, 300);
   }
 
-  componentWillMount() {
-    if (typeof document === "undefined" || process.env.NODE_ENV === "development") {
-      this.props.dispatch(getMinasDevJobs());
-    }
-  }
+  // componentWillMount() {
+  //   if (typeof document === "undefined" || process.env.NODE_ENV === "development") {
+  //     this.props.dispatch(getMinasDevJobs());
+  //   }
+  // }
 
   filterMinasDevJobsBySearchTerm(searchTerm) {
     this.setState(

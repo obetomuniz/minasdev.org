@@ -21,11 +21,11 @@ export default class NextEvents extends Component {
     minasDevEvents: PropTypes.object
   };
 
-  componentWillMount() {
-    if (typeof document === "undefined" || process.env.NODE_ENV === "development") {
-      this.props.dispatch(getMinasDevEvents());
-    }
-  }
+  // componentWillMount() {
+  //   if (typeof document === "undefined" || process.env.NODE_ENV === "development") {
+  //     this.props.dispatch(getMinasDevEvents());
+  //   }
+  // }
 
   render() {
     return (

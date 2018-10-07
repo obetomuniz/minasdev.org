@@ -7,6 +7,7 @@
     "dev-build": "rm -rf ./dist/ && ./node_modules/.bin/cross-env NODE_ENV=development ./node_modules/.bin/webpack --progress --config ./devtools/development/webpack.config.js",
     "prod": "npm run prod-build && ./node_modules/.bin/cross-env NODE_ENV=production ./node_modules/.bin/babel-node ./devtools/server",
     "dev": "npm run dev-build && ./node_modules/.bin/cross-env NODE_ENV=development ./node_modules/.bin/babel-node ./devtools/server",
+    "dev-start": "./node_modules/.bin/cross-env NODE_ENV=development ./node_modules/.bin/babel-node ./devtools/server",
     "start": "./node_modules/.bin/cross-env NODE_ENV=production ./node_modules/.bin/babel-node ./devtools/server",
     "test": "./node_modules/.bin/cross-env NODE_ENV=test ./node_modules/.bin/jest --coverage",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
