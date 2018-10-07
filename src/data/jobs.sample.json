@@ -1,0 +1,46 @@
+[
+  {
+    "language": "en-us",
+    "source": "cryptojobs",
+    "sourceURL": "https://crypto.jobs",
+    "index": 0,
+    "position": "Project Manager",
+    "company": "allforcrypto",
+    "date": "2018-10-06T00:00:00.000Z",
+    "url": "https://crypto.jobs/jobs/project-manager-at-allforcrypto",
+    "tags": ["blockchain", "manager"]
+  },
+  {
+    "language": "en-us",
+    "source": "jobspresso",
+    "sourceURL": "https://jobspresso.co",
+    "index": 0,
+    "position": "Facebook Ads Manager",
+    "company": "Emily Hirsh Inc.",
+    "date": "2018-10-06T00:00:00.000Z",
+    "url": "https://jobspresso.co/job/emily-hirsh-inc-north-american-time-zone-marketing-facebook-ads-manager/",
+    "tags": ["manager", "remote"]
+  },
+  {
+    "language": "en-us",
+    "source": "jobspresso",
+    "sourceURL": "https://jobspresso.co",
+    "index": 0,
+    "position": "Content Writer",
+    "company": "GitHub",
+    "date": "2018-10-06T00:00:00.000Z",
+    "url": "https://jobspresso.co/job/content-writer/",
+    "tags": ["content", "remote"]
+  },
+  {
+    "language": "en-us",
+    "source": "cryptojobs",
+    "sourceURL": "https://crypto.jobs",
+    "index": 1,
+    "position": "Accounting and Finance Manager",
+    "company": "allforcrypto",
+    "date": "2018-10-06T00:00:00.000Z",
+    "url": "https://crypto.jobs/jobs/accounting-and-finance-manager-at-allforcrypto",
+    "tags": ["blockchain", "manager", "finance"]
+  }
+]
