@@ -23,9 +23,9 @@ export const PublicationDate = styled.p`
   font-family: "montserrat-regular", sans-serif;
   font-size: 0.7rem;
   color: #666;
-  max-width: 65%;
   margin-bottom: 5px;
   display: flex;
+  align-items: center;
 
   time {
     margin-left: 3px;
@@ -35,6 +35,17 @@ export const PublicationDate = styled.p`
 export const JobLanguage = styled.span`
   font-size: 0.7rem;
   margin-left: 5px;
+`;
+
+export const JobIsRemote = styled.span`
+  font-family: "montserrat-regular", sans-serif;
+  font-size: 0.6rem;
+  margin-left: 5px;
+  color: #e64c3b;
+  border: 1px solid #e64c3b;
+  padding: 2px;
+  border-radius: 3px;
+  margin-bottom: 3px;
 `;
 
 export const JobTitle = styled.h2`

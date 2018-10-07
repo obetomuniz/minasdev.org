@@ -6,6 +6,7 @@ import {
   PublicationDate,
   JobTitle,
   JobLanguage,
+  JobIsRemote,
   JobLink,
   JobCompany,
   Source,
@@ -14,7 +15,6 @@ import {
 } from "./UI";
 
 const jobLabels = {
-  remote: "Remoto",
   programming: "Programação",
   blockchain: "Blockchain",
   mobile: "Mobile",
@@ -31,35 +31,39 @@ const jobLabels = {
   finance: "Finanças"
 };
 
-const Job = ({ data }) => (
-  <Wrapper itemScope itemType="http://schema.org/JobPosting">
-    <PublicationDate>
-      Publicado em
-      <time itemProp="datePosted" dateTime={data.get("date")}>
-        {format(data.get("date").replace("T00:00:00.000Z", ""), "DD/MM/YYYY")}
-      </time>
-      <JobLanguage>{data.get("language") === "en-us" ? "🌐" : "🇧🇷"}</JobLanguage>
-    </PublicationDate>
-    <JobTitle itemProp="title">
-      <JobLink itemProp="url" href={data.get("url")} target="_blank" rel="noopener">
-        {data.get("position")}
-      </JobLink>
-    </JobTitle>
-    <JobCompany>@{data.get("company")}</JobCompany>
-    <Source itemProp="source">
-      <SourceLink href={data.get("sourceURL")} target="_blank" rel="noopener">
-        {data.get("source")}
-      </SourceLink>
-      <Tags>
-        ,{" "}
-        {data
-          .get("tags")
-          .map(tag => jobLabels[tag])
-          .join(", ")}
-      </Tags>
-    </Source>
-  </Wrapper>
-);
+const Job = ({ data }) => {
+  const tags = data.get("tags");
+  const isRemote = tags.contains("remote");
+  const tagList = tags
+    .filter(tag => tag !== "remote")
+    .map(tag => jobLabels[tag])
+    .join(", ");
+
+  return (
+    <Wrapper itemScope itemType="http://schema.org/JobPosting">
+      <PublicationDate>
+        Publicado em
+        <time itemProp="datePosted" dateTime={data.get("date")}>
+          {format(data.get("date").replace("T00:00:00.000Z", ""), "DD/MM/YYYY")}
+        </time>
+        <JobLanguage>{data.get("language") === "en-us" ? "🌐" : "🇧🇷"}</JobLanguage>
+        {isRemote ? <JobIsRemote>REMOTO</JobIsRemote> : null}
+      </PublicationDate>
+      <JobTitle itemProp="title">
+        <JobLink itemProp="url" href={data.get("url")} target="_blank" rel="noopener">
+          {data.get("position")}
+        </JobLink>
+      </JobTitle>
+      <JobCompany>@{data.get("company")}</JobCompany>
+      <Source itemProp="source">
+        <SourceLink href={data.get("sourceURL")} target="_blank" rel="noopener">
+          {data.get("source")}
+        </SourceLink>
+        <Tags>, {tagList}</Tags>
+      </Source>
+    </Wrapper>
+  );
+};
 
 Job.propTypes = {
   data: PropTypes.object
