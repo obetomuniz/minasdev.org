@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import _ from "lodash";
-import { getMinasDevJobs, filterMinasDevJobs } from "@reducers/MinasDev/actions";
+import { filterMinasDevJobs } from "@reducers/MinasDev/actions";
 import { selectMinasDevJobs, selectMinasDevJobsFiltered } from "@reducers/MinasDev/selectors";
 import { Job } from "@components/Jobs";
 import { Wrapper, Content, Title, Search, Filters, ButtonFilter, ResultsNotFound } from "./UI";
@@ -36,12 +36,6 @@ export default class JobList extends Component {
 
     this.filterMinasDevJobsBySearchTerm = _.debounce(this.filterMinasDevJobsBySearchTerm, 300);
   }
-
-  // componentWillMount() {
-  //   if (typeof document === "undefined" || process.env.NODE_ENV === "development") {
-  //     this.props.dispatch(getMinasDevJobs());
-  //   }
-  // }
 
   filterMinasDevJobsBySearchTerm(searchTerm) {
     this.setState(

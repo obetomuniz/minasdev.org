@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { getMinasDevEvents } from "@reducers/MinasDev/actions";
 import { selectMinasDevEvents } from "@reducers/MinasDev/selectors";
 import { Event } from "@components/Home";
 import {
@@ -20,12 +19,6 @@ export default class NextEvents extends Component {
     dispatch: PropTypes.func.isRequired,
     minasDevEvents: PropTypes.object
   };
-
-  // componentWillMount() {
-  //   if (typeof document === "undefined" || process.env.NODE_ENV === "development") {
-  //     this.props.dispatch(getMinasDevEvents());
-  //   }
-  // }
 
   render() {
     return (

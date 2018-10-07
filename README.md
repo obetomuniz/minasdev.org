@@ -1,23 +1,5 @@
 # Minas Dev Website
 
-## Tooling
-
-- reeakt
-- SSR (Server-Side Rendering)
-- react
-- react-router
-- redux
-- redux-saga
-- immutable.js
-- redux-immutable
-- styled-components
-- webpack
-- jest & enzyme
-- prettier
-- ducks _(a modern and optimized way to work with redux structure)_
-- axios
-- express
-
 ## Installation
 
 ```
@@ -44,3 +26,7 @@ $ npm run start
 ```
 $ npm run test
 ```
+
+## Tooling
+
+- [reeakt](https://github.com/obetomuniz/reeakt)
