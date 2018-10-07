@@ -119,12 +119,6 @@ export default class JobList extends Component {
             Back-End
           </ButtonFilter>
           <ButtonFilter
-            active={this.state.tags.includes("qa")}
-            onClick={event => this.filterMinasDevJobsByTag("qa")}
-          >
-            QA
-          </ButtonFilter>
-          <ButtonFilter
             active={this.state.tags.includes("mobile")}
             onClick={event => this.filterMinasDevJobsByTag("mobile")}
           >
@@ -141,6 +135,12 @@ export default class JobList extends Component {
             onClick={event => this.filterMinasDevJobsByTag("blockchain")}
           >
             Blockchain
+          </ButtonFilter>
+          <ButtonFilter
+            active={this.state.tags.includes("qa")}
+            onClick={event => this.filterMinasDevJobsByTag("qa")}
+          >
+            QA
           </ButtonFilter>
           <ButtonFilter
             active={this.state.tags.includes("design")}
