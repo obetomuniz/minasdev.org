@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { format } from "date-fns";
+import { getTagsPtBr } from "@services/Tags";
 import {
   Wrapper,
   PublicationDate,
@@ -14,29 +15,12 @@ import {
   Tags
 } from "./UI";
 
-const jobLabels = {
-  programming: "Programação",
-  blockchain: "Blockchain",
-  mobile: "Mobile",
-  backend: "Back-End",
-  frontend: "Front-End",
-  devops: "DevOps",
-  qa: "QA",
-  design: "Design",
-  content: "Conteúdo",
-  social: "Social Media",
-  support: "Suporte",
-  manager: "Manager",
-  sales: "Sales",
-  finance: "Finanças"
-};
-
 const Job = ({ data }) => {
   const tags = data.get("tags");
   const isRemote = tags.contains("remote");
   const tagList = tags
     .filter(tag => tag !== "remote")
-    .map(tag => jobLabels[tag])
+    .map(tag => getTagsPtBr[tag])
     .join(", ");
 
   return (

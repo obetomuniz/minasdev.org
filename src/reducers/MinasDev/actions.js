@@ -9,24 +9,7 @@ import {
   FETCH_MINASDEV_JOBS_FAILURE,
   FILTER_MINASDEV_JOBS
 } from "@reducers/MinasDev/types";
-
-const jobLabels = {
-  remote: "Remoto",
-  programming: "Programação",
-  blockchain: "Blockchain",
-  mobile: "Mobile",
-  backend: "Back-End",
-  frontend: "Front-End",
-  devops: "DevOps",
-  qa: "QA",
-  design: "Design",
-  content: "Conteúdo",
-  social: "Social Media",
-  support: "Suporte",
-  manager: "Manager",
-  sales: "Sales",
-  finance: "Finanças"
-};
+import { getTagsPtBr } from "@services/Tags";
 
 export const getMinasDevEvents = () => {
   return {
@@ -79,7 +62,7 @@ export const filterMinasDevJobs = (jobs, { filters }) => {
     const regex = new RegExp(`${regexString}.*`, "");
     const tags = job.tags.join(" ").toLowerCase();
     const tagsPtBr = job.tags
-      .map(tag => jobLabels[tag])
+      .map(tag => getTagsPtBr[tag])
       .join(" ")
       .toLowerCase();
 
