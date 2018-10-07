@@ -29,6 +29,9 @@ export const PublicationDate = styled.p`
 
   time {
     margin-left: 3px;
+    height: 15px;
+    display: flex;
+    align-items: center;
   }
 `;
 
@@ -44,8 +47,9 @@ export const JobIsRemote = styled.span`
   color: #e64c3b;
   border: 1px solid #e64c3b;
   padding: 2px;
+  height: 15px;
   border-radius: 3px;
-  margin-bottom: 3px;
+  display: flex;
 `;
 
 export const JobTitle = styled.h2`
