@@ -123,6 +123,12 @@ app.get("/", (req, res) => {
   setRenderContext(data, "/", { res });
 });
 
+app.use((req, res) => {
+  res.set("content-type", "text/html");
+  res.sendStatus(200);
+  res.end();
+});
+
 server.listen(4000, err => {
   if (err) {
     console.error(`ERROR: ${err}`);
