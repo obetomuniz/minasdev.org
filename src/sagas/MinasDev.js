@@ -18,9 +18,9 @@ if (typeof window === "undefined") {
 
 export function* fetchMinasDevEvents() {
   try {
-    const events = yield call(getMinasDevEvents);
-    window.localStorage.setItem("events", JSON.stringify(events.data));
-    yield put(getMinasDevEventsSuccess(events.data));
+    const events = getMinasDevEvents();
+    window.localStorage.setItem("events", JSON.stringify(events));
+    yield put(getMinasDevEventsSuccess(events));
   } catch (error) {
     const events = JSON.parse(window.localStorage.getItem("events"));
     yield put(getMinasDevEventsFailure(error, events));
@@ -29,9 +29,9 @@ export function* fetchMinasDevEvents() {
 
 export function* fetchMinasDevJobs() {
   try {
-    const jobs = yield call(getMinasDevJobs);
-    window.localStorage.setItem("jobs", JSON.stringify(jobs.data));
-    yield put(getMinasDevJobsSuccess(jobs.data));
+    const jobs = getMinasDevJobs();
+    window.localStorage.setItem("jobs", JSON.stringify(jobs));
+    yield put(getMinasDevJobsSuccess(jobs));
   } catch (error) {
     const jobs = JSON.parse(window.localStorage.getItem("jobs"));
     yield put(getMinasDevJobsFailure(error, jobs));

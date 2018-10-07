@@ -25,12 +25,6 @@ $ git clone https://github.com/minasdev/minasdev.org.git
 $ npm install
 ```
 
-After clone, rename the following files:
-
-`src/data/events.sample.json` >> `src/data/events.json`
-
-`src/data/jobs.sample.json` >> `src/data/jobs.json`
-
 ## CLI
 
 #### Run the Development Mode

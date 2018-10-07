@@ -1,7 +1,19 @@
 import axios from "axios";
 
-const getMinasDevEvents = () => axios.get("https://api.minasdev.org/events");
+const getMinasDevEvents = () => {
+  try {
+    return require("../../../../api.minasdev.org/data/events.json");
+  } catch (error) {
+    return require("@data/events.json");
+  }
+};
 
-const getMinasDevJobs = () => axios.get("https://api.minasdev.org/jobs");
+const getMinasDevJobs = () => {
+  try {
+    return require("../../../../api.minasdev.org/data/jobs.json");
+  } catch (error) {
+    return require("@data/jobs.json");
+  }
+};
 
 export { getMinasDevEvents, getMinasDevJobs };

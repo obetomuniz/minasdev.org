@@ -14,5 +14,3 @@ profile.json
 .vscode
 webpack-assets.json
 webpack-stats.json
-src/data/events.json
-src/data/jobs.json

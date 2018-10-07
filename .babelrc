@@ -17,7 +17,8 @@
         { "src": "./src/sagas", "expose": "@sagas" },
         { "src": "./src/services", "expose": "@services" },
         { "src": "./src/assets", "expose": "@assets" },
-        { "src": "./src/helpers", "expose": "@helpers" }
+        { "src": "./src/helpers", "expose": "@helpers" },
+        { "src": "./src/data", "expose": "@data" }
       ]
     ],
     ["styled-components", { "ssr": true, "minify": true }],
