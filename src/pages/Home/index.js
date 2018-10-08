@@ -37,7 +37,7 @@ const Home = () => (
     </Helmet>
 
     <HeaderContent>
-      <Header />
+      <Header mainNav={{ url: "https://minasdev.org/vagas", label: "VAGAS" }} />
       <About />
     </HeaderContent>
 

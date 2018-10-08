@@ -12,7 +12,7 @@ import {
   SocialLink
 } from "./UI";
 
-const Header = () => {
+const Header = ({ mainNav }) => {
   return (
     <Wrapper>
       <Content>
@@ -20,7 +20,7 @@ const Header = () => {
         <nav>
           <Navigation>
             <NavigationItem>
-              <NavigationLink href="https://minasdev.org/vagas">VAGAS</NavigationLink>
+              <NavigationLink href={mainNav.url}>{mainNav.label}</NavigationLink>
             </NavigationItem>
             <NavigationItem>
               <NavigationLink href="https://slack.minasdev.org/">Slack</NavigationLink>

@@ -37,7 +37,7 @@ const Jobs = () => {
       </Helmet>
 
       <HeaderContent>
-        <Header />
+        <Header mainNav={{ url: "https://minasdev.org", label: "O Minas Dev" }} />
       </HeaderContent>
 
       <JobList />
