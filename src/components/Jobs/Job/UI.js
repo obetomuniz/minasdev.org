@@ -58,15 +58,20 @@ export const JobTitle = styled.h2`
   color: #e64c3b;
   margin-bottom: 5px;
   word-break: break-word;
-
-  @media screen and (max-width: 1023px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
 `;
 
 export const JobLink = styled.a`
   margin: 0 8px 0 0;
+`;
+
+export const JobOnMinasDevSlack = styled.img`
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
 `;
 
 export const JobCompany = styled.span`

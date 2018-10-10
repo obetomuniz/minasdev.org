@@ -9,6 +9,7 @@ import {
   JobLanguage,
   JobIsRemote,
   JobLink,
+  JobOnMinasDevSlack,
   JobCompany,
   Source,
   SourceLink,
@@ -37,6 +38,7 @@ const Job = ({ data }) => {
         <JobLink itemProp="url" href={data.get("url")} target="_blank" rel="noopener">
           {data.get("position")}
         </JobLink>
+        {data.get("source") === "minasdevslack" ? <JobOnMinasDevSlack src="https://minasdev.org/images/favicons/apple-touch-icon-57x57.png" /> : null}
       </JobTitle>
       <JobCompany>@{data.get("company")}</JobCompany>
       <Source itemProp="source">
