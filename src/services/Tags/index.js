@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const getTagsPtBr = {
+  gamedev: "GameDev",
   remote: "Remoto",
   programming: "Programação",
   blockchain: "Blockchain",
