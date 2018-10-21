@@ -10,7 +10,11 @@ const Event = ({ data }) => (
       {format(data.get("date").replace("T00:00:00.000Z", ""), "DD.MM")}
     </Time>
     <Title itemProp="name">{data.get("name")}</Title>
-    <ScreenReaderContent itemProp="location">{data.get("location")}</ScreenReaderContent>
+    <ScreenReaderContent itemProp="location" itemScope itemType="http://schema.org/Place">
+      <span itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
+        <span itemProp="addressLocality">{data.get("location")}</span>
+      </span>
+    </ScreenReaderContent>
     <Community itemProp="organizer">{data.get("community")}</Community>
     <Link href={data.get("url")} target="_blank" rel="noopener" itemProp="url">
       Visite o site do evento <ScreenReaderContent>{data.get("name")}</ScreenReaderContent>
