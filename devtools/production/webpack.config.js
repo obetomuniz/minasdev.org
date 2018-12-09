@@ -124,9 +124,8 @@ module.exports = {
       { from: `${srcPath}assets/static`, to: distPath }
     ]),
     new OfflinePlugin({
-      safeToUseOptionalCaches: true,
+      safeToUseOptionalCaches: false,
       externals: [
-        "index.html",
         "index.js",
         "images/background.jpg",
         "images/icons.svg",
