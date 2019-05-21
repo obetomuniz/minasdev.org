@@ -7,7 +7,6 @@ import webpackDevMiddleware from "webpack-dev-middleware";
 import webpackHotMiddleware from "webpack-hot-middleware";
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import rootSagas from "@sagas";
 import Html from "@components/Common/Html";
 import configureStore from "@services/Store";
 
@@ -37,20 +36,13 @@ const setRenderContext = (data, route, { res }) => {
     }
   });
 
-  store
-    .runSaga(rootSagas)
-    .done.then(() => {
-      res.set("content-type", "text/html");
-      res.send(
-        `<!doctype html>${renderToStaticMarkup(
-          <Html store={store} context={{}} assets={webpackIsomorphicTools.assets()} />
-        )}`
-      );
-      res.end();
-    })
-    .catch(e => console.log(e));
-
-  store.close();
+  res.set("content-type", "text/html");
+  res.send(
+    `<!doctype html>${renderToStaticMarkup(
+      <Html store={store} context={{}} assets={webpackIsomorphicTools.assets()} />
+    )}`
+  );
+  res.end();
 };
 
 app.use(express.static(path.join(__dirname, "../", "../", "dist")));

@@ -15,7 +15,7 @@ module.exports = {
   context: path.join(__dirname, "..", ".."),
   mode: "production",
   entry: {
-    main: ["babel-polyfill", `${srcPath}index`],
+    main: ["@babel/polyfill", `${srcPath}index`],
     vendor: [
       "react",
       "redux",

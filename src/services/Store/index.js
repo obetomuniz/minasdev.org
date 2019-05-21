@@ -1,9 +1,7 @@
 import { fromJS } from "immutable";
 import { createStore, applyMiddleware, compose } from "redux";
 import { routerMiddleware } from "react-router-redux";
-import createSagaMiddleware, { END } from "redux-saga";
 import Reducers from "@reducers";
-import Sagas from "@sagas";
 
 function enableHMR(store) {
   if (process.env.NODE_ENV === "development" && module.hot) {
@@ -15,23 +13,18 @@ function enableHMR(store) {
 }
 
 export default function configureStore(initialState, history) {
-  const ReduxSagaMiddleware = createSagaMiddleware();
   const store = createStore(
     Reducers,
     fromJS(initialState),
     compose(
-      applyMiddleware(ReduxSagaMiddleware, routerMiddleware(history)),
+      applyMiddleware(routerMiddleware(history)),
       process.env.NODE_ENV === "development" &&
-      typeof window === "object" &&
-      typeof window.devToolsExtension !== "undefined"
-        ? window.devToolsExtension()
+        typeof window === "object" &&
+        typeof window.__REDUX_DEVTOOLS_EXTENSION__ !== "undefined"
+        ? window.__REDUX_DEVTOOLS_EXTENSION__()
         : f => f
     )
   );
-
-  store.runSaga = ReduxSagaMiddleware.run;
-  store.runSaga(Sagas);
-  store.close = () => store.dispatch(END);
 
   enableHMR(store);
   return store;

@@ -1,9 +1,14 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import { Wrapper } from "./UI";
+import { GlobalStyle, Wrapper } from "./UI";
 import { renderRoutes } from "@services/Routes";
 
-const Layout = ({ route }) => <Wrapper>{renderRoutes(route.routes)}</Wrapper>;
+const Layout = ({ route }) => (
+  <Fragment>
+    <GlobalStyle />
+    <Wrapper>{renderRoutes(route.routes)}</Wrapper>
+  </Fragment>
+);
 
 Layout.propTypes = {
   route: PropTypes.object.isRequired

@@ -1,6 +1,7 @@
 import OfflinePlugin from "offline-plugin/runtime";
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import { AppContainer } from "react-hot-loader";
 import createHistory from "history/createBrowserHistory";
 import Root from "@components/Common/Root";
@@ -34,7 +35,9 @@ OfflinePlugin.install({
 
 ReactDOM.render(
   <AppContainer>
-    <Root store={store} history={history} />
+    <BrowserRouter>
+      <Root store={store} history={history} />
+    </BrowserRouter>
   </AppContainer>,
   DOMRoot
 );

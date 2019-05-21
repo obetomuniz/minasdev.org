@@ -1,4 +1,4 @@
-import styled, { injectGlobal } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 import MontserratBlackWOFF2 from "@assets/fonts/Montserrat/Montserrat-Black.woff2";
 import MontserratBlackWOFF from "@assets/fonts/Montserrat/Montserrat-Black.woff";
@@ -32,7 +32,7 @@ import MontserratThinWOFF2 from "@assets/fonts/Montserrat/Montserrat-Thin.woff2"
 import MontserratThinWOFF from "@assets/fonts/Montserrat/Montserrat-Thin.woff";
 import MontserratThinSVG from "@assets/fonts/Montserrat/Montserrat-Thin.svg";
 
-injectGlobal`
+export const GlobalStyle = createGlobalStyle`
   @font-face{
     font-family: "montserrat-black";
     src: url(${MontserratBlackWOFF2}) format("woff2"),

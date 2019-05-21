@@ -7,7 +7,6 @@ import React from "react";
 import { renderToString, renderToStaticMarkup } from "react-dom/server";
 import { Provider } from "react-redux";
 import StaticRouter from "react-router-dom/StaticRouter";
-import rootSagas from "@sagas";
 import Html from "@components/Common/Html";
 import { routes, renderRoutes } from "@services/Routes";
 import configureStore from "@services/Store";
@@ -37,27 +36,20 @@ const setRenderContext = (data, route, { res }) => {
     </Provider>
   );
 
-  store
-    .runSaga(rootSagas)
-    .done.then(() => {
-      if (context.url) {
-        res.redirect(302, context.url);
-        return;
-      }
+  if (context.url) {
+    res.redirect(302, context.url);
+    return;
+  }
 
-      res.set("content-type", "text/html");
-      res.send(
-        `<!doctype html>${renderToStaticMarkup(
-          <Html component={component} assets={webpackIsomorphicTools.assets()} store={store} />
-        )}`
-      );
-      res.end();
-    })
-    .catch(e => console.log(e));
+  res.set("content-type", "text/html");
+  res.send(
+    `<!doctype html>${renderToStaticMarkup(
+      <Html component={component} assets={webpackIsomorphicTools.assets()} store={store} />
+    )}`
+  );
+  res.end();
 
   renderToString(component);
-
-  store.close();
 };
 
 app.use(compression());

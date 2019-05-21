@@ -15,7 +15,7 @@ module.exports = () => {
     mode: "development",
     entry: {
       main: [
-        "babel-polyfill",
+        "@babel/polyfill",
         "webpack-hot-middleware/client?reload=true",
         "react-hot-loader/patch",
         `${srcPath}index`
@@ -117,6 +117,7 @@ module.exports = () => {
     ],
     resolve: {
       alias: {
+        "react-dom": "@hot-loader/react-dom",
         "@components": path.resolve(__dirname, "src/components/"),
         "@containers": path.resolve(__dirname, "src/containers/"),
         "@pages": path.resolve(__dirname, "src/pages/"),
