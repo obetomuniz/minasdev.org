@@ -13,22 +13,23 @@ const notFoundImages = [
   "https://media1.tenor.com/images/0289ce650765491b752d3f9f23015688/tenor.gif",
   "https://media1.tenor.com/images/d00aea19494a9c502f732de87b2e9069/tenor.gif",
   "https://media1.tenor.com/images/6a22b36d7658ceb0d6984bf28c759100/tenor.gif",
-  "https://media.tenor.com/images/71656fc182ad63d50fbcd7c5496aa09d/tenor.gif"
+  "https://media.tenor.com/images/71656fc182ad63d50fbcd7c5496aa09d/tenor.gif",
 ];
 
-@connect(state => ({
+@connect((state) => ({
   minasDevJobs: selectMinasDevJobs(state),
-  minasDevJobsFiltered: selectMinasDevJobsFiltered(state)
+  minasDevJobsFiltered: selectMinasDevJobsFiltered(state),
 }))
 export default class JobList extends Component {
   state = {
+    localization: "",
     searchTerm: "",
-    tags: []
+    tags: [],
   };
 
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
-    minasDevJobs: PropTypes.object
+    minasDevJobs: PropTypes.object,
   };
 
   constructor(props) {
@@ -37,25 +38,45 @@ export default class JobList extends Component {
     this.filterMinasDevJobsBySearchTerm = _.debounce(this.filterMinasDevJobsBySearchTerm, 300);
   }
 
-  filterMinasDevJobsBySearchTerm(searchTerm) {
+  filterMinasDevJobsByLocalization(localization) {
     this.setState(
       {
-        searchTerm
+        localization: localization === this.state.localization ? "" : localization,
       },
       () => {
         this.props.dispatch(
           filterMinasDevJobs(this.props.minasDevJobs, {
             filters: {
+              language: this.state.localization,
               searchTerm: this.state.searchTerm,
-              tags: this.state.tags
-            }
+              tags: this.state.tags,
+            },
           })
         );
       }
     );
   }
 
-  filterMinasDevJobsByTag = tag => {
+  filterMinasDevJobsBySearchTerm(searchTerm) {
+    this.setState(
+      {
+        searchTerm,
+      },
+      () => {
+        this.props.dispatch(
+          filterMinasDevJobs(this.props.minasDevJobs, {
+            filters: {
+              language: this.state.localization,
+              searchTerm: this.state.searchTerm,
+              tags: this.state.tags,
+            },
+          })
+        );
+      }
+    );
+  }
+
+  filterMinasDevJobsByTag = (tag) => {
     const { tags } = this.state;
     const removeElementByValue = (elements, value) => {
       for (var i = 0; i < elements.length; i++)
@@ -69,15 +90,16 @@ export default class JobList extends Component {
 
     this.setState(
       {
-        tags: newTags
+        tags: newTags,
       },
       () => {
         this.props.dispatch(
           filterMinasDevJobs(this.props.minasDevJobs, {
             filters: {
+              language: this.state.localization,
               searchTerm: this.state.searchTerm,
-              tags: this.state.tags
-            }
+              tags: this.state.tags,
+            },
           })
         );
       }
@@ -90,93 +112,93 @@ export default class JobList extends Component {
         <Search
           type="search"
           placeholder="Digite React, Python, QA, Manager, etc."
-          onChange={event => this.filterMinasDevJobsBySearchTerm(event.target.value)}
+          onChange={(event) => this.filterMinasDevJobsBySearchTerm(event.target.value)}
           autoFocus
         />
         <Filters>
           <ButtonFilter
+            active={this.state.localization === "pt-br"}
+            onClick={() => this.filterMinasDevJobsByLocalization("pt-br")}
+          >
+            No Brasil
+          </ButtonFilter>
+          <ButtonFilter
             active={this.state.tags.includes("remote")}
-            onClick={event => this.filterMinasDevJobsByTag("remote")}
+            onClick={() => this.filterMinasDevJobsByTag("remote")}
           >
             Remoto
           </ButtonFilter>
           <ButtonFilter
             active={this.state.tags.includes("programming")}
-            onClick={event => this.filterMinasDevJobsByTag("programming")}
+            onClick={() => this.filterMinasDevJobsByTag("programming")}
           >
             Programação
           </ButtonFilter>
           <ButtonFilter
             active={this.state.tags.includes("frontend")}
-            onClick={event => this.filterMinasDevJobsByTag("frontend")}
+            onClick={() => this.filterMinasDevJobsByTag("frontend")}
           >
             Front-End
           </ButtonFilter>
           <ButtonFilter
             active={this.state.tags.includes("backend")}
-            onClick={event => this.filterMinasDevJobsByTag("backend")}
+            onClick={() => this.filterMinasDevJobsByTag("backend")}
           >
             Back-End
           </ButtonFilter>
           <ButtonFilter
             active={this.state.tags.includes("mobile")}
-            onClick={event => this.filterMinasDevJobsByTag("mobile")}
+            onClick={() => this.filterMinasDevJobsByTag("mobile")}
           >
             Mobile
           </ButtonFilter>
           <ButtonFilter
             active={this.state.tags.includes("devops")}
-            onClick={event => this.filterMinasDevJobsByTag("devops")}
+            onClick={() => this.filterMinasDevJobsByTag("devops")}
           >
             DevOps
           </ButtonFilter>
           <ButtonFilter
             active={this.state.tags.includes("blockchain")}
-            onClick={event => this.filterMinasDevJobsByTag("blockchain")}
+            onClick={() => this.filterMinasDevJobsByTag("blockchain")}
           >
             Blockchain
           </ButtonFilter>
           <ButtonFilter
             active={this.state.tags.includes("qa")}
-            onClick={event => this.filterMinasDevJobsByTag("qa")}
+            onClick={() => this.filterMinasDevJobsByTag("qa")}
           >
             QA
           </ButtonFilter>
           <ButtonFilter
             active={this.state.tags.includes("design")}
-            onClick={event => this.filterMinasDevJobsByTag("design")}
+            onClick={() => this.filterMinasDevJobsByTag("design")}
           >
             Design
           </ButtonFilter>
           <ButtonFilter
             active={this.state.tags.includes("content")}
-            onClick={event => this.filterMinasDevJobsByTag("content")}
+            onClick={() => this.filterMinasDevJobsByTag("content")}
           >
             Conteúdo
           </ButtonFilter>
           <ButtonFilter
             active={this.state.tags.includes("social")}
-            onClick={event => this.filterMinasDevJobsByTag("social")}
+            onClick={() => this.filterMinasDevJobsByTag("social")}
           >
             Social
           </ButtonFilter>
           <ButtonFilter
             active={this.state.tags.includes("support")}
-            onClick={event => this.filterMinasDevJobsByTag("support")}
+            onClick={() => this.filterMinasDevJobsByTag("support")}
           >
             Suporte
           </ButtonFilter>
           <ButtonFilter
             active={this.state.tags.includes("manager")}
-            onClick={event => this.filterMinasDevJobsByTag("manager")}
+            onClick={() => this.filterMinasDevJobsByTag("manager")}
           >
             Manager
-          </ButtonFilter>
-          <ButtonFilter
-            active={this.state.tags.includes("sales")}
-            onClick={event => this.filterMinasDevJobsByTag("sales")}
-          >
-            Sales
           </ButtonFilter>
         </Filters>
       </div>
