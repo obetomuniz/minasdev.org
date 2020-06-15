@@ -5,7 +5,7 @@ import { Wrapper, NewsletterForm, Title, Input, Button } from "./UI";
 const Newsletter = () => (
   <Wrapper>
     <NewsletterForm
-      action="https://minasdev.us3.list-manage.com/subscribe/post?u=50258ba79635076ed976b3238&amp;id=c864b0ba02"
+      action="https://minasdev.us10.list-manage.com/subscribe/post?u=9714606f0b65d6aed36b29a47&amp;id=0c0b7ea960"
       method="post"
     >
       <Title htmlFor="minasdev-newsletter-email">Newsletter</Title>
