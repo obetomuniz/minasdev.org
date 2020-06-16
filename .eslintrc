@@ -1,0 +1,156 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:eslint-comments/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jsdoc/recommended",
+    "plugin:react/recommended",
+    "prettier/react",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "plugins": ["react", "react-hooks", "jsx-a11y"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "block-scoped-var": "error",
+    "complexity": [
+      "error",
+      {
+        "max": 20
+      }
+    ],
+    "consistent-return": "error",
+    "curly": ["error", "all"],
+    "default-case": "error",
+    "guard-for-in": "error",
+    "no-await-in-loop": "error",
+    "no-extra-bind": "error",
+    "no-extra-label": "error",
+    "no-floating-decimal": "error",
+    "no-implicit-coercion": "error",
+    "no-implicit-globals": "error",
+    "no-implied-eval": "error",
+    "no-loop-func": "error",
+    "no-new": "error",
+    "no-new-func": "error",
+    "no-new-wrappers": "error",
+    "no-restricted-properties": "error",
+    "no-return-assign": "error",
+    "no-return-await": "error",
+    "no-sequences": "error",
+    "no-shadow": "error",
+    "no-template-curly-in-string": "error",
+    "no-throw-literal": "error",
+    "no-unmodified-loop-condition": "error",
+    "no-unused-vars": [
+      "error",
+      {
+        "ignoreRestSiblings": true
+      }
+    ],
+    "no-useless-call": "error",
+    "no-useless-concat": "error",
+    "no-console": "error",
+    "prefer-object-spread": "error",
+    "prefer-promise-reject-errors": "error",
+    "prefer-rest-params": "error",
+    "prefer-spread": "error",
+    "radix": ["error", "as-needed"],
+    "require-await": "error",
+    "rest-spread-spacing": ["error", "never"],
+    "import/no-extraneous-dependencies": "error",
+    "import/no-unresolved": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          ["external", "unknown"],
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ]
+      }
+    ],
+    "jsdoc/require-jsdoc": "off",
+    "jsdoc/require-returns": "off",
+    "jsdoc/require-param-description": "off",
+    "jsdoc/check-indentation": "error",
+    "eslint-comments/no-unused-disable": "error",
+    "react/prop-types": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": [
+      "error",
+      {
+        "enableDangerousAutofixThisMayCauseInfiniteLoops": false,
+        "additionalHooks": [
+          {
+            "test": "useSelect$",
+            "callbackIndex": 0
+          },
+          {
+            "test": "useBatchingCallback",
+            "callbackIndex": 0
+          },
+          {
+            "test": "useKeyEffectInternal",
+            "callbackIndex": 3
+          },
+          {
+            "test": "useKeyEffect",
+            "callbackIndex": 2
+          },
+          {
+            "test": "useKeyDownEffect",
+            "callbackIndex": 2
+          },
+          {
+            "test": "useKeyUpEffect",
+            "callbackIndex": 2
+          },
+          {
+            "test": "useGlobalKeyDownEffect",
+            "callbackIndex": 1
+          },
+          {
+            "test": "useGlobalKeyUpEffect",
+            "callbackIndex": 1
+          },
+          {
+            "test": "useIntersectionEffect",
+            "callbackIndex": 2
+          },
+          {
+            "test": "useResizeEffect",
+            "callbackIndex": 1
+          }
+        ]
+      }
+    ],
+    "react/jsx-fragments": "error",
+    "react/jsx-no-literals": "error",
+    "react/jsx-no-useless-fragment": "error",
+    "react/no-unused-prop-types": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/self-closing-comp": "error"
+  },
+  "settings": {
+    "jsdoc": {
+      "tagNamePreference": {
+        "returns": "return",
+        "yields": "yield"
+      }
+    }
+  }
+}

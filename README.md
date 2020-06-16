@@ -12,21 +12,13 @@ $ npm install
 #### Run the Development Mode
 
 ```
+$ npm run build
 $ npm run dev
 ```
 
 #### Run the Production Mode
 
 ```
-$ npm run start
+$ npm run build
+$ npm start
 ```
-
-#### Run the tests
-
-```
-$ npm run test
-```
-
-## Tooling
-
-- [reeakt](https://github.com/obetomuniz/reeakt)
