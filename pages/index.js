@@ -51,8 +51,10 @@ const Home = ({ events }) => (
 
 export const getServerSideProps = async () => {
   let events = await getJSON("events.json")
-  events = events.filter((event) => event.sources.length > 0)
-  events = events.map((event) => event.sources).flat()
+  events = events
+    .filter((event) => event.sources.length > 0)
+    .map((event) => event.sources)
+    .flat()
 
   return {
     props: {

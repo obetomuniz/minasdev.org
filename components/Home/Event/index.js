@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { format } from "date-fns"
+import format from "date-fns/format"
 import getDateObjectFromString from "../../../helpers/getDateObjectFromString"
 import { ScreenReaderContent } from "../../Common"
 import { Wrapper, Time, Title, Community, Link } from "./ui"

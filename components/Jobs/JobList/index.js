@@ -16,24 +16,16 @@ const JobList = () => {
   const {
     state: { jobs },
   } = useJobs()
-  const jobsLength = jobs.map((job) => job.sources).flat().length
+  const jobsLength = jobs.length
 
   return (
     <Wrapper>
       <Title>{`${jobsLength} VAGAS`}</Title>
       <JobFilters />
       <Content>
-        {jobs
-          .map(({ sources, metadata }, sourceKey) => {
-            return sources.map((job, jobKey) => (
-              <Job
-                key={`job-${sourceKey}-${jobKey}`}
-                data={job}
-                metadata={metadata}
-              />
-            ))
-          })
-          .flat()}
+        {jobs.map((job) => (
+          <Job key={job.id} {...job} />
+        ))}
         {jobsLength === 0 && (
           <ResultsNotFound
             src={

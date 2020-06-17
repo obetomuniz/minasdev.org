@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { format } from "date-fns"
+import format from "date-fns/format"
 import getDateObjectFromString from "../../../helpers/getDateObjectFromString"
 import {
   Wrapper,
@@ -16,8 +16,7 @@ import {
   Tags,
 } from "./ui"
 
-const Job = ({ data, metadata }) => {
-  const { company, date, position, remote, url } = data
+const Job = ({ company, date, position, remote, url, metadata }) => {
   const { language, name: source, website } = metadata
 
   return (

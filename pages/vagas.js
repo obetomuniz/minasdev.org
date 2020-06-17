@@ -1,5 +1,7 @@
+import compareAsc from "date-fns/compareAsc"
 import Head from "next/head"
 import getJSON from "../helpers/getJSON"
+import getDateObjectFromString from "../helpers/getDateObjectFromString"
 import { JobsProvider } from "../contexts/Jobs"
 import { JobList } from "../components/Jobs"
 import { Header, Newsletter, Footer } from "../components/Common"
@@ -50,7 +52,19 @@ const Vagas = ({ jobs }) => (
 
 export const getServerSideProps = async () => {
   let jobs = await getJSON("jobs.json")
-  jobs = jobs.filter((job) => job.sources.length > 0)
+  jobs = jobs
+    .filter((job) => job.sources.length > 0)
+    .map(({ sources, metadata }) => {
+      return sources.map((source) => ({ ...source, metadata }))
+    })
+    .flat()
+    .sort((a, b) =>
+      compareAsc(
+        getDateObjectFromString(b.date),
+        getDateObjectFromString(a.date)
+      )
+    )
+
   return {
     props: {
       jobs,
