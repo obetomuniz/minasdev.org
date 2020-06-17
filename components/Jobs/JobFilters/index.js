@@ -1,6 +1,10 @@
+import { useJobs } from "../../../contexts/Jobs"
 import { Search, Filters, ButtonFilter } from "./ui"
 
 const JobFilters = () => {
+  const {
+    actions: { onFilterByTerm },
+  } = useJobs()
   const filters = [
     {
       label: "No Brasil",
@@ -53,7 +57,7 @@ const JobFilters = () => {
       <Search
         type="search"
         placeholder="Digite React, Python, QA, Manager, etc."
-        onChange={(event) => null}
+        onChange={(e) => onFilterByTerm(e.target.value)}
         autoFocus
       />
       <Filters>
