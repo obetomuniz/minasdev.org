@@ -1,4 +1,5 @@
 import PropTypes from "prop-types"
+import { useJobs } from "../../../contexts/Jobs"
 import { Job, JobFilters } from "../"
 import { Wrapper, Content, Title, ResultsNotFound } from "./ui"
 
@@ -11,8 +12,12 @@ const notFoundImages = [
   "https://media.tenor.com/images/71656fc182ad63d50fbcd7c5496aa09d/tenor.gif",
 ]
 
-const JobList = ({ jobs }) => {
+const JobList = () => {
+  const {
+    state: { jobs },
+  } = useJobs()
   const jobsLength = jobs.map((job) => job.sources).flat().length
+
   return (
     <Wrapper>
       <Title>{`${jobsLength} VAGAS`}</Title>
