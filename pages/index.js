@@ -50,6 +50,8 @@ const Home = ({ events }) => (
   </Wrapper>
 )
 
+export const config = { unstable_runtimeJS: false }
+
 export const getServerSideProps = async () => {
   let events = await getJSON("events.json")
   events = events

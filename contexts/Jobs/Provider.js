@@ -43,6 +43,7 @@ export function JobsProvider({ jobs, children }) {
 
       if (term && term.length > 1) {
         timer.current = setTimeout(() => {
+          setJobListFiltered([])
           let newJobListFiltered = searchEngineByTerm(term, jobs)
           if (tagsSelected.current.size) {
             newJobListFiltered = searchEngineByTag(
@@ -53,6 +54,7 @@ export function JobsProvider({ jobs, children }) {
           setJobListFiltered(newJobListFiltered.sort(sortByDateAsc))
         }, 300)
       } else if (!term) {
+        setJobListFiltered([])
         let newJobListFiltered = jobs
         if (tagsSelected.current.size) {
           newJobListFiltered = searchEngineByTag(
@@ -68,6 +70,7 @@ export function JobsProvider({ jobs, children }) {
 
   const onSelectTag = useCallback(
     (tag) => {
+      setJobListFiltered([])
       let newJobListFiltered = jobs
 
       if (tagsSelected.current.has(tag)) {
