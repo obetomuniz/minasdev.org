@@ -1,6 +1,6 @@
-import { useEffect } from "react"
 import * as JsSearch from "js-search"
 import { createContext, useState, useRef } from "react"
+import sortByDateAsc from "../../helpers/sortByDateAsc"
 
 export const INITIAL_STATE = {
   actions: {},
@@ -48,7 +48,7 @@ export function JobsProvider({ jobs, children }) {
             newJobListFiltered
           )
         }
-        setJobListFiltered(newJobListFiltered)
+        setJobListFiltered(newJobListFiltered.sort(sortByDateAsc))
       }, 300)
     } else {
       let newJobListFiltered = jobs
@@ -58,7 +58,7 @@ export function JobsProvider({ jobs, children }) {
           newJobListFiltered
         )
       }
-      setJobListFiltered(newJobListFiltered)
+      setJobListFiltered(newJobListFiltered.sort(sortByDateAsc))
     }
   }
 
@@ -80,7 +80,7 @@ export function JobsProvider({ jobs, children }) {
       newJobListFiltered = searchEngineByTerm(searchTerm, newJobListFiltered)
     }
 
-    setJobListFiltered(newJobListFiltered)
+    setJobListFiltered(newJobListFiltered.sort(sortByDateAsc))
   }
 
   const state = {

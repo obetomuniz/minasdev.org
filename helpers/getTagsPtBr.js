@@ -1,6 +1,5 @@
 const getTagsPtBr = {
   gamedev: "GameDev",
-  remote: "Remoto",
   programming: "Programação",
   blockchain: "Blockchain",
   mobile: "Mobile",
@@ -10,11 +9,8 @@ const getTagsPtBr = {
   qa: "QA",
   design: "Design",
   content: "Conteúdo",
-  social: "Social Media",
   support: "Suporte",
   manager: "Manager",
-  sales: "Sales",
-  finance: "Finanças",
 }
 
 export default getTagsPtBr

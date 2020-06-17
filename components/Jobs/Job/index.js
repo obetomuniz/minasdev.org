@@ -2,6 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import format from "date-fns/format"
 import getDateObjectFromString from "../../../helpers/getDateObjectFromString"
+import getTagsPtBr from "../../../helpers/getTagsPtBr"
+
 import {
   Wrapper,
   PublicationDate,
@@ -16,8 +18,11 @@ import {
   Tags,
 } from "./ui"
 
-const Job = ({ company, date, position, remote, url, metadata }) => {
+const Job = ({ company, date, position, url, tags, metadata }) => {
   const { language, name: source, website } = metadata
+  const tagList = [...new Set(tags.map((tag) => getTagsPtBr[tag]))]
+    .filter(Boolean)
+    .join(", ")
 
   return (
     <Wrapper itemScope itemType="http://schema.org/JobPosting">
@@ -27,7 +32,7 @@ const Job = ({ company, date, position, remote, url, metadata }) => {
           {format(getDateObjectFromString(date), "dd/MM/yyyy")}
         </time>
         <JobLanguage>{language === "en-us" ? "🌐" : "🇧🇷"}</JobLanguage>
-        {remote ? <JobIsRemote>REMOTO</JobIsRemote> : null}
+        {tags.includes("remote") ? <JobIsRemote>REMOTO</JobIsRemote> : null}
       </PublicationDate>
       <JobTitle itemProp="title">
         <JobLink itemProp="url" href={url} target="_blank" rel="noopener">
@@ -42,7 +47,7 @@ const Job = ({ company, date, position, remote, url, metadata }) => {
         <SourceLink href={website} target="_blank" rel="noopener">
           {source}
         </SourceLink>
-        {/* <Tags>{`, ${tagList}`}</Tags> TODO: Add support for tags */}
+        {tagList.length ? <Tags>{`, ${tagList}`}</Tags> : null}
       </Source>
     </Wrapper>
   )
