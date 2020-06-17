@@ -1,3 +1,4 @@
+import { useCallback } from "react"
 import * as JsSearch from "js-search"
 import { createContext, useState, useRef } from "react"
 import sortByDateAsc from "../../helpers/sortByDateAsc"
@@ -35,13 +36,24 @@ export function JobsProvider({ jobs, children }) {
   const tagsSelected = useRef(new Set([]))
   const timer = useRef(null)
 
-  const onFilterByTerm = (term) => {
-    setSearchTerm(term)
-    clearTimeout(timer.current)
+  const onFilterByTerm = useCallback(
+    (term) => {
+      setSearchTerm(term)
+      clearTimeout(timer.current)
 
-    if (term) {
-      timer.current = setTimeout(() => {
-        let newJobListFiltered = searchEngineByTerm(term, jobs)
+      if (term && term.length > 1) {
+        timer.current = setTimeout(() => {
+          let newJobListFiltered = searchEngineByTerm(term, jobs)
+          if (tagsSelected.current.size) {
+            newJobListFiltered = searchEngineByTag(
+              tagsSelected.current,
+              newJobListFiltered
+            )
+          }
+          setJobListFiltered(newJobListFiltered.sort(sortByDateAsc))
+        }, 300)
+      } else if (!term) {
+        let newJobListFiltered = jobs
         if (tagsSelected.current.size) {
           newJobListFiltered = searchEngineByTag(
             tagsSelected.current,
@@ -49,39 +61,34 @@ export function JobsProvider({ jobs, children }) {
           )
         }
         setJobListFiltered(newJobListFiltered.sort(sortByDateAsc))
-      }, 300)
-    } else {
-      let newJobListFiltered = jobs
-      if (tagsSelected.current.size) {
-        newJobListFiltered = searchEngineByTag(
-          tagsSelected.current,
-          newJobListFiltered
-        )
       }
+    },
+    [jobListFiltered, tagsSelected, timer]
+  )
+
+  const onSelectTag = useCallback(
+    (tag) => {
+      let newJobListFiltered = jobs
+
+      if (tagsSelected.current.has(tag)) {
+        tagsSelected.current.delete(tag)
+      } else {
+        tagsSelected.current.add(tag)
+      }
+
+      newJobListFiltered = searchEngineByTag(
+        tagsSelected.current,
+        newJobListFiltered
+      )
+
+      if (searchTerm) {
+        newJobListFiltered = searchEngineByTerm(searchTerm, newJobListFiltered)
+      }
+
       setJobListFiltered(newJobListFiltered.sort(sortByDateAsc))
-    }
-  }
-
-  const onSelectTag = (tag) => {
-    let newJobListFiltered = jobs
-
-    if (tagsSelected.current.has(tag)) {
-      tagsSelected.current.delete(tag)
-    } else {
-      tagsSelected.current.add(tag)
-    }
-
-    newJobListFiltered = searchEngineByTag(
-      tagsSelected.current,
-      newJobListFiltered
-    )
-
-    if (searchTerm) {
-      newJobListFiltered = searchEngineByTerm(searchTerm, newJobListFiltered)
-    }
-
-    setJobListFiltered(newJobListFiltered.sort(sortByDateAsc))
-  }
+    },
+    [jobListFiltered, tagsSelected, searchTerm]
+  )
 
   const state = {
     actions: { onFilterByTerm, onSelectTag },
