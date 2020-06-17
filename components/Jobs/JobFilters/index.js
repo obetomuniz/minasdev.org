@@ -3,52 +3,64 @@ import { Search, Filters, ButtonFilter } from "./ui"
 
 const JobFilters = () => {
   const {
-    actions: { onFilterByTerm },
+    actions: { onFilterByTerm, onSelectTag },
+    state: { tagsSelected },
   } = useJobs()
   const filters = [
     {
+      value: "",
       label: "No Brasil",
     },
     {
+      value: "",
       label: "Remoto",
     },
     {
+      value: "",
       label: "Programação",
     },
     {
+      value: "",
       label: "Front-End",
     },
     {
+      value: "",
       label: "Back-End",
     },
     {
+      value: "",
       label: "Mobile",
     },
     {
+      value: "",
       label: "DevOps",
     },
     {
+      value: "",
       label: "Blockchain",
     },
     {
-      label: "DevOps",
-    },
-    {
+      value: "",
       label: "QA",
     },
     {
+      value: "",
       label: "Design",
     },
     {
+      value: "",
       label: "Conteúdo",
     },
     {
+      value: "",
       label: "Social",
     },
     {
+      value: "",
       label: "Suporte",
     },
     {
+      value: "",
       label: "Manager",
     },
   ]
@@ -64,8 +76,8 @@ const JobFilters = () => {
         {filters.map((filter, index) => (
           <ButtonFilter
             key={`filter-${index}`}
-            active={filter.label === "Remoto"}
-            onClick={() => null}
+            active={tagsSelected.has(filter.value)}
+            onClick={() => onSelectTag(filter.value)}
           >
             {filter.label}
           </ButtonFilter>

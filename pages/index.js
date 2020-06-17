@@ -1,5 +1,6 @@
 import Head from "next/head"
 import getJSON from "../helpers/getJSON"
+import sortByDateDesc from "../helpers/sortByDateDesc"
 import { EventsProvider } from "../contexts/Events"
 import { Header, Newsletter, Footer } from "../components/Common"
 import { About, NextEvents } from "../components/Home"
@@ -55,6 +56,7 @@ export const getServerSideProps = async () => {
     .filter((event) => event.sources.length > 0)
     .map((event) => event.sources)
     .flat()
+    .sort(sortByDateDesc)
 
   return {
     props: {

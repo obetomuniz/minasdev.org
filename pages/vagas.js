@@ -1,7 +1,6 @@
-import compareAsc from "date-fns/compareAsc"
 import Head from "next/head"
 import getJSON from "../helpers/getJSON"
-import getDateObjectFromString from "../helpers/getDateObjectFromString"
+import sortByDateAsc from "../helpers/sortByDateAsc"
 import { JobsProvider } from "../contexts/Jobs"
 import { JobList } from "../components/Jobs"
 import { Header, Newsletter, Footer } from "../components/Common"
@@ -58,12 +57,7 @@ export const getServerSideProps = async () => {
       return sources.map((source) => ({ ...source, metadata }))
     })
     .flat()
-    .sort((a, b) =>
-      compareAsc(
-        getDateObjectFromString(b.date),
-        getDateObjectFromString(a.date)
-      )
-    )
+    .sort(sortByDateAsc)
 
   return {
     props: {
