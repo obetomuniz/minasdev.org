@@ -1,9 +1,8 @@
 import Head from "next/head"
 import getJSON from "../helpers/getJSON"
-import { JobList } from "../containers/Jobs"
+import { JobList } from "../components/Jobs"
 import { Header, Newsletter, Footer } from "../components/Common"
 import { Wrapper, HeaderContent } from "../components/Jobs/ui"
-import { JobLanguage } from "../components/Jobs/Job/ui"
 
 const URL = "https://minasdev.org/vagas"
 const TITLE = "Minas Dev - Vagas"
@@ -47,7 +46,7 @@ const Vagas = ({ jobs }) => (
 )
 
 export const getServerSideProps = async () => {
-  let jobs = JSON.parse(await getJSON("jobs.json"))
+  let jobs = await getJSON("jobs.json")
   jobs = jobs.filter((job) => job.sources.length > 0)
   return {
     props: {

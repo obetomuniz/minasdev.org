@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import { Job, JobFilters } from "../../../components/Jobs"
+import { Job, JobFilters } from "../"
 import { Wrapper, Content, Title, ResultsNotFound } from "./ui"
 
 const notFoundImages = [

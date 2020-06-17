@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import { Event } from "../../../components/Home"
+import { Event } from "../"
 import {
   Wrapper,
   Header,

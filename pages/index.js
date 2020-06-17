@@ -1,8 +1,7 @@
 import Head from "next/head"
-import { NextEvents } from "../containers/Home"
 import getJSON from "../helpers/getJSON"
 import { Header, Newsletter, Footer } from "../components/Common"
-import { About } from "../components/Home"
+import { About, NextEvents } from "../components/Home"
 import { Wrapper, HeaderContent } from "../components/Home/ui"
 
 const URL = "https://minasdev.org/"
@@ -48,7 +47,7 @@ const Home = ({ events }) => (
 )
 
 export const getServerSideProps = async () => {
-  let events = JSON.parse(await getJSON("events.json"))
+  let events = await getJSON("events.json")
   events = events.filter((event) => event.sources.length > 0)
   events = events.map((event) => event.sources).flat()
 

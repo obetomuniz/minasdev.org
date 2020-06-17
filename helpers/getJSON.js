@@ -1,6 +1,11 @@
 import aws from "aws-sdk"
 
-const { AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, S3_BUCKET } = process.env
+const {
+  AWS_ACCESS_KEY_ID,
+  AWS_SECRET_ACCESS_KEY,
+  S3_BUCKET,
+  NODE_ENV,
+} = process.env
 
 aws.config.update({
   accessKeyId: AWS_ACCESS_KEY_ID,
@@ -10,6 +15,10 @@ aws.config.update({
 const s3 = new aws.S3()
 
 export default async (name) => {
+  if (NODE_ENV === "development") {
+    return Promise.resolve(require(`../fixtures/data/${name}`))
+  }
+
   return new Promise((resolve, reject) => {
     s3.getObject(
       {
@@ -18,7 +27,7 @@ export default async (name) => {
       },
       (err, data) => {
         if (err) reject(err)
-        else resolve(data.Body.toString("utf-8"))
+        else resolve(JSON.parse(data.Body.toString("utf-8")))
       }
     )
   })
