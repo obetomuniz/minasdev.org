@@ -23,9 +23,11 @@ const JobList = () => {
       <Title>{`${jobsLength} VAGAS`}</Title>
       <JobFilters />
       <Content>
-        {jobs.map((job) => (
-          <Job key={job.id} {...job} />
-        ))}
+        {jobs
+          .slice(0, typeof window === "undefined" ? 20 : undefined)
+          .map((job) => (
+            <Job key={job.id} {...job} />
+          ))}
         {jobsLength === 0 && (
           <ResultsNotFound
             src={
