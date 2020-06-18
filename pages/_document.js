@@ -142,12 +142,6 @@ class MyDocument extends Document {
           {/* Google Tags */}
           <meta name="google" value="notranslate" />
 
-          {/* Styles */}
-          <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap"
-            rel="stylesheet"
-          />
-
           {/* Google Analytics */}
           {isProduction && GA_ID && (
             <Fragment>
