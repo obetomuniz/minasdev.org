@@ -71,7 +71,7 @@ export const JobLink = styled.a`
   margin: 0 8px 0 0;
 `
 
-export const JobOnMinasDevSlack = styled.img`
+export const JobOnMinasDevSlack = styled.picture`
   width: 25px;
   height: 25px;
   margin: 0 5px;

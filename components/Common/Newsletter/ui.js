@@ -18,27 +18,15 @@ export const NewsletterForm = styled.form`
 
   @media screen and (max-width: 1023px) {
     flex-direction: column;
-  }
-`
-
-export const Title = styled.label`
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 900;
-  font-size: 2.2rem;
-  line-height: 2.5rem;
-  text-transform: uppercase;
-
-  @media screen and (max-width: 1023px) {
-    margin-bottom: 20px;
+    width: 100%;
   }
 `
 
 export const Input = styled.input`
-  margin: 0 60px;
+  margin: 0 60px 0 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 0.88rem;
+  font-size: 1.2rem;
   text-align: center;
   animation-duration: 0.5s;
   animation-fill-mode: both;
@@ -50,7 +38,7 @@ export const Input = styled.input`
   border-radius: 5px;
   display: inline-block;
   padding: 15px;
-  min-width: 420px;
+  min-width: 555px;
   width: 100%;
 
   &::-webkit-input-placeholder {
@@ -71,11 +59,7 @@ export const Input = styled.input`
 
   @media screen and (max-width: 1023px) {
     margin: 0 0 20px;
-    min-width: 727px;
-  }
-
-  @media screen and (max-width: 767px) {
-    min-width: 280px;
+    min-width: 100%;
   }
 `
 
@@ -84,7 +68,7 @@ export const Button = styled.button`
   font-weight: 700;
   font-size: 0.88rem;
   background-color: #fff;
-  color: #e64c3b;
+  color: #cc4233;
   border-radius: 5px;
   border: 0;
   cursor: pointer;
@@ -92,7 +76,7 @@ export const Button = styled.button`
   padding: 15px 45px;
   text-transform: uppercase;
 
-  @media screen and (max-width: 767px) {
-    width: 280px;
+  @media screen and (max-width: 1023px) {
+    min-width: 100%;
   }
 `

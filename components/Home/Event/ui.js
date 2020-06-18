@@ -9,7 +9,7 @@ export const Time = styled.time`
   display: block;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: #242424;
 
   &:after {
@@ -26,11 +26,11 @@ export const Title = styled.h2`
   display: block;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
-  font-size: 0.95rem;
-  line-height: 1.3rem;
+  font-size: 1.5rem;
+  line-height: 1.85rem;
   color: #242424;
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: 13px;
   overflow: hidden;
 `
 
@@ -39,7 +39,7 @@ export const Community = styled.p`
   font-weight: 700;
   font-size: 0.7rem;
   color: #4a4a4a;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   max-width: 65%;
 `
 
@@ -47,7 +47,7 @@ export const Link = styled.a`
   align-self: baseline;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 0.75rem;
+  font-size: 1.2rem;
   font-style: italic;
   border-bottom: 1px solid #e64c3b;
   color: #e64c3b;

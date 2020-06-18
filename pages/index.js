@@ -37,7 +37,7 @@ const Home = ({ events }) => (
       <meta itemProp="description" content={DESCRIPTION} />
     </Head>
 
-    <HeaderContent>
+    <HeaderContent className={"webp"}>
       <Header mainNav={{ url: "/vagas", label: "VAGAS" }} />
       <About />
     </HeaderContent>

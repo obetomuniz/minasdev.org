@@ -19,7 +19,7 @@ import {
 } from "./ui"
 
 const Job = ({ company, date, position, url, tags, metadata }) => {
-  const { language, name: source, website } = metadata
+  const { language, id: source, website } = metadata
   const tagList = [...new Set(tags.map((tag) => getTagsPtBr[tag]))]
     .filter(Boolean)
     .join(", ")
@@ -38,8 +38,20 @@ const Job = ({ company, date, position, url, tags, metadata }) => {
         <JobLink itemProp="url" href={url} target="_blank" rel="noopener">
           {position}
         </JobLink>
-        {source === "Minas Dev Vagas" ? (
-          <JobOnMinasDevSlack src="/images/favicons/apple-touch-icon-57x57.png" />
+        {source === "backendbrvagas" ? (
+          <JobOnMinasDevSlack>
+            <source
+              srcSet={require("../../../public/images/minasdev-logo-57x57.png?webp")}
+              type="image/webp"
+            />
+            <source
+              srcSet={require("../../../public/images/minasdev-logo-57x57.png")}
+              type="image/png"
+            />
+            <img
+              src={require("../../../public/images/minasdev-logo-57x57.png?webp")}
+            />
+          </JobOnMinasDevSlack>
         ) : null}
       </JobTitle>
       <JobCompany>{`@${company}`}</JobCompany>

@@ -2,6 +2,9 @@ import styled from "styled-components"
 
 export const Wrapper = styled.main`
   background-image: url("/images/mapa-de-minas.png");
+  &.webp {
+    background-image: url("/images/mapa-de-minas.webp");
+  }
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: contain;

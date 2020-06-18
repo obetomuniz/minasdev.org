@@ -37,7 +37,7 @@ const Vagas = ({ jobs }) => (
       <meta itemProp="description" content={DESCRIPTION} />
     </Head>
 
-    <HeaderContent>
+    <HeaderContent className={"webp"}>
       <Header mainNav={{ url: "/", label: "O Minas Dev" }} />
     </HeaderContent>
 

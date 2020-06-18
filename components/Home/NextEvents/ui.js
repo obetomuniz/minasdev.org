@@ -83,13 +83,12 @@ export const EventList = styled.ul`
   margin: 0 auto;
   width: 1024px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
   padding: 40px 20px 30px;
 
   @media screen and (max-width: 1024px) {
     width: 100%;
-    grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
   }
 `
