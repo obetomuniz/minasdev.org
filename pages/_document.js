@@ -144,9 +144,8 @@ class MyDocument extends Document {
 
           {/* Styles */}
           <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=block"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap"
             rel="stylesheet"
-            async
           />
 
           {/* Google Analytics */}
