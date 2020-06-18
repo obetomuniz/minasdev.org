@@ -61,6 +61,10 @@ export const Input = styled.input`
     margin: 0 0 20px;
     min-width: 100%;
   }
+
+  @media screen and (max-width: 767px) {
+    font-size: 0.68rem;
+  }
 `
 
 export const Button = styled.button`

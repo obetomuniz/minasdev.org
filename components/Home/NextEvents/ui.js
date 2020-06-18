@@ -27,7 +27,7 @@ export const Title = styled.span`
   color: #e64c3b;
 
   @media screen and (max-width: 767px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 2rem;
     text-align: center;
   }
@@ -87,8 +87,12 @@ export const EventList = styled.ul`
   grid-gap: 50px;
   padding: 40px 20px 30px;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     width: 100%;
+  }
+
+  @media screen and (max-width: 767px) {
     grid-gap: 30px;
+    grid-template-columns: 1fr;
   }
 `
