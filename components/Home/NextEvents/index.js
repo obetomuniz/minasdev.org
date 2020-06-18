@@ -19,13 +19,13 @@ const NextEvents = () => {
     <Wrapper>
       <Header>
         <TitleIcon>
-          <svg aria-hidden="">
+          <svg aria-hidden="true">
             <use xlinkHref="/images/vectors/icons.svg#calendar" />
           </svg>
         </TitleIcon>
         <Title>Próximos Eventos</Title>
         <TitleIcon hide>
-          <svg aria-hidden="">
+          <svg aria-hidden="true">
             <use xlinkHref="/images/vectors/icons.svg#calendar" />
           </svg>
         </TitleIcon>

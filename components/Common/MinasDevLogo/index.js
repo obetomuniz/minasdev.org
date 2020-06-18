@@ -6,7 +6,7 @@ const MinasDevLogo = () => {
   return (
     <Wrapper>
       <a href="/">
-        <svg aria-hidden="">
+        <svg aria-hidden="true">
           <use xlinkHref="/images/vectors/objects.svg#minasdev-logo" />
         </svg>
         Minas Dev

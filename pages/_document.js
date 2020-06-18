@@ -49,13 +49,13 @@ class MyDocument extends Document {
     const { isProduction } = this.props
 
     return (
-      <html>
+      <html lang="pt-br">
         <Head>
           <meta charSet="UTF-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta
             name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           <link rel="canonical" href="https://minasdev.org/" />
 

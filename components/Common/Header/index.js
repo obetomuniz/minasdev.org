@@ -54,7 +54,7 @@ const Header = ({ mainNav }) => {
                     target="_blank"
                     rel="noopener"
                   >
-                    <svg aria-hidden="">
+                    <svg aria-hidden="true">
                       <use xlinkHref="/images/vectors/icons.svg#github" />
                     </svg>
                     GitHub do Minas Dev
@@ -66,7 +66,7 @@ const Header = ({ mainNav }) => {
                     target="_blank"
                     rel="noopener"
                   >
-                    <svg aria-hidden="">
+                    <svg aria-hidden="true">
                       <use xlinkHref="/images/vectors/icons.svg#twitter" />
                     </svg>
                     Twitter do Minas Dev
