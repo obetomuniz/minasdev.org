@@ -6,7 +6,7 @@ export const Wrapper = styled.li`
   padding-left: 10px;
 
   &:hover {
-    border-left: 3px solid #e64c3b;
+    border-left: 3px solid #cc4233;
   }
 
   @media screen and (max-width: 1023px) {
@@ -46,8 +46,8 @@ export const JobIsRemote = styled.span`
   font-weight: 400;
   font-size: 0.6rem;
   margin-left: 5px;
-  color: #e64c3b;
-  border: 1px solid #e64c3b;
+  color: #cc4233;
+  border: 1px solid #cc4233;
   padding: 2px;
   height: 15;
   border-radius: 3px;
@@ -81,9 +81,9 @@ export const JobCompany = styled.span`
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 0.8rem;
-  color: #777;
+  color: #555;
   display: block;
-  margin: 5px 0;
+  margin: 5px 0 10px;
 `
 
 export const Source = styled.p`
@@ -93,11 +93,11 @@ export const Source = styled.p`
 export const SourceLink = styled.a`
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  color: #4a4a4a;
+  color: #333;
 `
 
 export const Tags = styled.span`
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #777;
+  color: #555;
 `

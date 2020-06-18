@@ -1,4 +1,5 @@
 import { useJobs } from "../../../contexts/Jobs"
+import { ScreenReaderContent } from "../../Common"
 import { Search, Filters, ButtonFilter } from "./ui"
 
 const FILTERS = [
@@ -68,7 +69,11 @@ const JobFilters = () => {
 
   return (
     <div>
+      <ScreenReaderContent htmlFor="search" as={"label"}>
+        Buscar Vaga
+      </ScreenReaderContent>
       <Search
+        id="search"
         type="search"
         placeholder="Digite React, Python, QA, Manager, etc."
         onChange={(e) => onFilterByTerm(e.target.value)}

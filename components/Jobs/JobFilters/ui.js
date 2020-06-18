@@ -6,25 +6,26 @@ export const Search = styled.input`
   margin: 0px auto;
   padding: 20px;
   display: block;
-  border: 2px #e64c3b solid;
+  border: 2px #cc4233 solid;
   border-radius: 5px;
-  color: #e64c3b;
+  color: #cc4233;
   margin: 0 auto 10px;
+  font-size: 1.2rem;
 
   &::-webkit-input-placeholder {
-    color: #e64c3b;
+    color: #cc4233;
   }
 
   &:-moz-placeholder {
-    color: #e64c3b;
+    color: #cc4233;
   }
 
   &::-moz-placeholder {
-    color: #e64c3b;
+    color: #cc4233;
   }
 
   &:-ms-input-placeholder {
-    color: #e64c3b;
+    color: #cc4233;
   }
 
   @media screen and (max-width: 767px) {
@@ -56,11 +57,11 @@ export const ButtonFilter = styled.button`
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 0.88rem;
-  background-color: ${({ active }) => (active ? "#e64c3b" : "#ffffff")};
-  border: 2px solid #e64c3b;
+  background-color: ${({ active }) => (active ? "#cc4233" : "#ffffff")};
+  border: 2px solid #cc4233;
   border-radius: 5px;
   cursor: pointer;
   display: inline-block;
   padding: 5px;
-  color: ${({ active }) => (active ? "#ffffff" : "#e64c3b")};
+  color: ${({ active }) => (active ? "#ffffff" : "#cc4233")};
 `
