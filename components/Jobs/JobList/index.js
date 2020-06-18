@@ -1,7 +1,25 @@
+import { Fragment } from "react"
+import dynamic from "next/dynamic"
 import PropTypes from "prop-types"
 import { useJobs } from "../../../contexts/Jobs"
-import { Job, JobFilters } from "../"
-import { Wrapper, Content, Title, ResultsNotFound } from "./ui"
+import { JobFilters } from "../"
+import { Wrapper, Content, Title, LoadingJob, ResultsNotFound } from "./ui"
+
+const Job = dynamic(() => import("../Job"), {
+  ssr: false,
+  loading: () => (
+    <Fragment>
+      <LoadingJob />
+      <LoadingJob />
+      <LoadingJob />
+      <LoadingJob />
+      <LoadingJob />
+      <LoadingJob />
+      <LoadingJob />
+      <LoadingJob />
+    </Fragment>
+  ),
+})
 
 const notFoundImages = [
   "https://media.giphy.com/media/BEYRc8P1IaiaY/giphy.gif",
@@ -23,11 +41,9 @@ const JobList = () => {
       <Title>{`${jobsLength} VAGAS`}</Title>
       <JobFilters />
       <Content>
-        {jobs
-          .slice(0, typeof window === "undefined" ? 20 : undefined)
-          .map((job) => (
-            <Job key={job.id} {...job} />
-          ))}
+        {jobs.map((job) => (
+          <Job key={job.id} {...job} />
+        ))}
         {jobsLength === 0 && (
           <ResultsNotFound
             src={

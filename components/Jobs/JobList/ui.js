@@ -33,6 +33,15 @@ export const Title = styled.h2`
   }
 `
 
+export const LoadingJob = styled.li`
+  width: 100%;
+  background-color: rgb(230, 76, 59);
+  height: 81px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  border-left: 3px solid transparent;
+`
+
 export const ResultsNotFound = styled.img`
   width: auto;
   max-height: 500px;

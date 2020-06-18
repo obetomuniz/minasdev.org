@@ -18,11 +18,13 @@ const Header = ({ mainNav }) => {
         <MinasDevLogo />
         <nav>
           <Navigation>
-            <NavigationItem>
-              <NavigationLink href={mainNav.url}>
-                {mainNav.label}
-              </NavigationLink>
-            </NavigationItem>
+            {mainNav && (
+              <NavigationItem>
+                <NavigationLink href={mainNav.url}>
+                  {mainNav.label}
+                </NavigationLink>
+              </NavigationItem>
+            )}
             <NavigationItem>
               <NavigationLink href="https://minasdev.org/slack">
                 Slack
