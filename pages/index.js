@@ -38,8 +38,8 @@ const Home = ({ events }) => (
     </Head>
 
     <HeaderContent>
-      <Header mainNav={{ url: "/vagas", label: "VAGAS" }} />
-      {/* <Header /> */}
+      {/* <Header mainNav={{ url: "/vagas", label: "VAGAS" }} /> */}
+      <Header />
       <About />
     </HeaderContent>
 
