@@ -38,7 +38,7 @@ const Job = ({ company, date, position, url, tags, metadata }) => {
         <JobLink itemProp="url" href={url} target="_blank" rel="noopener">
           {position}
         </JobLink>
-        {source === "backendbrvagas" ? (
+        {source === "minasdevvagas" ? (
           <JobOnMinasDevSlack>
             <source
               srcSet={require("../../../public/images/minasdev-logo-57x57.png?webp")}
