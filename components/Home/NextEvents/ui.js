@@ -63,7 +63,7 @@ export const ContributionCTA = styled.p`
   color: #242424;
 
   @media screen and (max-width: 767px) {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     line-height: 1.5rem;
   }
 `
