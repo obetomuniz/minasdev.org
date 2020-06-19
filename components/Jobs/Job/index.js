@@ -19,7 +19,7 @@ import {
 } from "./ui"
 
 const Job = ({ company, date, position, url, tags, metadata }) => {
-  const { language, id: source, website } = metadata
+  const { language, name: source, website } = metadata
   const tagList = [...new Set(tags.map((tag) => getTagsPtBr[tag]))]
     .filter(Boolean)
     .join(", ")
@@ -41,16 +41,14 @@ const Job = ({ company, date, position, url, tags, metadata }) => {
         {source === "minasdevvagas" ? (
           <JobOnMinasDevSlack>
             {/* <source
-              srcSet={require("../../../public/images/minasdev-logo-57x57.png?webp")}
+              srcSet={require("../../../public/images/minasdev-logo-57x57.png")}
               type="image/webp"
             />
             <source
               srcSet={require("../../../public/images/minasdev-logo-57x57.png")}
               type="image/png"
             /> */}
-            <img
-              src={require("../../../public/images/minasdev-logo-57x57.png?webp")}
-            />
+            <img src="/images/minasdev-logo-57x57.png" />
           </JobOnMinasDevSlack>
         ) : null}
       </JobTitle>

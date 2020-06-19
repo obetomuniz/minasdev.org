@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 `
 
 export const HeaderContent = styled.div`
-  background-image: url(${require("../../public/images/background.jpg")});
+  background-image: url("/images/background.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: cover;
@@ -96,8 +96,8 @@ export const CommunityInviter = styled.div`
   button {
     font-family: "Montserrat", sans-serif !important;
     font-weight: 700 !important;
-    border: 1px solid #e64b3b !important;
-    background-color: #e64b3b !important;
+    border: 1px solid #d64031 !important;
+    background-color: #d64031 !important;
     border-radius: 3px !important;
     cursor: pointer !important;
     padding: 15px !important;

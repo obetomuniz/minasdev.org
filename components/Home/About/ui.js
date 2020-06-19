@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.main`
-  background-image: url(${require("../../../public/images/mapa-de-minas.png")});
+  background-image: url("/images/mapa-de-minas.png");
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: contain;

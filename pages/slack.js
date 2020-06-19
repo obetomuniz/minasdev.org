@@ -1,6 +1,5 @@
-import { useEffect } from "react"
 import Head from "next/head"
-import { Header, Footer } from "../components/Common"
+import { Header, Footer, ScreenReaderContent } from "../components/Common"
 import {
   Wrapper,
   HeaderContent,
@@ -15,18 +14,6 @@ const DESCRIPTION =
   "O Minas Dev visa unir comunidades e membros dos setores de Tecnologia da Informação de Minas Gerais."
 
 const Slack = () => {
-  useEffect(() => {
-    window.addEventListener("load", () => {
-      console.log(document.querySelector("#CommunityInviter div"))
-    })
-    //   document.querySelector("#CommunityInviter div").innerHTML =
-    //     "Entre no Slack do Minas Dev"
-    //   document.querySelector("#CommunityInviter input").placeholder =
-    //     "Qual é o seu email?"
-    //   document.querySelector("#CommunityInviter button").innerHTML =
-    //     "Enviar Convite"
-  }, [])
-
   return (
     <Wrapper>
       <Head>
@@ -64,6 +51,9 @@ const Slack = () => {
       </HeaderContent>
 
       <CommunityInviterContainer>
+        <ScreenReaderContent htmlFor="CommunityInviterEmail" as={"label"}>
+          Entre no Slack do Minas Dev
+        </ScreenReaderContent>
         <CommunityInviter id="CommunityInviter"></CommunityInviter>
         <PoweredBy>Powered by CommunityInviter.com</PoweredBy>
       </CommunityInviterContainer>
@@ -73,6 +63,6 @@ const Slack = () => {
   )
 }
 
-// export const config = { unstable_runtimeJS: false }
+export const config = { unstable_runtimeJS: false }
 
 export default Slack

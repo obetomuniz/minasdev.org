@@ -2,7 +2,7 @@ import { Fragment } from "react"
 import Document, { Head, Main, NextScript } from "next/document"
 import { ServerStyleSheet } from "styled-components"
 
-const GA_ID = ""
+const GA_ID = "UA-46088004-1"
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
