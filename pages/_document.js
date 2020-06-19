@@ -59,6 +59,8 @@ class MyDocument extends Document {
           />
 
           {/* Prefetch external assets */}
+          <link rel="preload" href={"https://www.google-analytics.com"} />
+          <link rel="preconnect" href={"https://www.google-analytics.com"} />
           <link rel="dns-prefetch" href={"https://www.google-analytics.com"} />
 
           {/* Icons */}
