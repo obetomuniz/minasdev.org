@@ -58,6 +58,9 @@ class MyDocument extends Document {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
 
+          {/* Prefetch external assets */}
+          <link rel="dns-prefetch" href={"https://www.google-analytics.com"} />
+
           {/* Icons */}
           <link
             rel="shortcut icon"

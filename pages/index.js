@@ -17,28 +17,21 @@ const Home = ({ events }) => (
       {/* SEO */}
       <link rel="canonical" href={URL} />
 
-      {/* Prefetch external assets */}
-      <link rel="dns-prefetch" href={URL} />
-
       {/* About */}
       <title>{TITLE}</title>
       <meta name="description" content={DESCRIPTION} />
-
       {/* Facebook Tags */}
       <meta property="og:title" content={TITLE} />
       <meta property="og:description" content={DESCRIPTION} />
       <meta property="og:url" content={URL} />
       <meta property="og:site_name" content={TITLE} />
-
       {/* Twitter Tags */}
       <meta name="twitter:description" content={DESCRIPTION} />
       <meta name="twitter:url" content={URL} />
       <meta name="twitter:title" content={TITLE} />
-
       {/* Schema.org */}
       <meta itemProp="name" content={TITLE} />
       <meta itemProp="description" content={DESCRIPTION} />
-
       {/* PWA Configs */}
       <link rel="manifest" href="/manifest.json" />
       <meta name="mobile-web-app-capable" content="no" />

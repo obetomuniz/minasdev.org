@@ -20,9 +20,6 @@ const Slack = () => {
         {/* SEO */}
         <link rel="canonical" href={URL} />
 
-        {/* Prefetch external assets */}
-        <link rel="dns-prefetch" href={URL} />
-
         {/* About */}
         <title>{TITLE}</title>
         <meta name="description" content={DESCRIPTION} />
