@@ -58,18 +58,7 @@ class MyDocument extends Document {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
 
-          {/* PWA Configs */}
-          <meta name="mobile-web-app-capable" content="no" />
-          <meta name="apple-mobile-web-app-capable" content="no" />
-          <meta name="application-name" content="Minas Dev" />
-          <meta name="apple-mobile-web-app-title" content="Minas Dev" />
-          <meta name="theme-color" content="#e64c3b" />
-          <meta name="msapplication-navbutton-color" content="#e64c3b" />
-          <meta
-            name="apple-mobile-web-app-status-bar-style"
-            content="black-translucent"
-          />
-          <meta name="msapplication-starturl" content="/" />
+          {/* Icons */}
           <link
             rel="shortcut icon"
             href="/images/favicons/favicon.ico"

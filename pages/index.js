@@ -38,6 +38,20 @@ const Home = ({ events }) => (
       {/* Schema.org */}
       <meta itemProp="name" content={TITLE} />
       <meta itemProp="description" content={DESCRIPTION} />
+
+      {/* PWA Configs */}
+      <link rel="manifest" href="/manifest.json" />
+      <meta name="mobile-web-app-capable" content="no" />
+      <meta name="apple-mobile-web-app-capable" content="no" />
+      <meta name="application-name" content={TITLE} />
+      <meta name="apple-mobile-web-app-title" content={TITLE} />
+      <meta name="theme-color" content="#e64c3b" />
+      <meta name="msapplication-navbutton-color" content="#e64c3b" />
+      <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent"
+      />
+      <meta name="msapplication-starturl" content="/" />
     </Head>
 
     <HeaderContent>
