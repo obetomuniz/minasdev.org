@@ -14,6 +14,9 @@ const DESCRIPTION =
 const Vagas = ({ jobs }) => (
   <Wrapper>
     <Head>
+      {/* SEO */}
+      <link rel="canonical" href={URL} />
+
       {/* Prefetch external assets */}
       <link rel="dns-prefetch" href={URL} />
 
