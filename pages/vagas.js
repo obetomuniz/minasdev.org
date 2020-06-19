@@ -49,7 +49,7 @@ const Vagas = ({ jobs }) => (
   </Wrapper>
 )
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   let jobs = await getJSON("jobs.json")
   jobs = jobs
     .filter((job) => job.sources.length > 0)

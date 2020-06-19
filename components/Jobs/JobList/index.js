@@ -1,25 +1,7 @@
-import { Fragment } from "react"
-import dynamic from "next/dynamic"
 import PropTypes from "prop-types"
 import { useJobs } from "../../../contexts/Jobs"
-import { JobFilters } from "../"
-import { Wrapper, Content, Title, LoadingJob, ResultsNotFound } from "./ui"
-
-const Job = dynamic(() => import("../Job"), {
-  ssr: false,
-  loading: () => (
-    <Fragment>
-      <LoadingJob />
-      <LoadingJob />
-      <LoadingJob />
-      <LoadingJob />
-      <LoadingJob />
-      <LoadingJob />
-      <LoadingJob />
-      <LoadingJob />
-    </Fragment>
-  ),
-})
+import { Job, JobFilters } from "../"
+import { Wrapper, Content, Title, ResultsNotFound } from "./ui"
 
 const notFoundImages = [
   "https://media.giphy.com/media/BEYRc8P1IaiaY/giphy.gif",
