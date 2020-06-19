@@ -7,6 +7,7 @@ export const Wrapper = styled.footer`
   padding: 10px 0 13px;
   background-color: #242424;
   position: relative;
+  width: 100%;
 
   &:after {
     content: "";

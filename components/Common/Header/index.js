@@ -26,9 +26,7 @@ const Header = ({ mainNav }) => {
               </NavigationItem>
             )}
             <NavigationItem>
-              <NavigationLink href="https://minasdev.org/slack">
-                Slack
-              </NavigationLink>
+              <NavigationLink href="/slack">Slack</NavigationLink>
             </NavigationItem>
             <NavigationItem>
               <NavigationLink
