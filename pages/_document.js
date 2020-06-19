@@ -57,7 +57,6 @@ class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          <link rel="canonical" href="https://minasdev.org/" />
 
           {/* PWA Configs */}
           <meta name="mobile-web-app-capable" content="no" />
