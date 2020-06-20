@@ -1,10 +1,7 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.main`
-  background-image: url("/images/mapa-de-minas.png");
-  background-repeat: no-repeat;
-  background-position: center 0;
-  background-size: contain;
+  width: 100%;
   max-width: 960px;
   height: 652px;
   margin: 0 auto;
@@ -13,7 +10,7 @@ export const Wrapper = styled.main`
   justify-content: center;
   flex-direction: column;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   top: -95px;
 
   @media screen and (max-width: 1023px) {
@@ -32,6 +29,23 @@ export const Wrapper = styled.main`
   }
 `
 
+export const Background = styled.picture`
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+
+  img,
+  source {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+`
+
 export const Title = styled.h2`
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
@@ -43,6 +57,7 @@ export const Title = styled.h2`
   color: #fff;
   text-shadow: 1px 1px 2px #000;
   max-width: 500px;
+  z-index: 2;
 
   @media screen and (max-width: 1023px) {
     font-size: 2.2rem;
@@ -69,6 +84,7 @@ export const Description = styled.p`
   text-shadow: 1px 1px 2px #000;
   max-width: 500px;
   letter-spacing: 0.3px;
+  z-index: 2;
 
   @media screen and (max-width: 1023px) {
     font-size: 0.75rem;

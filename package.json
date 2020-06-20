@@ -13,10 +13,12 @@
     "date-fns": "^2.14.0",
     "js-search": "^2.0.0",
     "next": "9.4.4",
+    "next-compose-plugins": "^2.2.0",
+    "next-optimized-images": "^2.6.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-image-webp": "^0.7.0",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

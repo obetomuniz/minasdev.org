@@ -3,6 +3,7 @@ import { Header, Footer, ScreenReaderContent } from "../components/Common"
 import {
   Wrapper,
   HeaderContent,
+  Background,
   CommunityInviterContainer,
   CommunityInviter,
   PoweredBy,
@@ -45,6 +46,14 @@ const Slack = () => {
 
       <HeaderContent>
         <Header mainNav={{ url: "/", label: "O Minas Dev" }} />
+        <Background aria-hidden="true">
+          <source
+            srcSet={require("../public/images/background.jpg?webp")}
+            type="image/webp"
+          />
+          <source srcSet="/images/background.jpg" type="image/jpg" />
+          <img src="/images/background.jpg" />
+        </Background>
       </HeaderContent>
 
       <CommunityInviterContainer>

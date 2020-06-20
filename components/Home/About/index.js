@@ -1,8 +1,16 @@
 import React from "react"
-import { Wrapper, Title, Description } from "./ui"
+import { Wrapper, Background, Title, Description } from "./ui"
 
 const About = () => (
   <Wrapper>
+    <Background>
+      <source
+        srcSet={require("../../../public/images/mapa-de-minas.png?webp")}
+        type="image/webp"
+      />
+      <source srcSet="/images/mapa-de-minas.png" type="image/png" />
+      <img src="/images/mapa-de-minas.png" />
+    </Background>
     <Title>COMUNIDADE DE DESENVOLVEDORES DE MINAS GERAIS</Title>
     <Description>
       O Minas Dev idealiza a união das comunidades e dos membros dos setores de

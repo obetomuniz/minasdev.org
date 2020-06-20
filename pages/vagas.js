@@ -4,7 +4,7 @@ import sortByDateAsc from "../helpers/sortByDateAsc"
 import { JobsProvider } from "../contexts/Jobs"
 import { JobList } from "../components/Jobs"
 import { Header, Newsletter, Footer } from "../components/Common"
-import { Wrapper, HeaderContent } from "../components/Jobs/ui"
+import { Wrapper, HeaderContent, Background } from "../components/Jobs/ui"
 
 const URL = "https://minasdev.org/vagas"
 const TITLE = "Minas Dev - Vagas"
@@ -39,6 +39,14 @@ const Vagas = ({ jobs }) => (
 
     <HeaderContent>
       <Header mainNav={{ url: "/", label: "O Minas Dev" }} />
+      <Background aria-hidden="true">
+        <source
+          srcSet={require("../public/images/background.jpg?webp")}
+          type="image/webp"
+        />
+        <source srcSet="/images/background.jpg" type="image/jpg" />
+        <img src="/images/background.jpg" />
+      </Background>
     </HeaderContent>
 
     <JobsProvider jobs={jobs}>

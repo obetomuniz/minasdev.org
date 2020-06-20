@@ -4,7 +4,7 @@ import sortByDateDesc from "../helpers/sortByDateDesc"
 import { EventsProvider } from "../contexts/Events"
 import { Header, Newsletter, Footer } from "../components/Common"
 import { About, NextEvents } from "../components/Home"
-import { Wrapper, HeaderContent } from "../components/Home/ui"
+import { Wrapper, Background, HeaderContent } from "../components/Home/ui"
 
 const URL = "https://minasdev.org/"
 const TITLE = "Minas Dev"
@@ -50,6 +50,14 @@ const Home = ({ events }) => (
     <HeaderContent>
       <Header mainNav={{ url: "/vagas", label: "VAGAS" }} />
       <About />
+      <Background aria-hidden="true">
+        <source
+          srcSet={require("../public/images/background.jpg?webp")}
+          type="image/webp"
+        />
+        <source srcSet="/images/background.jpg" type="image/jpg" />
+        <img src="/images/background.jpg" />
+      </Background>
     </HeaderContent>
 
     <Newsletter />

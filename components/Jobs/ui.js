@@ -3,10 +3,24 @@ import styled from "styled-components"
 export const Wrapper = styled.div``
 
 export const HeaderContent = styled.div`
-  background-image: url("/images/background.jpg");
-  background-repeat: no-repeat;
-  background-position: center 0;
-  background-size: cover;
-  height: 215px;
   width: 100%;
+  height: 215px;
+`
+
+export const Background = styled.picture`
+  width: 100%;
+  height: 215px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+
+  img,
+  source {
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+  }
 `

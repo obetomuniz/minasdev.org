@@ -40,14 +40,11 @@ const Job = ({ company, date, position, url, tags, metadata }) => {
         </JobLink>
         {source === "minasdevvagas" ? (
           <JobOnMinasDevSlack>
-            {/* <source
-              srcSet={require("../../../public/images/minasdev-logo-57x57.png")}
+            <source
+              srcSet={require("../../../public/images/minasdev-logo-57x57.png?webp")}
               type="image/webp"
             />
-            <source
-              srcSet={require("../../../public/images/minasdev-logo-57x57.png")}
-              type="image/png"
-            /> */}
+            <source srcSet="/images/minasdev-logo-57x57.png" type="image/png" />
             <img src="/images/minasdev-logo-57x57.png" />
           </JobOnMinasDevSlack>
         ) : null}
