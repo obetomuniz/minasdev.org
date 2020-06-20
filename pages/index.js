@@ -56,7 +56,10 @@ const Home = ({ events }) => (
           type="image/webp"
         />
         <source srcSet="/images/background.jpg" type="image/jpg" />
-        <img src="/images/background.jpg" />
+        <img
+          src="/images/background.jpg"
+          alt="Plano de fundo: Um dedo tocando uma tela de celular"
+        />
       </Background>
     </HeaderContent>
 
@@ -70,7 +73,7 @@ const Home = ({ events }) => (
 
 export const config = { unstable_runtimeJS: false }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   let events = await getJSON("events.json")
   events = events
     .filter((event) => event.sources.length > 0)

@@ -9,7 +9,7 @@ const About = () => (
         type="image/webp"
       />
       <source srcSet="/images/mapa-de-minas.png" type="image/png" />
-      <img src="/images/mapa-de-minas.png" />
+      <img src="/images/mapa-de-minas.png" alt="Mapa de Minas Gerais" />
     </Background>
     <Title>COMUNIDADE DE DESENVOLVEDORES DE MINAS GERAIS</Title>
     <Description>

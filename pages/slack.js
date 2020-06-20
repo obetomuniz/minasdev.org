@@ -52,7 +52,10 @@ const Slack = () => {
             type="image/webp"
           />
           <source srcSet="/images/background.jpg" type="image/jpg" />
-          <img src="/images/background.jpg" />
+          <img
+            src="/images/background.jpg"
+            alt="Plano de fundo: Um dedo tocando uma tela de celular"
+          />
         </Background>
       </HeaderContent>
 

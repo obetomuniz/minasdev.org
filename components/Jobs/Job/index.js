@@ -45,7 +45,10 @@ const Job = ({ company, date, position, url, tags, metadata }) => {
               type="image/webp"
             />
             <source srcSet="/images/minasdev-logo-57x57.png" type="image/png" />
-            <img src="/images/minasdev-logo-57x57.png" />
+            <img
+              src="/images/minasdev-logo-57x57.png"
+              alt="Logomarca do Minas Dev"
+            />
           </JobOnMinasDevSlack>
         ) : null}
       </JobTitle>
