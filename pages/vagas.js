@@ -60,7 +60,7 @@ const Vagas = ({ jobs }) => (
   </Wrapper>
 )
 
-export const getStaticProps = async () => {
+Vagas.getInitialProps = async () => {
   let jobs = await getJSON("jobs.json")
   jobs = jobs
     .filter((job) => job.sources.length > 0)
@@ -71,9 +71,7 @@ export const getStaticProps = async () => {
     .sort(sortByDateAsc)
 
   return {
-    props: {
-      jobs,
-    },
+    jobs,
   }
 }
 
