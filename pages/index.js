@@ -73,7 +73,7 @@ const Home = ({ events }) => (
 
 export const config = { unstable_runtimeJS: false }
 
-export const getStaticProps = async () => {
+export const getServerProps = async () => {
   let events = await getJSON("events.json")
   events = events
     .filter((event) => event.sources.length > 0)
