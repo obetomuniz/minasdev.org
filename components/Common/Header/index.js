@@ -46,7 +46,7 @@ const Header = ({ mainNav }) => {
                 Código de Conduta
               </NavigationLink>
             </NavigationItem>
-            <NavigationItem>
+            {/* <NavigationItem>
               <Socials>
                 <Social>
                   <SocialLink
@@ -73,7 +73,7 @@ const Header = ({ mainNav }) => {
                   </SocialLink>
                 </Social>
               </Socials>
-            </NavigationItem>
+            </NavigationItem> */}
           </Navigation>
         </nav>
       </Content>
