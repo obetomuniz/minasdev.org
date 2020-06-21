@@ -1,5 +1,5 @@
 import React from "react"
-import { MinasDevLogo } from "../"
+import { MinasDevLogo, Svg } from "../"
 import {
   Wrapper,
   Content,
@@ -46,7 +46,7 @@ const Header = ({ mainNav }) => {
                 Código de Conduta
               </NavigationLink>
             </NavigationItem>
-            {/* <NavigationItem>
+            <NavigationItem>
               <Socials>
                 <Social>
                   <SocialLink
@@ -54,26 +54,46 @@ const Header = ({ mainNav }) => {
                     target="_blank"
                     rel="noopener"
                   >
-                    <svg aria-hidden="true">
-                      <use xlinkHref="/images/vectors/icons.svg#github" />
-                    </svg>
+                    <Svg
+                      vector="icon-github"
+                      aria-hidden="true"
+                      viewBox="0 0 416 448"
+                    />
                     GitHub do Minas Dev
                   </SocialLink>
                 </Social>
+
                 <Social>
                   <SocialLink
                     href="https://twitter.com/minasdev"
                     target="_blank"
                     rel="noopener"
                   >
-                    <svg aria-hidden="true">
-                      <use xlinkHref="/images/vectors/icons.svg#twitter" />
-                    </svg>
+                    <Svg
+                      vector="icon-twitter"
+                      aria-hidden="true"
+                      viewBox="0 0 512 512"
+                    />
                     Twitter do Minas Dev
                   </SocialLink>
                 </Social>
+
+                <Social>
+                  <SocialLink
+                    href="https://facebook.com/minasdev"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <Svg
+                      vector="icon-facebook"
+                      aria-hidden="true"
+                      viewBox="0 0 512 512"
+                    />
+                    Facebook do Minas Dev
+                  </SocialLink>
+                </Social>
               </Socials>
-            </NavigationItem> */}
+            </NavigationItem>
           </Navigation>
         </nav>
       </Content>

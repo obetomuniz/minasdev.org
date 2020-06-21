@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import { useEvents } from "../../../contexts/Events"
+import { Svg } from "../../Common"
 import { Event } from "../"
 import {
   Wrapper,
@@ -19,15 +20,11 @@ const NextEvents = () => {
     <Wrapper>
       <Header>
         <TitleIcon>
-          <svg aria-hidden="true">
-            <use xlinkHref="/images/vectors/icons.svg#calendar" />
-          </svg>
+          <Svg vector="icon-calendar" aria-hidden="true" viewBox="0 0 45 47" />
         </TitleIcon>
         <Title>Próximos Eventos</Title>
         <TitleIcon hide>
-          <svg aria-hidden="true">
-            <use xlinkHref="/images/vectors/icons.svg#calendar" />
-          </svg>
+          <Svg vector="icon-calendar" aria-hidden="true" viewBox="0 0 45 47" />
         </TitleIcon>
       </Header>
       <ContributionCTA>

@@ -1,20 +1,16 @@
 import React from "react"
-import PropTypes from "prop-types"
+import { Svg } from "../"
 import { Wrapper } from "./ui"
 
 const MinasDevLogo = () => {
   return (
     <Wrapper>
       <a href="/">
-        <svg aria-hidden="true">
-          <use xlinkHref="/images/vectors/objects.svg#minasdev-logo" />
-        </svg>
+        <Svg vector="minasdev-logo" aria-hidden="true" viewBox="0 0 500 500" />
         Minas Dev
       </a>
     </Wrapper>
   )
 }
-
-MinasDevLogo.propTypes = {}
 
 export default MinasDevLogo

@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Wrapper = styled.header`
   padding-top: 3px;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 
   &:before {
     content: "";
@@ -67,7 +67,9 @@ export const Socials = styled.ul`
   align-items: center;
 `
 
-export const Social = styled.li``
+export const Social = styled.li`
+  display: block;
+`
 
 export const SocialLink = styled.a`
   display: block;
@@ -78,17 +80,18 @@ export const SocialLink = styled.a`
   stroke-width: 0;
   overflow: hidden;
   position: relative;
-  fill: #fff;
 
-  &:hover {
-    fill: #e85849;
-  }
-
+  div,
   svg {
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    fill: #fff;
+
+    &:hover {
+      fill: #e85849;
+    }
   }
 `
