@@ -26,9 +26,6 @@ const Header = ({ mainNav }) => {
               </NavigationItem>
             )}
             <NavigationItem>
-              <NavigationLink href="/slack">Slack</NavigationLink>
-            </NavigationItem>
-            <NavigationItem>
               <NavigationLink
                 href="https://github.com/minasdev/manifesto"
                 target="_blank"
@@ -48,6 +45,36 @@ const Header = ({ mainNav }) => {
             </NavigationItem>
             <NavigationItem>
               <Socials>
+                <Social>
+                  <SocialLink
+                    href="https://minasdev.org/slack"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <Svg
+                      vector="icon-slack"
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                    />
+                    Slack do Minas Dev
+                  </SocialLink>
+                </Social>
+
+                <Social>
+                  <SocialLink
+                    href="https://t.me/minasdev"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <Svg
+                      vector="icon-telegram"
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                    />
+                    Telegram do Minas Dev
+                  </SocialLink>
+                </Social>
+
                 <Social>
                   <SocialLink
                     href="https://github.com/minasdev"

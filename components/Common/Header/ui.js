@@ -30,15 +30,18 @@ export const Content = styled.div`
 
 export const Navigation = styled.ul`
   display: block;
-  width: 180px;
-  margin-top: 20px;
+  margin-top: 28px;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 20px;
+  }
 `
 
 export const NavigationItem = styled.li`
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin: 0px 0px 18px;
+  margin: 0px 0px 25px;
 `
 
 export const NavigationLink = styled.a`
@@ -71,12 +74,14 @@ export const Social = styled.li`
   display: block;
 `
 
+const ICON_SIZE = 25
+
 export const SocialLink = styled.a`
   display: block;
-  width: 20px;
-  margin: 0 10px;
+  width: ${ICON_SIZE}px;
+  margin: 0 0 0 28px;
   height: 0;
-  padding-top: 20px;
+  padding-top: ${ICON_SIZE}px;
   stroke-width: 0;
   overflow: hidden;
   position: relative;
@@ -84,7 +89,6 @@ export const SocialLink = styled.a`
   div,
   svg {
     width: 100%;
-    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -93,5 +97,12 @@ export const SocialLink = styled.a`
     &:hover {
       fill: #e85849;
     }
+  }
+
+  @media screen and (max-width: 767px) {
+    width: ${ICON_SIZE - 5}px;
+    margin: 0 0 0 20px;
+    height: 0;
+    padding-top: ${ICON_SIZE - 5}px;
   }
 `
