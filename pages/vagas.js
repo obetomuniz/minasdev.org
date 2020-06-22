@@ -38,7 +38,7 @@ const Vagas = ({ jobs }) => (
     </Head>
 
     <HeaderContent>
-      <Header mainNav={{ url: "/", label: "O Minas Dev" }} />
+      {/* <Header mainNav={{ url: "/", label: "O Minas Dev" }} /> */}
       <Background aria-hidden="true">
         <source
           srcSet={require("../public/images/background.jpg?webp")}

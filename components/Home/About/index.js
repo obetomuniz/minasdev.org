@@ -1,4 +1,3 @@
-import React from "react"
 import { Wrapper, Background, Title, Description } from "./ui"
 
 const About = () => (

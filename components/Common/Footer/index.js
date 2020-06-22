@@ -1,4 +1,3 @@
-import React from "react"
 import { Wrapper, FooterText } from "./ui"
 
 const Footer = () => {

@@ -1,4 +1,3 @@
-import React from "react"
 import Head from "next/head"
 import { Wrapper, NotFoundTitle } from "../components/404/ui"
 

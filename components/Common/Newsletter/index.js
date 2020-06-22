@@ -1,4 +1,3 @@
-import React from "react"
 import { ScreenReaderContent } from "../"
 import { Wrapper, NewsletterForm, Title, Input, Button } from "./ui"
 
