@@ -1,4 +1,4 @@
-import React from "react"
+import { memo } from "react"
 import { MinasDevLogo, Svg } from "../"
 import {
   Wrapper,
@@ -128,4 +128,4 @@ const Header = ({ mainNav }) => {
   )
 }
 
-export default Header
+export default memo(Header)
