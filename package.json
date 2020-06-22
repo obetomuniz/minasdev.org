@@ -9,7 +9,7 @@
     "start": "next start -p $PORT"
   },
   "dependencies": {
-    "aws-sdk": "^2.697.0",
+    "aws-sdk": "^2.701.0",
     "date-fns": "^2.14.0",
     "js-search": "^2.0.0",
     "next": "9.4.4",
