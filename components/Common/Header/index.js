@@ -60,7 +60,6 @@ const Header = ({ mainNav, onlySocials }) => {
                   </SocialLink>
                 </Social>
 
-                {/*
                 <Social>
                   <SocialLink
                     href="https://twitter.com/minasdev"
@@ -76,6 +75,7 @@ const Header = ({ mainNav, onlySocials }) => {
                   </SocialLink>
                 </Social>
 
+                {/*
                 <Social>
                   <SocialLink
                     href="https://facebook.com/minasdev"
