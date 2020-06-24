@@ -60,11 +60,15 @@ export const TitleContainer = styled.div`
 
   background-repeat: no-repeat;
   background-size: cover;
-  height: 200px;
+  height: 160px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   border-radius: 5px;
+
+  @media screen and (max-width: 767px) {
+    height: 100px;
+  }
 `
 
 export const Title = styled.h2`
@@ -82,7 +86,7 @@ export const Title = styled.h2`
   }
 
   @media screen and (max-width: 767px) {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.2rem;
   }
 `

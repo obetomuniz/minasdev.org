@@ -91,7 +91,7 @@ export const getServerSideProps = async () => {
 
   return {
     props: {
-      news: news.slice(0, 10),
+      news: news.slice(0, 6),
       events,
     },
   }

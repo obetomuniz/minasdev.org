@@ -11,6 +11,7 @@ export const NewsList = styled.div`
 
   @media screen and (max-width: 767px) {
     grid-template-columns: 1fr;
+    grid-gap: 20px;
     padding: 0 20px 20px;
   }
 `
