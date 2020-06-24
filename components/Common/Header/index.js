@@ -31,7 +31,7 @@ const Header = ({ mainNav, onlySocials }) => {
                   </SocialLink>
                 </Social>
 
-                {/* <Social>
+                <Social>
                   <SocialLink
                     href="https://t.me/minasdev"
                     target="_blank"
@@ -45,7 +45,7 @@ const Header = ({ mainNav, onlySocials }) => {
                     Telegram do Minas Dev
                   </SocialLink>
                 </Social>
-
+                {/*
                 <Social>
                   <SocialLink
                     href="https://github.com/minasdev"
