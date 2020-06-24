@@ -39,7 +39,7 @@ const Vagas = ({ jobs }) => (
 
     <HeaderTopNav />
 
-    {/* <HeaderContent>
+    <HeaderContent>
       <Header mainNav={{ url: "/", label: "O Minas Dev" }} onlySocials />
       <Background aria-hidden="true">
         <source
@@ -52,7 +52,7 @@ const Vagas = ({ jobs }) => (
           alt="Plano de fundo: Um dedo tocando uma tela de celular"
         />
       </Background>
-    </HeaderContent> */}
+    </HeaderContent>
 
     <JobsProvider jobs={jobs}>
       <JobList />

@@ -18,7 +18,7 @@ const Header = ({ mainNav, onlySocials }) => {
         <MinasDevLogo />
         <nav>
           <Navigation>
-            <NavigationItem>
+            {/* <NavigationItem>
               <Socials>
                 <Social>
                   <SocialLink href="/slack">
@@ -91,7 +91,7 @@ const Header = ({ mainNav, onlySocials }) => {
                   </SocialLink>
                 </Social>
               </Socials>
-            </NavigationItem>
+            </NavigationItem> */}
             {mainNav && (
               <NavigationItem>
                 <NavigationLink href={mainNav.url}>
