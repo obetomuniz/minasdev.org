@@ -29,7 +29,6 @@ export const Title = styled.h2`
   font-size: 1.5rem;
   line-height: 1.85rem;
   color: #242424;
-  text-transform: uppercase;
   margin-bottom: 13px;
   overflow: hidden;
 `

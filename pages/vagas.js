@@ -3,7 +3,7 @@ import getJSON from "../helpers/getJSON"
 import sortByDateAsc from "../helpers/sortByDateAsc"
 import { JobsProvider } from "../contexts/Jobs"
 import { JobList } from "../components/Jobs"
-import { Header, Newsletter, Footer } from "../components/Common"
+import { HeaderTopNav, Header, Newsletter, Footer } from "../components/Common"
 import { Wrapper, HeaderContent, Background } from "../components/Jobs/ui"
 
 const URL = "https://minasdev.org/vagas"
@@ -36,6 +36,8 @@ const Vagas = ({ jobs }) => (
       <meta itemProp="name" content={TITLE} />
       <meta itemProp="description" content={DESCRIPTION} />
     </Head>
+
+    <HeaderTopNav />
 
     <HeaderContent>
       <Header mainNav={{ url: "/", label: "O Minas Dev" }} onlySocials />

@@ -43,7 +43,7 @@ export const SourceLink = styled.a`
   font-weight: 700;
   font-size: 0.7rem;
   color: #333;
-  display: inline-block;
+  display: block;
   text-decoration: none;
   margin: 0 0 0;
 `
@@ -74,7 +74,6 @@ export const Title = styled.h2`
   line-height: 2.1rem;
   color: #fff;
   width: 100%;
-  overflow: hidden;
   padding: 20px;
 
   @media screen and (max-width: 1023px) {

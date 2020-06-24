@@ -1,29 +1,18 @@
 import PropTypes from "prop-types"
 import { useEvents } from "../../../contexts/Events"
 import { Svg } from "../../Common"
-import { Event } from "../"
-import {
-  Wrapper,
-  Header,
-  Title,
-  TitleIcon,
-  ContributionCTA,
-  ContributionCTALink,
-  EventList,
-} from "./ui"
+import { Section, Event } from "../"
+import { ContributionCTA, ContributionCTALink, EventList } from "./ui"
 
 const Events = () => {
   const {
     state: { events },
   } = useEvents()
   return (
-    <Wrapper>
-      <Header>
-        <TitleIcon>
-          <Svg vector="icon-calendar" aria-hidden="true" viewBox="0 0 45 47" />
-        </TitleIcon>
-        <Title>Eventos</Title>
-      </Header>
+    <Section
+      title="Eventos"
+      icon={{ vector: "icon-calendar", viewBox: "0 0 45 47" }}
+    >
       <EventList>
         {events.map((event, key) => (
           <Event key={`event-${key}`} {...event} />
@@ -39,7 +28,7 @@ const Events = () => {
           Adicione-o neste link
         </ContributionCTALink>
       </ContributionCTA>
-    </Wrapper>
+    </Section>
   )
 }
 

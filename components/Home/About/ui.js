@@ -11,7 +11,7 @@ export const Wrapper = styled.main`
   flex-direction: column;
   position: relative;
   z-index: 2;
-  top: 0;
+  top: -55px;
 
   @media screen and (max-width: 1023px) {
     max-width: 600px;
@@ -23,7 +23,7 @@ export const Wrapper = styled.main`
     height: auto;
     padding: 0 20px;
     align-items: flex-start;
-    top: 30px;
+    top: 0;
     margin-bottom: 50px;
   }
 `

@@ -1,8 +1,8 @@
 import PropTypes from "prop-types"
 import { useNews } from "../../../contexts/News"
 import { Svg } from "../../Common"
-import { Article } from "../"
-import { Wrapper, Header, Title, TitleIcon, NewsList } from "./ui"
+import { Section, Article } from "../"
+import { NewsList } from "./ui"
 
 const News = () => {
   const {
@@ -10,20 +10,16 @@ const News = () => {
   } = useNews()
 
   return (
-    <Wrapper>
-      <Header>
-        <TitleIcon>
-          <Svg vector="icon-news" aria-hidden="true" viewBox="0 0 24 24" />
-        </TitleIcon>
-        <Title>Notícias</Title>
-      </Header>
-
+    <Section
+      title="Notícias"
+      icon={{ vector: "icon-news", viewBox: "0 0 24 24" }}
+    >
       <NewsList>
         {news.map((article) => (
           <Article key={article.id} {...article} />
         ))}
       </NewsList>
-    </Wrapper>
+    </Section>
   )
 }
 

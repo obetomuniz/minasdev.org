@@ -4,7 +4,7 @@ import sortByDateDesc from "../helpers/sortByDateDesc"
 import { NewsProvider } from "../contexts/News"
 import { EventsProvider } from "../contexts/Events"
 import { HeaderTopNav, Header, Newsletter, Footer } from "../components/Common"
-import { About, Events, News } from "../components/Home"
+import { About, News, Events } from "../components/Home"
 import { Wrapper, Background, HeaderContent } from "../components/Home/ui"
 
 const URL = "https://minasdev.org/"
@@ -67,6 +67,7 @@ const Home = ({ news, events }) => (
     </HeaderContent>
 
     <Newsletter />
+
     <NewsProvider news={news}>
       <News />
     </NewsProvider>

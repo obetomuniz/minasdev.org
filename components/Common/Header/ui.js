@@ -30,10 +30,14 @@ export const Content = styled.div`
 
 export const Navigation = styled.ul`
   display: block;
-  margin-top: 28px;
+  margin-top: 50px;
+
+  @media screen and (max-width: 1023px) {
+    margin-top: 40px;
+  }
 
   @media screen and (max-width: 767px) {
-    margin-top: 20px;
+    margin-top: 25px;
   }
 `
 
@@ -41,8 +45,16 @@ export const NavigationItem = styled.li`
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin: 0px 0px 25px;
+  margin: 0px 0px 50px;
   position: relative;
+
+  @media screen and (max-width: 1023px) {
+    margin: 0px 0px 40px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 0px 0px 25px;
+  }
 `
 
 export const NavigationLink = styled.a`
@@ -51,8 +63,7 @@ export const NavigationLink = styled.a`
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   text-shadow: 1px 1px 2px #000;
-  font-size: 1rem;
-  line-height: 1.2rem;
+  font-size: 2rem;
   padding: 0 2px;
   letter-spacing: 0.5px;
 
@@ -60,8 +71,8 @@ export const NavigationLink = styled.a`
     color: #e85849;
   }
 
-  @media screen and (max-width: 1023px) {
-    font-size: 0.85rem;
+  @media screen and (max-width: 767px) {
+    font-size: 1.2rem;
   }
 `
 
@@ -76,25 +87,18 @@ export const Socials = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 20px;
-  position: absolute;
-  right: 0;
-
-  @media screen and (max-width: 767px) {
-    margin: 0 0 20px;
-  }
 `
 
 export const Social = styled.li`
   display: block;
 `
 
-const ICON_SIZE = 25
+const ICON_SIZE = 30
 
 export const SocialLink = styled.a`
   display: block;
   width: ${ICON_SIZE}px;
-  margin: 0 0 0 28px;
+  margin: 0 0 0 30px;
   height: 0;
   padding-top: ${ICON_SIZE}px;
   stroke-width: 0;
@@ -116,7 +120,7 @@ export const SocialLink = styled.a`
 
   @media screen and (max-width: 767px) {
     width: ${ICON_SIZE - 5}px;
-    margin: 0 0 0 20px;
+    margin: 0 0 0 22px;
     height: 0;
     padding-top: ${ICON_SIZE - 5}px;
   }
