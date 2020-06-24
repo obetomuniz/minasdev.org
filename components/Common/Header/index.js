@@ -45,6 +45,22 @@ const Header = ({ mainNav, onlySocials }) => {
                     Telegram do Minas Dev
                   </SocialLink>
                 </Social>
+
+                <Social>
+                  <SocialLink
+                    href="https://twitter.com/minasdev"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <Svg
+                      vector="icon-twitter"
+                      aria-hidden="true"
+                      viewBox="0 0 512 512"
+                    />
+                    Twitter do Minas Dev
+                  </SocialLink>
+                </Social>
+
                 <Social>
                   <SocialLink
                     href="https://github.com/minasdev"
@@ -62,22 +78,6 @@ const Header = ({ mainNav, onlySocials }) => {
 
                 <Social>
                   <SocialLink
-                    href="https://twitter.com/minasdev"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <Svg
-                      vector="icon-twitter"
-                      aria-hidden="true"
-                      viewBox="0 0 512 512"
-                    />
-                    Twitter do Minas Dev
-                  </SocialLink>
-                </Social>
-
-                {/*
-                <Social>
-                  <SocialLink
                     href="https://facebook.com/minasdev"
                     target="_blank"
                     rel="noopener"
@@ -89,7 +89,7 @@ const Header = ({ mainNav, onlySocials }) => {
                     />
                     Facebook do Minas Dev
                   </SocialLink>
-                </Social> */}
+                </Social>
               </Socials>
             </NavigationItem>
             {mainNav && (
