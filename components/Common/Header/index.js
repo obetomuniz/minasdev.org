@@ -27,7 +27,7 @@ const Header = ({ mainNav, onlySocials }) => {
                       aria-hidden="true"
                       viewBox="0 0 24 24"
                     />
-                    Slack do Minas Dev
+                    {"Slack do Minas Dev"}
                   </SocialLink>
                 </Social>
 
@@ -42,7 +42,7 @@ const Header = ({ mainNav, onlySocials }) => {
                       aria-hidden="true"
                       viewBox="0 0 24 24"
                     />
-                    Telegram do Minas Dev
+                    {"Telegram do Minas Dev"}
                   </SocialLink>
                 </Social>
 
@@ -57,7 +57,7 @@ const Header = ({ mainNav, onlySocials }) => {
                       aria-hidden="true"
                       viewBox="0 0 512 512"
                     />
-                    Twitter do Minas Dev
+                    {"Twitter do Minas Dev"}
                   </SocialLink>
                 </Social>
 
@@ -72,7 +72,7 @@ const Header = ({ mainNav, onlySocials }) => {
                       aria-hidden="true"
                       viewBox="0 0 416 448"
                     />
-                    GitHub do Minas Dev
+                    {"GitHub do Minas Dev"}
                   </SocialLink>
                 </Social>
 
@@ -85,9 +85,9 @@ const Header = ({ mainNav, onlySocials }) => {
                     <Svg
                       vector="icon-facebook"
                       aria-hidden="true"
-                      viewBox="0 0 512 512"
+                      viewBox="0 0 24 24"
                     />
-                    Facebook do Minas Dev
+                    {"Facebook do Minas Dev"}
                   </SocialLink>
                 </Social>
               </Socials>
