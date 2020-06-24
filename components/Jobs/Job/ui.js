@@ -49,7 +49,7 @@ export const JobIsRemote = styled.span`
   color: #cc4233;
   border: 1px solid #cc4233;
   padding: 2px;
-  height: 15;
+  height: 15px;
   border-radius: 3px;
   display: flex;
 `

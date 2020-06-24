@@ -31,10 +31,6 @@ const Vagas = ({ jobs }) => (
       <meta name="twitter:description" content={DESCRIPTION} />
       <meta name="twitter:url" content={URL} />
       <meta name="twitter:title" content={TITLE} />
-
-      {/* Schema.org */}
-      <meta itemProp="name" content={TITLE} />
-      <meta itemProp="description" content={DESCRIPTION} />
     </Head>
 
     <HeaderTopNav />

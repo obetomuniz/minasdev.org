@@ -51,7 +51,6 @@ class MyDocument extends Document {
     return (
       <html lang="pt-br">
         <Head>
-          <meta charSet="UTF-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta
             name="viewport"
@@ -109,12 +108,6 @@ class MyDocument extends Document {
             href="/images/favicons/apple-touch-icon-152x152.png"
           />
 
-          {/* Schema.org */}
-          <meta
-            itemProp="image"
-            content="https://minasdev.org/images/facebook-thumb.png"
-          />
-
           {/* Facebook Tags */}
           <meta property="og:type" content="website" />
           <meta
@@ -132,7 +125,7 @@ class MyDocument extends Document {
           />
 
           {/* Google Tags */}
-          <meta name="google" value="notranslate" />
+          <meta name="google" content="notranslate" />
 
           {/* Google Analytics */}
           {isProduction && GA_ID && (
