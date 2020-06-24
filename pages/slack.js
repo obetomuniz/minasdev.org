@@ -1,5 +1,10 @@
 import Head from "next/head"
-import { Header, Footer, ScreenReaderContent } from "../components/Common"
+import {
+  HeaderTopNav,
+  Header,
+  Footer,
+  ScreenReaderContent,
+} from "../components/Common"
 import {
   Wrapper,
   HeaderContent,
@@ -44,8 +49,10 @@ const Slack = () => {
         <script src="/scripts/communityinviter.js" />
       </Head>
 
+      <HeaderTopNav />
+
       <HeaderContent>
-        <Header mainNav={{ url: "/", label: "O Minas Dev" }} />
+        <Header mainNav={{ url: "/", label: "O Minas Dev" }} onlySocials />
         <Background aria-hidden="true">
           <source
             srcSet={require("../public/images/background.jpg?webp")}

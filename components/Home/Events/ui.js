@@ -1,0 +1,104 @@
+import styled from "styled-components"
+
+export const Wrapper = styled.section`
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 40px;
+
+  @media screen and (max-width: 767px) {
+    padding: 0 0 40px;
+  }
+`
+
+export const Header = styled.h2`
+  display: flex;
+  align-items: center;
+  margin: 0 auto 40px;
+  align-self: flex-start;
+  max-width: 1024px;
+  width: 100%;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+`
+
+export const Title = styled.span`
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  line-height: 3.6rem;
+  color: #e64c3b;
+
+  @media screen and (max-width: 767px) {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    text-align: center;
+  }
+`
+
+export const TitleIcon = styled.span`
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 20px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 30px;
+    height: 30px;
+    margin: 0 0 20px;
+  }
+`
+
+export const ContributionCTA = styled.p`
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  color: #242424;
+
+  @media screen and (max-width: 767px) {
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+  }
+`
+
+export const ContributionCTALink = styled.a`
+  font-size: 0.95rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  border-bottom: 1px solid #242424;
+  color: #242424;
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 5px;
+`
+
+export const EventList = styled.ul`
+  margin: 0 auto;
+  width: 1024px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  padding: 0 20px 40px;
+
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 767px) {
+    grid-gap: 30px;
+    grid-template-columns: 1fr;
+  }
+`

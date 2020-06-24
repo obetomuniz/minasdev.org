@@ -2,10 +2,10 @@ import styled from "styled-components"
 
 export const Wrapper = styled.section`
   align-items: center;
-  background-color: #e64c3b;
+  background-color: #242424;
   display: flex;
   justify-content: center;
-  padding: 30px 0 40px;
+  padding: 30px 0;
 `
 
 export const NewsletterForm = styled.form`
@@ -72,7 +72,7 @@ export const Button = styled.button`
   font-weight: 700;
   font-size: 0.88rem;
   background-color: #fff;
-  color: #cc4233;
+  color: #242424;
   border-radius: 5px;
   border: 0;
   cursor: pointer;

@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Wrapper = styled.main`
   width: 100%;
   max-width: 960px;
-  height: 652px;
+  height: 500px;
   margin: 0 auto;
   display: flex;
   align-items: flex-end;
@@ -11,12 +11,11 @@ export const Wrapper = styled.main`
   flex-direction: column;
   position: relative;
   z-index: 2;
-  top: -95px;
+  top: 0;
 
   @media screen and (max-width: 1023px) {
     max-width: 600px;
-    height: 489px;
-    top: -85px;
+    height: 400px;
   }
 
   @media screen and (max-width: 767px) {
@@ -24,7 +23,7 @@ export const Wrapper = styled.main`
     height: auto;
     padding: 0 20px;
     align-items: flex-start;
-    top: 0;
+    top: 30px;
     margin-bottom: 50px;
   }
 `

@@ -1,9 +1,10 @@
 import Head from "next/head"
 import getJSON from "../helpers/getJSON"
 import sortByDateDesc from "../helpers/sortByDateDesc"
+import { NewsProvider } from "../contexts/News"
 import { EventsProvider } from "../contexts/Events"
-import { Header, Newsletter, Footer } from "../components/Common"
-import { About, NextEvents } from "../components/Home"
+import { HeaderTopNav, Header, Newsletter, Footer } from "../components/Common"
+import { About, Events, News } from "../components/Home"
 import { Wrapper, Background, HeaderContent } from "../components/Home/ui"
 
 const URL = "https://minasdev.org/"
@@ -11,7 +12,7 @@ const TITLE = "Minas Dev"
 const DESCRIPTION =
   "O Minas Dev visa unir comunidades e membros dos setores de Tecnologia da Informação de Minas Gerais."
 
-const Home = ({ events }) => (
+const Home = ({ news, events }) => (
   <Wrapper>
     <Head>
       {/* SEO */}
@@ -47,6 +48,8 @@ const Home = ({ events }) => (
       <meta name="msapplication-starturl" content="/" />
     </Head>
 
+    <HeaderTopNav />
+
     <HeaderContent>
       <Header mainNav={{ url: "/vagas", label: "VAGAS" }} />
       <About />
@@ -64,8 +67,11 @@ const Home = ({ events }) => (
     </HeaderContent>
 
     <Newsletter />
+    <NewsProvider news={news}>
+      <News />
+    </NewsProvider>
     <EventsProvider events={events}>
-      <NextEvents />
+      <Events />
     </EventsProvider>
     <Footer />
   </Wrapper>
@@ -74,6 +80,7 @@ const Home = ({ events }) => (
 export const config = { unstable_runtimeJS: false }
 
 export const getServerSideProps = async () => {
+  let news = await getJSON("news.json")
   let events = await getJSON("events.json")
   events = events
     .filter((event) => event.sources.length > 0)
@@ -83,6 +90,7 @@ export const getServerSideProps = async () => {
 
   return {
     props: {
+      news: news.slice(0, 10),
       events,
     },
   }

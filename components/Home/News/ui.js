@@ -5,16 +5,25 @@ export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 0;
+  padding: 40px 0 0;
+
+  @media screen and (max-width: 767px) {
+    padding: 20px 0;
+  }
 `
 
 export const Header = styled.h2`
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  align-self: flex-start;
+  margin: 0 auto 40px;
+  max-width: 1024px;
+  width: 100%;
 
   @media screen and (max-width: 767px) {
     flex-direction: column;
+    margin: 20px auto;
   }
 `
 
@@ -48,51 +57,25 @@ export const TitleIcon = styled.span`
     width: 30px;
     height: 30px;
     margin: 0 0 20px;
-    display: ${({ hide }) => (hide ? "none" : null)};
   }
 `
 
-export const ContributionCTA = styled.p`
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  text-align: center;
-  font-size: 0.95rem;
-  line-height: 1rem;
-  display: inline-block;
-  vertical-align: middle;
-  color: #242424;
-
-  @media screen and (max-width: 767px) {
-    font-size: 0.95rem;
-    line-height: 1.5rem;
-  }
-`
-
-export const ContributionCTALink = styled.a`
-  font-size: 0.95rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  border-bottom: 1px solid #242424;
-  color: #242424;
-  display: inline-block;
-  text-decoration: none;
-  margin-left: 5px;
-`
-
-export const EventList = styled.ul`
+export const NewsList = styled.div`
   margin: 0 auto;
   width: 1024px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 50px;
-  padding: 40px 20px 30px;
+  grid-gap: 40px;
+  padding: 0 20px 60px;
 
   @media screen and (max-width: 1023px) {
     width: 100%;
+    padding: 0 20px 40px;
   }
 
   @media screen and (max-width: 767px) {
-    grid-gap: 30px;
     grid-template-columns: 1fr;
+    grid-gap: 30px;
+    padding: 20px 20px 10px;
   }
 `

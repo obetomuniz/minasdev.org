@@ -1,4 +1,4 @@
-import { memo } from "react"
+import { Fragment, memo } from "react"
 import { MinasDevLogo, Svg } from "../"
 import {
   Wrapper,
@@ -11,7 +11,7 @@ import {
   SocialLink,
 } from "./ui"
 
-const Header = ({ mainNav }) => {
+const Header = ({ mainNav, onlySocials }) => {
   return (
     <Wrapper>
       <Content>
@@ -26,31 +26,9 @@ const Header = ({ mainNav }) => {
               </NavigationItem>
             )}
             <NavigationItem>
-              <NavigationLink
-                href="https://github.com/minasdev/manifesto"
-                target="_blank"
-                rel="noopener"
-              >
-                Manifesto
-              </NavigationLink>
-            </NavigationItem>
-            <NavigationItem>
-              <NavigationLink
-                href="https://github.com/minasdev/codigo-de-conduta"
-                target="_blank"
-                rel="noopener"
-              >
-                Código de Conduta
-              </NavigationLink>
-            </NavigationItem>
-            <NavigationItem>
               <Socials>
                 <Social>
-                  <SocialLink
-                    href="https://minasdev.org/slack"
-                    target="_blank"
-                    rel="noopener"
-                  >
+                  <SocialLink href="/slack">
                     <Svg
                       vector="icon-slack"
                       aria-hidden="true"

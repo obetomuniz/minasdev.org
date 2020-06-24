@@ -42,6 +42,7 @@ export const NavigationItem = styled.li`
   justify-content: flex-end;
   width: 100%;
   margin: 0px 0px 25px;
+  position: relative;
 `
 
 export const NavigationLink = styled.a`
@@ -64,10 +65,24 @@ export const NavigationLink = styled.a`
   }
 `
 
+export const SocialsContainer = styled.div`
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+`
+
 export const Socials = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 0 20px;
+  position: absolute;
+  right: 0;
+
+  @media screen and (max-width: 767px) {
+    margin: 0 0 20px;
+  }
 `
 
 export const Social = styled.li`
