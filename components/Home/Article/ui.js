@@ -42,7 +42,7 @@ export const SourceLink = styled.a`
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 0.7rem;
-  color: #333;
+  color: #e64c3b;
   display: block;
   text-decoration: none;
   margin: 0 0 0;
@@ -52,9 +52,9 @@ export const TitleContainer = styled.div`
   width: 100%;
   background-image: linear-gradient(
       0deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.3) 85%,
-      rgba(0, 0, 0, 0) 100%
+      rgba(36, 36, 36, 1) 0%,
+      rgba(36, 36, 36, 0.9) 60%,
+      rgba(36, 36, 36, 0) 120%
     ),
     url(${({ thumbnail }) => thumbnail});
   background-position: center;
@@ -65,9 +65,15 @@ export const TitleContainer = styled.div`
   align-items: flex-end;
   justify-content: flex-end;
   border-radius: 5px;
-
+  border: 3px solid #242424;
   @media screen and (max-width: 767px) {
     height: 100px;
+  }
+
+  &:hover {
+    h2 {
+      color: #e85849;
+    }
   }
 `
 
@@ -79,7 +85,7 @@ export const Title = styled.h2`
   color: #fff;
   width: 100%;
   padding: 20px;
-
+  text-shadow: 1px 1px 2px #000;
   @media screen and (max-width: 1023px) {
     font-size: 1.3rem;
     line-height: 1.6rem;

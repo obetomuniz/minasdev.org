@@ -24,6 +24,8 @@ export const HeaderTopNavLink = styled.a`
   color: #fff;
   text-align: center;
   font-size: 1rem;
+  font-family: "Montserrat";
+  font-weight: 400;
 
   @media screen and (max-width: 767px) {
     font-size: 0.9rem;
