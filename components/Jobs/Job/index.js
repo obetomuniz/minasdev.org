@@ -28,8 +28,8 @@ const Job = ({ company, date, position, url, tags, metadata }) => {
     <Wrapper itemScope itemType="http://schema.org/JobPosting">
       <ScreenReaderContent
         itemProp="jobLocation"
-        itemscope
-        itemtype="http://schema.org/Place"
+        itemScope
+        itemType="http://schema.org/Place"
       >
         <span
           itemProp="address"
