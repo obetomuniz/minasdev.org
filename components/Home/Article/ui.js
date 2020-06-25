@@ -52,12 +52,12 @@ export const TitleContainer = styled.div`
   width: 100%;
   background-image: linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 0.3) 80%,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.3) 85%,
       rgba(0, 0, 0, 0) 100%
     ),
     url(${({ thumbnail }) => thumbnail});
-
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 160px;
