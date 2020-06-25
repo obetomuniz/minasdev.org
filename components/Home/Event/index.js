@@ -22,6 +22,16 @@ const Event = ({ date, url, name, community, location }) => {
           itemType="http://schema.org/PostalAddress"
         >
           <span itemProp="addressLocality">{location}</span>
+          <a
+            itemProp="url"
+            target="_blank"
+            rel="noopener"
+            href={url}
+            aria-hidden="true"
+            tabIndex="-1"
+          >
+            {location}
+          </a>
         </span>
       </ScreenReaderContent>
       <Community itemProp="organizer">{community}</Community>
