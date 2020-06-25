@@ -26,8 +26,20 @@ const Job = ({ company, date, position, url, tags, metadata }) => {
 
   return (
     <Wrapper itemScope itemType="http://schema.org/JobPosting">
-      <ScreenReaderContent as={"span"} itemProp="jobLocation">
-        {language === "en-us" ? "Internacional" : "Brasil"}
+      <ScreenReaderContent
+        itemProp="jobLocation"
+        itemscope
+        itemtype="http://schema.org/Place"
+      >
+        <span
+          itemProp="address"
+          itemScope
+          itemType="http://schema.org/PostalAddress"
+        >
+          <span itemProp="addressLocality">
+            {language === "en-us" ? "Internacional" : "Brasil"}
+          </span>
+        </span>
       </ScreenReaderContent>
       <PublicationDate>
         Publicado em
