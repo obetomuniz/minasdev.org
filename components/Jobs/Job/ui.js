@@ -84,6 +84,10 @@ export const JobCompany = styled.span`
   color: #555;
   display: block;
   margin: 5px 0 10px;
+
+  &::before {
+    content: "@";
+  }
 `
 
 export const Source = styled.p`

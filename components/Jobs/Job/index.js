@@ -2,6 +2,7 @@ import PropTypes from "prop-types"
 import format from "date-fns/format"
 import getDateObjectFromString from "../../../helpers/getDateObjectFromString"
 import getTagsPtBr from "../../../helpers/getTagsPtBr"
+import { ScreenReaderContent } from "../../Common"
 
 import {
   Wrapper,
@@ -25,12 +26,17 @@ const Job = ({ company, date, position, url, tags, metadata }) => {
 
   return (
     <Wrapper itemScope itemType="http://schema.org/JobPosting">
+      <ScreenReaderContent as={"span"} itemProp="jobLocation">
+        {language === "en-us" ? "Internacional" : "Brasil"}
+      </ScreenReaderContent>
       <PublicationDate>
         Publicado em
         <time itemProp="datePosted" dateTime={date}>
           {format(getDateObjectFromString(date), "dd/MM/yyyy")}
         </time>
-        <JobLanguage>{language === "en-us" ? "🌐" : "🇧🇷"}</JobLanguage>
+        <JobLanguage aria-hidden="true">
+          {language === "en-us" ? "🌐" : "🇧🇷"}
+        </JobLanguage>
         {tags.includes("remote") ? <JobIsRemote>REMOTO</JobIsRemote> : null}
       </PublicationDate>
       <JobTitle itemProp="title">
@@ -51,12 +57,20 @@ const Job = ({ company, date, position, url, tags, metadata }) => {
           </JobOnMinasDevSlack>
         ) : null}
       </JobTitle>
-      <JobCompany>{`@${company}`}</JobCompany>
-      <Source itemProp="source">
-        <SourceLink href={website} target="_blank" rel="noopener">
+      <JobCompany itemProp="hiringOrganization">{company}</JobCompany>
+      <Source>
+        <SourceLink
+          itemProp="source"
+          href={website}
+          target="_blank"
+          rel="noopener"
+        >
           {source}
         </SourceLink>
-        {tagList.length ? <Tags>{`, ${tagList}`}</Tags> : null}
+        {", "}
+        <span itemProp="description">
+          {tagList.length ? <Tags>{`${tagList}`}</Tags> : null}
+        </span>
       </Source>
     </Wrapper>
   )
