@@ -65,7 +65,6 @@ export const TitleContainer = styled.div`
   align-items: flex-end;
   justify-content: flex-end;
   border-radius: 5px;
-  border: 3px solid #242424;
   @media screen and (max-width: 767px) {
     height: 100px;
   }
