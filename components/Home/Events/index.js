@@ -21,7 +21,7 @@ const Events = () => {
       <ContributionCTA>
         Não encontrou seu evento acima?
         <ContributionCTALink
-          href="https://github.com/minasdev/eventos/issues/new?template=adicionar-novo-evento.md&title=Nome+do+Evento"
+          href="https://github.com/minasdev/eventos/issues/new/choose"
           target="_blank"
           rel="noopener"
         >
