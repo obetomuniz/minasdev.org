@@ -42,8 +42,9 @@ class MyDocument extends Document {
         })
 
       const initialProps = await Document.getInitialProps(ctx)
+      console.log(ctx.pathname)
       const styleText =
-        ctx.pathname === "/"
+        ctx.asPath === "/"
           ? sheet.getStyleTags().replace(/(<([^>]+)>)/gi, "")
           : undefined
 
