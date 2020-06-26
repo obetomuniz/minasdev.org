@@ -50,10 +50,10 @@ const Vagas = ({ jobs }) => (
       </Background>
     </HeaderContent>
 
+    <Newsletter />
     <JobsProvider jobs={jobs}>
       <JobList />
     </JobsProvider>
-    <Newsletter />
     <Footer />
   </Wrapper>
 )

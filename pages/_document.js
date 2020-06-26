@@ -18,12 +18,12 @@ const cspHashOf = (text) => {
 }
 
 const getCSP = (scriptText, styleText) => {
-  if (process.env.NODE_ENV === "production") {
-    const scriptHash = cspHashOf(scriptText)
-    const styleHash = cspHashOf(styleText)
-    return `default-src 'self'; font-src https: data: localhost:*; img-src https: data: localhost:*; script-src https: '${scriptHash}'; script-src-elem https: '${scriptHash}'; style-src '${styleHash}'; object-src 'none'; connect-src https:`
-  }
-  return null
+  // if (process.env.NODE_ENV === "production") {
+  const scriptHash = cspHashOf(scriptText)
+  const styleHash = cspHashOf(styleText)
+  return `default-src 'self'; font-src https: data: localhost:*; img-src https: data: localhost:*; script-src https: '${scriptHash}'; script-src-elem https: '${scriptHash}'; style-src '${styleHash}'; object-src 'none'; connect-src https:`
+  // }
+  // return null
 }
 
 class MyDocument extends Document {
@@ -41,18 +41,15 @@ class MyDocument extends Document {
         })
 
       const initialProps = await Document.getInitialProps(ctx)
-
+      const s = sheet.getStyleElement()
       return {
         ...initialProps,
         isProduction,
-        CSP: getCSP(
-          GA_SCRIPT,
-          sheet.getStyleElement()[0].props.dangerouslySetInnerHTML.__html
-        ),
+        CSP: getCSP(GA_SCRIPT, s[0].props.dangerouslySetInnerHTML.__html),
         styles: (
           <>
             {initialProps.styles}
-            {sheet.getStyleElement()}
+            {s}
           </>
         ),
       }
