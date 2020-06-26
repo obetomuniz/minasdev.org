@@ -46,6 +46,7 @@ class MyDocument extends Document {
   }
 
   render() {
+    const { isProduction } = this.props
     return (
       <html lang="pt-br">
         <Head>
