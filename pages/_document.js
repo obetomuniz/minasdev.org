@@ -21,7 +21,7 @@ const getCSP = (scriptText, styleText) => {
   if (process.env.NODE_ENV === "production") {
     const scriptHash = cspHashOf(scriptText)
     const styleHash = styleText ? cspHashOf(styleText) : null
-    return `default-src 'self'; font-src https: data: localhost:*; img-src https: data: localhost:*; script-src https: '${scriptHash}'; script-src-elem https: '${scriptHash}' localhost:*; style-src '${
+    return `default-src 'self'; font-src https: data: localhost:*; img-src https: data: localhost:*; script-src '${scriptHash}'; script-src-elem https: '${scriptHash}' localhost:*; style-src '${
       styleHash || "unsafe-inline"
     }'; object-src 'none'; connect-src https:`
   }
@@ -46,11 +46,11 @@ class MyDocument extends Document {
         ctx.asPath === "/"
           ? sheet.getStyleTags().replace(/(<([^>]+)>)/gi, "")
           : undefined
-
+      const CSP = getCSP(GA_SCRIPT, styleText)
       return {
         ...initialProps,
         isProduction,
-        CSP: getCSP(GA_SCRIPT, styleText),
+        CSP,
         styles: (
           <>
             {initialProps.styles}
