@@ -18,19 +18,18 @@ const cspHashOf = (text) => {
 }
 
 const getCSP = (scriptText, styleText) => {
-  // if (process.env.NODE_ENV === "production") {
-  const scriptHash = cspHashOf(scriptText)
-  const styleHash = cspHashOf(styleText)
-  return `default-src 'self'; font-src https: data: localhost:*; img-src https: data: localhost:*; script-src https: '${scriptHash}'; script-src-elem https: '${scriptHash}'; style-src '${styleHash}'; object-src 'none'; connect-src https:`
-  // }
-  // return null
+  if (process.env.NODE_ENV === "production") {
+    const scriptHash = cspHashOf(scriptText)
+    const styleHash = cspHashOf(styleText)
+    return `default-src 'self'; font-src https: data: localhost:*; img-src https: data: localhost:*; script-src https: '${scriptHash}'; script-src-elem https: '${scriptHash}'; style-src '${styleHash}'; object-src 'none'; connect-src https:`
+  }
+  return null
 }
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet()
     const isProduction = process.env.NODE_ENV === "production"
-
     const originalRenderPage = ctx.renderPage
 
     try {
