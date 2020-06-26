@@ -1,8 +1,30 @@
+import crypto from "crypto"
 import { Fragment } from "react"
 import Document, { Head, Main, NextScript } from "next/document"
 import { ServerStyleSheet } from "styled-components"
 
 const GA_ID = "UA-46088004-1"
+const GA_SCRIPT = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${GA_ID}');
+      `
+
+const cspHashOf = (text) => {
+  const hash = crypto.createHash("sha256")
+  hash.update(text)
+  return `sha256-${hash.digest("base64")}`
+}
+
+const getCSP = (scriptText, styleText) => {
+  if (process.env.NODE_ENV === "production") {
+    const scriptHash = cspHashOf(scriptText)
+    const styleHash = cspHashOf(styleText)
+    return `default-src 'self'; font-src https: data: localhost:*; img-src https: data: localhost:*; script-src '${scriptHash}'; script-src-elem https: '${scriptHash}'; style-src '${styleHash}'; object-src 'none';`
+  }
+  return null
+}
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -19,9 +41,14 @@ class MyDocument extends Document {
         })
 
       const initialProps = await Document.getInitialProps(ctx)
+
       return {
         ...initialProps,
         isProduction,
+        CSP: getCSP(
+          GA_SCRIPT,
+          sheet.getStyleElement()[0].props.dangerouslySetInnerHTML.__html
+        ),
         styles: (
           <>
             {initialProps.styles}
@@ -46,10 +73,14 @@ class MyDocument extends Document {
   }
 
   render() {
-    const { isProduction } = this.props
+    const { isProduction, CSP } = this.props
+
     return (
       <html lang="pt-br">
         <Head>
+          {isProduction && CSP && (
+            <meta httpEquiv="Content-Security-Policy" content={CSP} />
+          )}
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta
             name="viewport"
