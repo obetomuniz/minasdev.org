@@ -15,10 +15,7 @@ const Section = ({ icon, title, children }) => (
 )
 
 Section.propTypes = {
-  icon: PropTypes.objectOf({
-    vector: PropTypes.string.isRequired,
-    viewBox: PropTypes.string.isRequired,
-  }).isRequired,
+  icon: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 }
