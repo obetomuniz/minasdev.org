@@ -1,15 +1,8 @@
-import crypto from "crypto"
 import { Fragment } from "react"
 import Document, { Head, Main, NextScript } from "next/document"
 import { ServerStyleSheet } from "styled-components"
 
 const GA_ID = "UA-46088004-1"
-
-const cspHashOf = (text) => {
-  const hash = crypto.createHash("sha256")
-  hash.update(text)
-  return `'sha256-${hash.digest("base64")}'`
-}
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -53,18 +46,9 @@ class MyDocument extends Document {
   }
 
   render() {
-    const { isProduction } = this.props
-    // let csp = `default-src 'self'; img-src 'self' https:; script-src 'self' ${cspHashOf(
-    //   NextScript.getInlineScriptSource(this.props)
-    // )}`
-    // if (process.env.NODE_ENV !== "production") {
-    const csp = `style-src 'self' 'unsafe-inline';img-src 'self' https:; font-src 'self' data:; default-src 'self'; script-src 'unsafe-eval' 'self' 'sha256-onbIxCxMPFxg9IBqBGa3K9+RSFIXCKqTFUTCuB1rRvU=' https: data:`
-    // }
-
     return (
       <html lang="pt-br">
         <Head>
-          <meta httpEquiv="Content-Security-Policy" content={csp} />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta
             name="viewport"
