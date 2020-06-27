@@ -1,8 +1,7 @@
 import PropTypes from "prop-types"
 import { useEvents } from "../../../contexts/Events"
-import { Svg } from "../../Common"
-import { Section, Event } from "../"
-import { ContributionCTA, ContributionCTALink, EventList } from "./ui"
+import { Section, ContributionCTA, Event } from "../"
+import { EventList } from "./ui"
 
 const Events = () => {
   const {
@@ -18,16 +17,15 @@ const Events = () => {
           <Event key={`event-${key}`} {...event} />
         ))}
       </EventList>
-      <ContributionCTA>
-        Não encontrou seu evento acima?
-        <ContributionCTALink
-          href="https://github.com/minasdev/eventos/issues/new/choose"
-          target="_blank"
-          rel="noopener"
-        >
-          Adicione-o neste link
-        </ContributionCTALink>
-      </ContributionCTA>
+      <ContributionCTA
+        text="Não encontrou seu evento acima?"
+        link={{
+          href: "https://github.com/minasdev/eventos/issues/new/choose",
+          target: "_blank",
+          rel: "noopener",
+        }}
+        textLink="Adicione-o neste link"
+      />
     </Section>
   )
 }

@@ -1,7 +1,6 @@
 import PropTypes from "prop-types"
 import { useNews } from "../../../contexts/News"
-import { Svg } from "../../Common"
-import { Section, Article } from "../"
+import { Section, ContributionCTA, Article } from "../"
 import { NewsList } from "./ui"
 
 const News = () => {

@@ -48,6 +48,18 @@ export const SourceLink = styled.a`
   margin: 0 0 0;
 `
 
+export const ArticleOnMinasDevMedium = styled.picture`
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+
+  img,
+  source {
+    width: 16px;
+    height: 16px;
+  }
+`
+
 export const TitleContainer = styled.div`
   width: 100%;
   background-image: linear-gradient(
