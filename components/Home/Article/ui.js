@@ -10,6 +10,10 @@ export const Link = styled.a`
   display: flex;
   flex-direction: column;
   position: relative;
+
+  border-radius: 9px;
+  overflow: hidden;
+  border: 4px solid ${({ isMedium }) => (isMedium ? "#e85849" : "#d4d4d4")};
 `
 
 export const Infos = styled.div`
@@ -22,6 +26,8 @@ export const ShareInfos = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  color: #e64c3b;
+  font-size: 0.7rem;
 `
 
 export const AuthorPhoto = styled.img`
@@ -36,6 +42,20 @@ export const MainInfo = styled.p`
   font-size: 0.7rem;
   color: #666;
   margin: 0 5px 0 6px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 0.6rem;
+  }
+`
+export const StrongInfo = styled.strong`
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.7rem;
+  color: #000;
+  margin: 0 0 0 6px;
+  @media screen and (max-width: 767px) {
+    font-size: 0.6rem;
+  }
 `
 
 export const SourceLink = styled.a`
@@ -46,6 +66,9 @@ export const SourceLink = styled.a`
   display: block;
   text-decoration: none;
   margin: 0 0 0;
+  @media screen and (max-width: 767px) {
+    font-size: 0.6rem;
+  }
 `
 
 export const ArticleOnMinasDevMedium = styled.picture`
@@ -76,7 +99,6 @@ export const TitleContainer = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  border-radius: 5px;
   @media screen and (max-width: 767px) {
     height: 100px;
   }

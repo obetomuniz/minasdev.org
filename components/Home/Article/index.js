@@ -1,10 +1,11 @@
-import PropTypes from "prop-types"
+import PropTypes, { memo } from "prop-types"
 import {
   Wrapper,
   Link,
   ShareInfos,
   AuthorPhoto,
   MainInfo,
+  StrongInfo,
   SourceLink,
   ArticleOnMinasDevMedium,
   TitleContainer,
@@ -12,13 +13,33 @@ import {
 } from "./ui"
 
 const Event = ({ user, title, url, thumbnail, source }) => {
+  const isMedium = source.name === "medium"
+  const renderLabel = isMedium ? (
+    <>
+      {`★`}
+      <StrongInfo>{source.author}</StrongInfo>
+      <MainInfo>{`publicou no`}</MainInfo>
+      <SourceLink
+        href={"https://medium.com/minasdev"}
+        target="_blank"
+        rel="noopener"
+      >
+        {"Medium"}
+      </SourceLink>
+    </>
+  ) : (
+    <>
+      <AuthorPhoto src={user.photo} alt={`Foto de ${user.name}`} />
+      <MainInfo>{`${user.name} compartilhou no`}</MainInfo>
+      <SourceLink href={"/slack"}>{"Slack"}</SourceLink>
+    </>
+  )
+
   return (
     <Wrapper>
       <ShareInfos>
-        <AuthorPhoto src={user.photo} alt={`Foto de ${user.name}`} />
-        <MainInfo>{`${user.name} compartilhou no`}</MainInfo>
-        <SourceLink href={"/slack"}>{"Slack"}</SourceLink>
-        {source === "Minas Dev Medium" ? (
+        {renderLabel}
+        {isMedium ? (
           <ArticleOnMinasDevMedium>
             <source
               srcSet={require("../../../public/images/minasdev-logo-57x57.png?webp")}
@@ -32,7 +53,7 @@ const Event = ({ user, title, url, thumbnail, source }) => {
           </ArticleOnMinasDevMedium>
         ) : null}
       </ShareInfos>
-      <Link href={url} target="_blank" rel="noopener">
+      <Link href={url} target="_blank" rel="noopener" isMedium={isMedium}>
         <TitleContainer thumbnail={thumbnail}>
           <Title>
             {title.length > 65 ? `${title.substring(0, 65)}...` : title}
