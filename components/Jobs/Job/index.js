@@ -69,19 +69,24 @@ const Job = ({ company, date, position, url, tags, metadata }) => {
           </JobOnMinasDevSlack>
         ) : null}
       </JobTitle>
-      <JobCompany itemProp="hiringOrganization">{company}</JobCompany>
+      <JobCompany
+        itemProp="hiringOrganization"
+        itemscope
+        itemtype="http://schema.org/Organization"
+      >
+        <span itemprop="name">{company}</span>
+      </JobCompany>
       <Source>
-        <SourceLink
-          itemProp="source"
-          href={website}
-          target="_blank"
-          rel="noopener"
-        >
+        <SourceLink href={website} target="_blank" rel="noopener">
           {source}
         </SourceLink>
         {", "}
         <span itemProp="description">
-          {tagList.length ? <Tags>{`${tagList}`}</Tags> : null}
+          {tagList.length ? (
+            <Tags>{`${tagList}`}</Tags>
+          ) : (
+            <ScreenReaderContent as={"span"}>Sem Tags</ScreenReaderContent>
+          )}
         </span>
       </Source>
     </Wrapper>
