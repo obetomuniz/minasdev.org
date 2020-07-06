@@ -10,7 +10,7 @@ const About = () => (
       <source srcSet="/images/mapa-de-minas.png" type="image/png" />
       <img src="/images/mapa-de-minas.png" alt="Mapa de Minas Gerais" />
     </Background>
-    <Title>COMUNIDADE DE DESENVOLVEDORES DE MINAS GERAIS</Title>
+    <Title>Comunidade de desenvolvedores de Minas Gerais</Title>
     <Description>
       O Minas Dev idealiza a união das comunidades e dos membros dos setores de
       Tecnologia da Informação para que juntos possamos fortalecer o mercado de
