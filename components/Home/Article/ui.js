@@ -91,7 +91,7 @@ export const TitleContainer = styled.div`
       rgba(36, 36, 36, 0.9) 60%,
       rgba(36, 36, 36, 0) 120%
     ),
-    url(${({ thumbnail }) => thumbnail});
+    url('${({ thumbnail }) => thumbnail}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
