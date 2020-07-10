@@ -74,7 +74,7 @@ const Job = ({ company, date, position, url, tags, metadata }) => {
         itemscope
         itemtype="http://schema.org/Organization"
       >
-        <span itemprop="name">{company}</span>
+        <span itemProp="name">{company}</span>
       </JobCompany>
       <Source>
         <SourceLink href={website} target="_blank" rel="noopener">
