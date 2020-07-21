@@ -48,12 +48,12 @@ const Home = () => (
       <About />
       <Background aria-hidden="true">
         <source
-          srcSet={require("../public/images/background.jpg?webp")}
+          srcSet={require("../public/images/background.png?webp")}
           type="image/webp"
         />
-        <source srcSet="/images/background.jpg" type="image/jpg" />
+        <source srcSet="/images/background.png" type="image/png" />
         <img
-          src="/images/background.jpg"
+          src="/images/background.png"
           alt="Plano de fundo: Um dedo tocando uma tela de celular"
         />
       </Background>

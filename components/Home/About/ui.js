@@ -21,7 +21,6 @@ export const Background = styled.picture`
   max-width: 500px;
   padding: 0 20px;
   position: absolute;
-  opacity: 0.6;
 
   img,
   source {
