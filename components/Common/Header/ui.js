@@ -30,14 +30,10 @@ export const Content = styled.div`
 
 export const Navigation = styled.ul`
   display: block;
-  margin-top: 50px;
+  margin-top: 30px;
 
   @media screen and (max-width: 1023px) {
-    margin-top: 40px;
-  }
-
-  @media screen and (max-width: 767px) {
-    margin-top: 25px;
+    margin-top: 20px;
   }
 `
 
@@ -45,15 +41,11 @@ export const NavigationItem = styled.li`
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin: 0px 0px 50px;
+  margin: 0px 0px 30px;
   position: relative;
 
   @media screen and (max-width: 1023px) {
-    margin: 0px 0px 40px;
-  }
-
-  @media screen and (max-width: 767px) {
-    margin: 0px 0px 25px;
+    margin: 0px 0px 20px;
   }
 `
 
@@ -63,7 +55,7 @@ export const NavigationLink = styled.a`
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   text-shadow: 1px 1px 2px #000;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 0 2px;
   letter-spacing: 0.5px;
 
@@ -72,7 +64,7 @@ export const NavigationLink = styled.a`
   }
 
   @media screen and (max-width: 767px) {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
 `
 

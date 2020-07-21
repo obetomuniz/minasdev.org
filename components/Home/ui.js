@@ -3,16 +3,12 @@ import styled from "styled-components"
 export const Wrapper = styled.div``
 
 export const HeaderContent = styled.div`
-  height: 725px;
+  height: calc(100vh - 228px);
   width: 100%;
   position: relative;
 
   @media screen and (max-width: 1023px) {
-    height: 600px;
-  }
-
-  @media screen and (max-width: 767px) {
-    height: 345px;
+    height: calc(100vh - 326px);
   }
 `
 

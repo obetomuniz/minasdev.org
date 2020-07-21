@@ -5,7 +5,11 @@ export const Wrapper = styled.section`
   background-color: #242424;
   display: flex;
   justify-content: center;
-  padding: 30px 0;
+  padding: 40px 0;
+
+  @media screen and (max-width: 1023px) {
+    padding: 60px 0;
+  }
 `
 
 export const NewsletterForm = styled.form`
@@ -82,5 +86,10 @@ export const Button = styled.button`
 
   @media screen and (max-width: 1023px) {
     min-width: 100%;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #e85849;
   }
 `

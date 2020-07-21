@@ -1,10 +1,6 @@
 import Head from "next/head"
-import getJSON from "../helpers/getJSON"
-import sortByDateDesc from "../helpers/sortByDateDesc"
-import { NewsProvider } from "../contexts/News"
-import { EventsProvider } from "../contexts/Events"
 import { HeaderTopNav, Header, Newsletter, Footer } from "../components/Common"
-import { About, News, Events } from "../components/Home"
+import { About } from "../components/Home"
 import { Wrapper, Background, HeaderContent } from "../components/Home/ui"
 
 const URL = "https://minasdev.org/"
@@ -12,7 +8,7 @@ const TITLE = "Minas Dev"
 const DESCRIPTION =
   "O Minas Dev visa unir comunidades e membros dos setores de Tecnologia da Informação de Minas Gerais."
 
-const Home = ({ news, events }) => (
+const Home = () => (
   <Wrapper>
     <Head>
       {/* SEO */}
@@ -48,7 +44,7 @@ const Home = ({ news, events }) => (
     <HeaderTopNav />
 
     <HeaderContent>
-      <Header mainNav={{ url: "/vagas", label: "VAGAS" }} />
+      <Header />
       <About />
       <Background aria-hidden="true">
         <source
@@ -65,33 +61,10 @@ const Home = ({ news, events }) => (
 
     <Newsletter />
 
-    <NewsProvider news={news}>
-      <News />
-    </NewsProvider>
-    <EventsProvider events={events}>
-      <Events />
-    </EventsProvider>
     <Footer />
   </Wrapper>
 )
 
 export const config = { unstable_runtimeJS: false }
-
-export const getServerSideProps = async () => {
-  let news = await getJSON("news.json")
-  let events = await getJSON("events.json")
-  events = events
-    .filter((event) => event.sources.length > 0)
-    .map((event) => event.sources)
-    .flat()
-    .sort(sortByDateDesc)
-
-  return {
-    props: {
-      news: news.slice(0, 6),
-      events,
-    },
-  }
-}
 
 export default Home

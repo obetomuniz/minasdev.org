@@ -5,28 +5,15 @@ export const Wrapper = styled.footer`
   align-items: center;
   justify-content: center;
   padding: 10px 0 13px;
-  background-color: #242424;
-  position: relative;
+  background-color: #000;
   width: 100%;
-
-  &:after {
-    content: "";
-    height: 3px;
-    width: 100%;
-    background-color: #e64c3b;
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
+  border-top: 3px solid #e64c3b;
 `
 
 export const FooterText = styled.small`
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 0.95rem;
+  font-weight: 500;
+  font-size: 0.7rem;
   line-height: 1rem;
   color: #fff;
-  text-shadow: 1px 1px 2px #000;
 `

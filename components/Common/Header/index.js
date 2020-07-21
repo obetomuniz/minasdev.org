@@ -11,7 +11,7 @@ import {
   SocialLink,
 } from "./ui"
 
-const Header = ({ mainNav, onlySocials }) => {
+const Header = () => {
   return (
     <Wrapper>
       <Content>
@@ -19,86 +19,30 @@ const Header = ({ mainNav, onlySocials }) => {
         <nav>
           <Navigation>
             <NavigationItem>
-              <Socials>
-                <Social>
-                  <SocialLink href="/slack">
-                    <Svg
-                      vector="icon-slack"
-                      aria-hidden="true"
-                      viewBox="0 0 24 24"
-                    />
-                    {"Slack do Minas Dev"}
-                  </SocialLink>
-                </Social>
-
-                <Social>
-                  <SocialLink
-                    href="https://t.me/minasdev"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <Svg
-                      vector="icon-telegram"
-                      aria-hidden="true"
-                      viewBox="0 0 24 24"
-                    />
-                    {"Telegram do Minas Dev"}
-                  </SocialLink>
-                </Social>
-
-                <Social>
-                  <SocialLink
-                    href="https://twitter.com/minasdev"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <Svg
-                      vector="icon-twitter"
-                      aria-hidden="true"
-                      viewBox="0 0 512 512"
-                    />
-                    {"Twitter do Minas Dev"}
-                  </SocialLink>
-                </Social>
-
-                <Social>
-                  <SocialLink
-                    href="https://github.com/minasdev"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <Svg
-                      vector="icon-github"
-                      aria-hidden="true"
-                      viewBox="0 0 416 448"
-                    />
-                    {"GitHub do Minas Dev"}
-                  </SocialLink>
-                </Social>
-
-                <Social>
-                  <SocialLink
-                    href="https://facebook.com/minasdev"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <Svg
-                      vector="icon-facebook"
-                      aria-hidden="true"
-                      viewBox="0 0 24 24"
-                    />
-                    {"Facebook do Minas Dev"}
-                  </SocialLink>
-                </Social>
-              </Socials>
+              <NavigationLink href={"https://t.me/minasdev"}>
+                {"Telegram"}
+              </NavigationLink>
             </NavigationItem>
-            {mainNav && (
-              <NavigationItem>
-                <NavigationLink href={mainNav.url}>
-                  {mainNav.label}
-                </NavigationLink>
-              </NavigationItem>
-            )}
+            <NavigationItem>
+              <NavigationLink href={"https://linkedin.com/company/minasdev"}>
+                {"LinkedIn"}
+              </NavigationLink>
+            </NavigationItem>
+            <NavigationItem>
+              <NavigationLink href={"https://github.com/minasdev/vagas/issues"}>
+                {"Medium"}
+              </NavigationLink>
+            </NavigationItem>
+            <NavigationItem>
+              <NavigationLink href={"https://twitter.com/minasdev"}>
+                {"Twitter"}
+              </NavigationLink>
+            </NavigationItem>
+            <NavigationItem>
+              <NavigationLink href={"https://github.com/minasdev/vagas/issues"}>
+                {"Vagas"}
+              </NavigationLink>
+            </NavigationItem>
           </Navigation>
         </nav>
       </Content>

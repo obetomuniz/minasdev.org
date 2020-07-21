@@ -2,40 +2,26 @@ import styled from "styled-components"
 
 export const Wrapper = styled.main`
   width: 100%;
-  max-width: 960px;
-  height: 500px;
-  margin: 0 auto;
+  height: 100%;
+  margin: 50px auto 0;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
-  position: relative;
+  padding: 0 20px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
   z-index: 2;
-  top: -55px;
-
-  @media screen and (max-width: 1023px) {
-    max-width: 600px;
-    height: 400px;
-  }
-
-  @media screen and (max-width: 767px) {
-    max-width: 100%;
-    height: auto;
-    padding: 0 20px;
-    align-items: flex-start;
-    top: 0;
-    margin-bottom: 50px;
-  }
 `
 
 export const Background = styled.picture`
   width: 100%;
+  max-width: 500px;
+  padding: 0 20px;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
+  opacity: 0.6;
 
   img,
   source {
@@ -55,7 +41,7 @@ export const Title = styled.h2`
   margin: 45px 0 25px;
   color: #fff;
   text-shadow: 1px 1px 2px #000;
-  max-width: 500px;
+  max-width: 600px;
   z-index: 2;
 
   @media screen and (max-width: 1023px) {
@@ -76,12 +62,12 @@ export const Title = styled.h2`
 
 export const Description = styled.p`
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
   line-height: 1.4rem;
   color: #fff;
   text-shadow: 1px 1px 2px #000;
-  max-width: 500px;
+  max-width: 600px;
   letter-spacing: 0.3px;
   z-index: 2;
 
