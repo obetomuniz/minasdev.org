@@ -19,27 +19,47 @@ const Header = () => {
         <nav>
           <Navigation>
             <NavigationItem>
-              <NavigationLink href={"https://t.me/minasdev"}>
+              <NavigationLink
+                target="_blank"
+                rel="noopener"
+                href={"https://t.me/minasdev"}
+              >
                 {"Telegram"}
               </NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <NavigationLink href={"https://linkedin.com/company/minasdev"}>
+              <NavigationLink
+                target="_blank"
+                rel="noopener"
+                href={"https://linkedin.com/company/minasdev"}
+              >
                 {"LinkedIn"}
               </NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <NavigationLink href={"https://medium.com/minasdev"}>
+              <NavigationLink
+                target="_blank"
+                rel="noopener"
+                href={"https://medium.com/minasdev"}
+              >
                 {"Medium"}
               </NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <NavigationLink href={"https://twitter.com/minasdev"}>
+              <NavigationLink
+                target="_blank"
+                rel="noopener"
+                href={"https://twitter.com/minasdev"}
+              >
                 {"Twitter"}
               </NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <NavigationLink href={"https://github.com/minasdev/vagas/issues"}>
+              <NavigationLink
+                target="_blank"
+                rel="noopener"
+                href={"https://github.com/minasdev/vagas/issues"}
+              >
                 {"Vagas"}
               </NavigationLink>
             </NavigationItem>

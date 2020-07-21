@@ -9,9 +9,6 @@
     "start": "next start -p $PORT"
   },
   "dependencies": {
-    "aws-sdk": "^2.709.0",
-    "date-fns": "^2.14.0",
-    "js-search": "^2.0.0",
     "next": "9.4.4",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.6.1",
