@@ -29,7 +29,7 @@ const Header = () => {
               </NavigationLink>
             </NavigationItem>
             <NavigationItem>
-              <NavigationLink href={"https://github.com/minasdev/vagas/issues"}>
+              <NavigationLink href={"https://medium.com/minasdev"}>
                 {"Medium"}
               </NavigationLink>
             </NavigationItem>
