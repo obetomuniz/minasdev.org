@@ -1,5 +1,5 @@
 import Head from "next/head"
-import { HeaderTopNav, Header, Newsletter, Footer } from "../components/Common"
+import { HeaderTopNav, Header, Footer } from "../components/Common"
 import { About } from "../components/Home"
 import { Wrapper, Background, HeaderContent } from "../components/Home/ui"
 
@@ -58,8 +58,6 @@ const Home = () => (
         />
       </Background>
     </HeaderContent>
-
-    <Newsletter />
 
     <Footer />
   </Wrapper>
