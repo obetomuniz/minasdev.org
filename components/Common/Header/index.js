@@ -22,18 +22,18 @@ const Header = () => {
               <NavigationLink
                 target="_blank"
                 rel="noopener"
-                href={"https://t.me/minasdev"}
+                href={"https://youtube.com/channel/UCNcCzxW2OSQO38AaqFGkB2g"}
               >
-                {"Telegram"}
+                {"YouTube"}
               </NavigationLink>
             </NavigationItem>
             <NavigationItem>
               <NavigationLink
                 target="_blank"
                 rel="noopener"
-                href={"https://linkedin.com/company/minasdev"}
+                href={"https://www.meetup.com/pt-BR/Minas_Dev/"}
               >
-                {"LinkedIn"}
+                {"Meetup"}
               </NavigationLink>
             </NavigationItem>
             <NavigationItem>

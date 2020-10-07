@@ -58,6 +58,7 @@ export const NavigationLink = styled.a`
   font-size: 1.5rem;
   padding: 0 2px;
   letter-spacing: 0.5px;
+  text-transform: uppercase;
 
   &:hover {
     color: #e85849;
