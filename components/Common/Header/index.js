@@ -22,33 +22,6 @@ const Header = () => {
               <NavigationLink
                 target="_blank"
                 rel="noopener"
-                href={"https://youtube.com/channel/UCNcCzxW2OSQO38AaqFGkB2g"}
-              >
-                {"YouTube"}
-              </NavigationLink>
-            </NavigationItem>
-            <NavigationItem>
-              <NavigationLink
-                target="_blank"
-                rel="noopener"
-                href={"https://www.meetup.com/pt-BR/Minas_Dev/"}
-              >
-                {"Meetup"}
-              </NavigationLink>
-            </NavigationItem>
-            <NavigationItem>
-              <NavigationLink
-                target="_blank"
-                rel="noopener"
-                href={"https://medium.com/minasdev"}
-              >
-                {"Medium"}
-              </NavigationLink>
-            </NavigationItem>
-            <NavigationItem>
-              <NavigationLink
-                target="_blank"
-                rel="noopener"
                 href={"https://twitter.com/minasdev"}
               >
                 {"Twitter"}
