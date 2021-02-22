@@ -21,7 +21,7 @@ const Header = () => {
             <NavigationItem>
               <NavigationLink
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 href={"https://twitter.com/minasdev"}
               >
                 {"Twitter"}
@@ -30,8 +30,8 @@ const Header = () => {
             <NavigationItem>
               <NavigationLink
                 target="_blank"
-                rel="noopener"
-                href={"https://github.com/minasdev/vagas/issues"}
+                rel="noopener noreferrer"
+                href={"https://seujob.tech"}
               >
                 {"Vagas"}
               </NavigationLink>
